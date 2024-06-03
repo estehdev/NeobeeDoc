@@ -137,12 +137,6 @@ Returns given yyyy-MM-dd HH:mm:ss format date in medium date-time format for the
 vtl: `$library_date.formatDate('2023-05-31 12:34:56', 'sr', 'RS')`
 
 response: "31.05.2023. 12:34."
-
-&nbsp;
-
-
-
-
 &nbsp;
 
 &nbsp;
