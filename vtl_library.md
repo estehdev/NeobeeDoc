@@ -4,7 +4,7 @@
 
 ## Time Library
 
-Prefix for methods in this custom class: **library_date**
+Prefix for methods in this custom class: `library_date`
 
 ### convertTimezone()
 
@@ -12,6 +12,6 @@ Prefix for methods in this custom class: **library_date**
 
 ## Library
 
-Prefix for methods in this custom class: **library**
+Prefix for methods in this custom class: `library`
 
 ### printObject()
