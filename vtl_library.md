@@ -22,3 +22,6 @@ Prefix for methods in this custom class: `library`
 
 Additional examples of vtl expressions can be found [here](vtl_examples.md) 
 
+
+> [!TIP]
+> Additional examples of vtl expressions can be found [here](vtl_examples.md) 
