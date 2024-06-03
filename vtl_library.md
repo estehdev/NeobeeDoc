@@ -98,6 +98,16 @@ response: "230531"
 
 &nbsp;
 
+### formatDay(Object date)
+Returns given yyyyMMdd format date in medium date format for the serbian language and Republika Srbija country.
+
+#### Example
+vtl: `$library_date.formatDay('20230531')`
+
+response: "230531"
+
+&nbsp;
+
 
 
 
