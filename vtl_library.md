@@ -146,7 +146,7 @@ response: "31.05.2023. 12:34."
 
 Prefix for methods in this custom class: `library`
 
-### printObject(Object object)
+### printObject(Object input)
 If object is instance of java Map, it return JsonObject.toString(). If object is java List, it returns JsonArray.toString(). If object is java String, it returns String with escaped values using Json String rules.
 
 #### Example
@@ -156,7 +156,7 @@ response: "folder\\/file"
 
 &nbsp;
 
-### escapeJson(String object)
+### escapeJson(String input)
 Returns String with escaped values using Json String rules.
 
 #### Example
@@ -166,7 +166,7 @@ response: "folder\\/file"
 
 &nbsp;
 
-### escQuery(Object object)
+### escQuery(Object input)
 Returns url encoded value of given object to be used in url query parameters.
 
 #### Example
@@ -176,7 +176,7 @@ response: "folder%2Ffile"
 
 &nbsp;
 
-### escPath(Object object)
+### escPath(Object input)
 Returns url encoded value of given object to be used in url path parameters.
 
 #### Example
@@ -186,13 +186,59 @@ response: "folder%2ffile"
 
 &nbsp;
 
-### quote(Object object)
+### quote(Object input)
 Returns...
 
 #### Example
 vtl: `$library.quote(...)`
 
 response: ""
+
+&nbsp;
+
+### formatNumber(Object input)
+Returns...
+
+#### Example
+vtl: `$library.formatNumber(...)`
+
+response: ""
+
+&nbsp;
+
+### formatNumber(Object input, String requestedLanguage, String requestedCountry)
+Returns...
+
+#### Example
+vtl: `$library.formatNumber(...)`
+
+response: ""
+
+&nbsp;
+
+### unescapeJson(String input)
+Returns...
+
+#### Example
+vtl: `$library.unescapeJson(...)`
+
+response: ""
+
+&nbsp;
+
+### escapeXml(String input)
+Returns...
+
+#### Example
+vtl: `$library.escapeXml(...)`
+
+response: ""
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
