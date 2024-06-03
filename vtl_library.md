@@ -5,6 +5,7 @@
 ## Time Library
 
 Prefix for methods in this custom class: `library_date`
+
 &nbsp;
 
 ### year()
@@ -14,6 +15,7 @@ Returns current year in four-digit format (yyyy).
 vtl: `$library_date.year()`
 
 response: 2024
+
 &nbsp;
 
 ### today()
