@@ -4,9 +4,7 @@
 &nbsp;
 
 ## Time Library
-
 Prefix for methods in this custom class: `library_date`
-
 &nbsp;
 
 ### year()
