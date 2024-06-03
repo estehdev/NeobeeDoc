@@ -39,7 +39,7 @@ response: 2024-06-03 13:09:13
 &nbsp;
 
 ### dateSubDay()
-Returns date and time in format: yyyy-MM-dd HH:mm:ss that is the result of subtracting the given date and number of days
+Returns date and time in format: yyyy-MM-dd HH:mm:ss that is the result of subtracting given number of days from given date.
 
 #### Example
 vtl: `$library_date.dateSubDay('2023-05-31 12:34:56', 2)`
@@ -47,6 +47,17 @@ vtl: `$library_date.dateSubDay('2023-05-31 12:34:56', 2)`
 response: 2023-05-29 12:34:56
 
 &nbsp;
+
+### dateAddDay()
+Returns date and time in format: yyyy-MM-dd HH:mm:ss that is the result of adding given number of days to given date.
+
+#### Example
+vtl: `$library_date.dateAddDay('2023-05-31 12:34:56', 2)`
+
+response: 2023-06-02 12:34:56
+
+&nbsp;
+
 
 
 
