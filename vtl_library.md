@@ -190,52 +190,52 @@ response: "folder%2ffile"
 &nbsp;
 
 ### quote(Object input)
-Returns...
+If object is instance of String, returns given value between double quotes. Else, returns object.toString
 
 #### Example
-vtl: `$library.quote(...)`
+vtl: `$library.quote('input')`
 
-response: ""
+response: "\"input\""
 
 &nbsp;
 
 ### formatNumber(Object input)
-Returns...
+Returns formated decimal number that is the result of division by 100 of given input for the serbian language and Republika Srbija country.
 
 #### Example
-vtl: `$library.formatNumber(...)`
+vtl: `$library.formatNumber('1234')`
 
-response: ""
+response: "12,34"
 
 &nbsp;
 
 ### formatNumber(Object input, String requestedLanguage, String requestedCountry)
-Returns...
+Returns formated decimal number that is the result of division by 100 of given input for the requested language and requested country.
 
 #### Example
-vtl: `$library.formatNumber(...)`
+vtl: `$library.formatNumber('1234','sr','Rs')`
 
-response: ""
+response: "12,34"
 
 &nbsp;
 
 ### unescapeJson(String input)
-Returns...
+Returns String with any Json literals unescaped.
 
 #### Example
-vtl: `$library.unescapeJson(...)`
+vtl: `$library.unescapeJson('folder\\/file')`
 
-response: ""
+response: "folder/file"
 
 &nbsp;
 
 ### escapeXml(String input)
-Returns...
+Returns String with escaped values for characters using XML entities.
 
 #### Example
-vtl: `$library.escapeXml(...)`
+vtl: `$library.escapeXml('folder & file')`
 
-response: ""
+response: "folder \&amp; file"
 
 &nbsp;
 
