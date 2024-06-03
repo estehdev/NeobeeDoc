@@ -38,6 +38,16 @@ response: 2024-06-03 13:09:13
 
 &nbsp;
 
+### dateSubDay()
+Returns date and time in format: yyyy-MM-dd HH:mm:ss that is the result of subtracting the given date and number of days
+
+#### Example
+vtl: `$library_date.dateSubDay('2023-05-31 12:34:56', 2)`
+
+response: 2023-05-29 12:34:56
+
+&nbsp;
+
 
 
 &nbsp;
