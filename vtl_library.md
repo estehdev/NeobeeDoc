@@ -7,9 +7,10 @@
 Prefix for methods in this custom class: `library_date`
 
 ### year()
-Returns current year in foru-digit format.
+Returns current year in four-digit format (yyyy).
 #### Example
 vtl: `$library_date.year()`
+
 response: 2024
 
 ### today()
