@@ -18,7 +18,6 @@ Prefix for methods in this custom class: `library`
 
 
 
-## Additional examples
 
 [Additional examples of vtl expressions](vtl_examples.md) 
 
