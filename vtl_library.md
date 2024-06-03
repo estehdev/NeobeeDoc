@@ -58,6 +58,26 @@ response: 2023-06-02 12:34:56
 
 &nbsp;
 
+### daySub()
+Returns date in format: yyyyMMdd that is the result of subtracting given number of days from given date.
+
+#### Example
+vtl: `$library_date.daySub('20230531', 2)`
+
+response: 20230529
+
+&nbsp;
+
+### dayAdd()
+Returns date in format: yyyyMMdd that is the result of adding given number of days to given date.
+
+#### Example
+vtl: `$library_date.dayAdd('20230531', 2)`
+
+response: 20230602
+
+&nbsp;
+
 
 
 
