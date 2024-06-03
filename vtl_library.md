@@ -1,6 +1,11 @@
 # VTL Library
 &nbsp;
 
+-----
+> [!TIP]
+> Additional examples of vtl expressions can be found [here](vtl_examples.md)
+-----
+
 &nbsp;
 
 ## Time Library
@@ -236,14 +241,3 @@ response: ""
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-
-
------
-> [!TIP]
-> Additional examples of vtl expressions can be found [here](vtl_examples.md) 
