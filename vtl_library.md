@@ -19,6 +19,16 @@ response: 2024
 &nbsp;
 
 ### today()
+Returns current date in format: yyyyMMdd.
+
+#### Example
+vtl: `$library_date.today()`
+
+response: 20240603
+
+&nbsp;
+
+### next()
 
 
 &nbsp;
