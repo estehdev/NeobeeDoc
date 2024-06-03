@@ -137,6 +137,7 @@ Returns given yyyy-MM-dd HH:mm:ss format date in medium date-time format for the
 vtl: `$library_date.formatDate('2023-05-31 12:34:56', 'sr', 'RS')`
 
 response: "31.05.2023. 12:34."
+
 &nbsp;
 
 &nbsp;
@@ -145,7 +146,55 @@ response: "31.05.2023. 12:34."
 
 Prefix for methods in this custom class: `library`
 
-### printObject()
+### printObject(Object object)
+If object is instance of java Map, it return JsonObject.toString(). If object is java List, it returns JsonArray.toString(). If object is java String, it returns String with escaped values using Json String rules.
+
+#### Example
+vtl: `$library.printObject('folder/file')`
+
+response: "folder\\/file"
+
+&nbsp;
+
+### escapeJson(String object)
+Returns String with escaped values using Json String rules.
+
+#### Example
+vtl: `$library.escapeJson('folder/file')`
+
+response: "folder\\/file"
+
+&nbsp;
+
+### escQuery(Object object)
+Returns url encoded value of given object to be used in url query parameters.
+
+#### Example
+vtl: `$library.escQuery('folder/file')`
+
+response: "folder%2Ffile"
+
+&nbsp;
+
+### escPath(Object object)
+Returns url encoded value of given object to be used in url path parameters.
+
+#### Example
+vtl: `$library.escPath('folder/file')`
+
+response: "folder%2ffile"
+
+&nbsp;
+
+### quote(Object object)
+Returns...
+
+#### Example
+vtl: `$library.quote(...)`
+
+response: ""
+
+&nbsp;
 
 
 
