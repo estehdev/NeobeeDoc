@@ -14,7 +14,7 @@ Returns current year in four-digit (yyyy) format.
 #### Example
 vtl: `$library_date.year()`
 
-response: `2024`
+response: "2024"
 
 &nbsp;
 
@@ -24,7 +24,7 @@ Returns current date in yyyyMMdd format.
 #### Example
 vtl: `$library_date.today()`
 
-response: `20240603`
+response: "20240603"
 
 &nbsp;
 
@@ -34,7 +34,7 @@ Returns current date in yyyy-MM-dd HH:mm:ss format.
 #### Example
 vtl: `$library_date.now()`
 
-response: `2024-06-03 13:09:13`
+response: "2024-06-03 13:09:13"
 
 &nbsp;
 
@@ -44,7 +44,7 @@ Returns date in yyyy-MM-dd HH:mm:ss format that is the result of subtracting giv
 #### Example
 vtl: `$library_date.dateSubDay('2023-05-31 12:34:56', 2)`
 
-response: `2023-05-29 12:34:56`
+response: "2023-05-29 12:34:56"
 
 &nbsp;
 
@@ -54,7 +54,7 @@ Returns date in yyyy-MM-dd HH:mm:ss format that is the result of adding given nu
 #### Example
 vtl: `$library_date.dateAddDay('2023-05-31 12:34:56', 2)`
 
-response: `2023-06-02 12:34:56`
+response: "2023-06-02 12:34:56"
 
 &nbsp;
 
@@ -64,7 +64,7 @@ Returns date in yyyyMMdd format that is the result of subtracting given number o
 #### Example
 vtl: `$library_date.daySub('20230531', 2)`
 
-response: `20230529`
+response: "20230529"
 
 &nbsp;
 
@@ -74,7 +74,7 @@ Returns date in yyyyMMdd format that is the result of adding given number of day
 #### Example
 vtl: `$library_date.dayAdd('20230531', 2)`
 
-response: `20230602`
+response: "20230602"
 
 &nbsp;
 
@@ -84,7 +84,7 @@ Returns date in yyyy-MM-dd HH:mm:ss format for the given date and time in UTC an
 #### Example
 vtl: `$library_date.convertToTimeZone('2023-05-31 12:34:56','Europe/Belgrade')`
 
-response: `2023-05-31 14:34:56`
+response: "2023-05-31 14:34:56"
 
 &nbsp;
 
@@ -94,7 +94,7 @@ Returns date in requested format for the given date in yyyy-MM-dd HH:mm:ss forma
 #### Example
 vtl: `$library_date.format('2023-05-31 12:34:56','yyMMdd')`
 
-response: `230531`
+response: "230531"
 
 &nbsp;
 
