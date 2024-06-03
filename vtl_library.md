@@ -2,7 +2,7 @@
 &nbsp;
 
 > [!TIP]
-> Additional examples of vtl expressions can be found [here](vtl_examples.md)
+> Additional examples of vtl expressions can be found [here](vtl_examples.md).
 
 &nbsp;
 
