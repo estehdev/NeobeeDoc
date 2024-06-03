@@ -11,7 +11,7 @@ Prefix for methods in this custom class: `library_date`
 
 &nbsp;
 
-### year()
+### `year()`
 Returns current year in four-digit (yyyy) format.
 
 #### Example
