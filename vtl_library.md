@@ -28,7 +28,16 @@ response: 20240603
 
 &nbsp;
 
-### next()
+### now()
+Returns current date and time in format: yyyy-MM-dd HH:mm:ss.
+
+#### Example
+vtl: `$library_date.now()`
+
+response: 2024-06-03 13:09:13
+
+&nbsp;
+
 
 
 &nbsp;
