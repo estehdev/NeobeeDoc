@@ -104,7 +104,39 @@ Returns given yyyyMMdd format date in medium date format for the serbian languag
 #### Example
 vtl: `$library_date.formatDay('20230531')`
 
-response: "230531"
+response: "31.05.2023."
+
+&nbsp;
+
+
+### formatDay(Object date, String requestedLanguage, String requestedCountry)
+Returns given yyyyMMdd format date in medium date format for the requested language and requested country.
+
+#### Example
+vtl: `$library_date.formatDay('20230531', 'sr', 'RS')`
+
+response: "31.05.2023."
+
+&nbsp;
+
+### formatDate(Object date)
+Returns given yyyy-MM-dd HH:mm:ss format date in medium date-time format for the serbian language and Republika Srbija country.
+
+#### Example
+vtl: `$library_date.formatDate('2023-05-31 12:34:56')`
+
+response: "31.05.2023. 12:34."
+
+&nbsp;
+
+
+### formatDate(Object date, String requestedLanguage, String requestedCountry)
+Returns given yyyy-MM-dd HH:mm:ss format date in medium date-time format for the requested language and requested country.
+
+#### Example
+vtl: `$library_date.formatDate('2023-05-31 12:34:56', 'sr', 'RS')`
+
+response: "31.05.2023. 12:34."
 
 &nbsp;
 
