@@ -239,3 +239,22 @@ response: "folder \&amp; file"
 
 &nbsp;
 
+&nbsp;
+
+## Text Library
+
+Prefix for methods in this custom class: `library_text`
+
+### removeHtml(String input)
+Returns plain text String with all the html tags removed. 
+
+#### Example
+vtl: `$library_text.removeHtml('<p>example</p>')`
+
+response: "example"
+
+&nbsp;
+
+&nbsp;
+
+
