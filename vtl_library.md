@@ -149,6 +149,8 @@ response: "31.05.2023. 12:34."
 
 Prefix for methods in this custom class: `library`
 
+&nbsp;
+
 ### printObject(Object input)
 If object is instance of java Map, it return JsonObject.toString(). If object is java List, it returns JsonArray.toString(). If object is java String, it returns String with escaped values using Json String rules.
 
@@ -244,6 +246,8 @@ response: "folder \&amp; file"
 ## Text Library
 
 Prefix for methods in this custom class: `library_text`
+
+&nbsp;
 
 ### removeHtml(String input)
 Returns plain text String with all the html tags removed. 
