@@ -241,6 +241,16 @@ response: "folder \&amp; file"
 
 &nbsp;
 
+### parseJsonToMap(String input)
+Returns Map<String, Object> parsed from input string which is json object toString().
+
+#### Example
+vtl: `$library.parseJsonToMap('{"key":"value"}')`
+
+response: {key=value}
+
+&nbsp;
+
 &nbsp;
 
 ## Text Library
