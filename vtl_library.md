@@ -253,6 +253,19 @@ response: {key=value}
 
 &nbsp;
 
+
+### parseJsonToList(String input)
+Returns List parsed from input string which is json object toString().
+
+#### Example
+vtl: `$library.parseJsonToList('[{"key":"value"}]')`
+
+response: [{key=value}]
+
+&nbsp;
+
+&nbsp;
+
 ## Text Library
 
 Prefix for methods in this custom class: `library_text`
