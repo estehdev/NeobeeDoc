@@ -316,6 +316,45 @@ response: "5.5"
 
 &nbsp;
 
+### mul(Object ... num)
+Returns the product of the numbers or null if they're invalid 
+
+#### Example
+vtl: `$library_math.mul(100000000, 10000000)`
+
+response: "1000000000000000"
+
+&nbsp;
+
+### div(Object ... num)
+Returns the quotient of the numbers or null if they're invalid or if any denominator equals zero 
+
+#### Example
+vtl: `$library_math.div(1000000000000000, 10000000)`
+
+response: "100000000"
+
+&nbsp;
+
+### round(Object num)
+Returns the number rounded to the nearest whole Integer or null if it's invalid
+
+#### Example
+vtl: `$library_math.round(3.141592653589793238462643383279502884197)`
+
+response: "3"
+
+&nbsp;
+
+### roundTo(Object decimals, Object num)
+Returns the value rounded to the specified number of decimal places or null if it's invalid
+
+#### Example
+vtl: `$library_math.round(2, 3.141592653589793238462643383279502884197)`
+
+response: "3.14"
+
+&nbsp;
 
 
 &nbsp;
