@@ -284,4 +284,39 @@ response: "example"
 
 &nbsp;
 
+## Math Library
+
+Prefix for methods in this custom class: `library_math`
+
+&nbsp;
+
+### add(Object ... num)
+Returns the sum of the numbers or null if they're invalid 
+
+#### Example
+vtl: `$library_math.add('5', 6, 7.5)`
+
+response: "18.5"
+
+&nbsp;
+
+### sub(Object ... num)
+Returns the difference of the numbers (subtracted in order) or null if they're invalid 
+
+#### Example
+vtl: `$library_math.sub(25, 6)`
+
+response: "19"
+
+
+vtl: `$library_math.sub(18.5, '10', 3)`
+
+response: "5.5"
+
+
+&nbsp;
+
+
+
+&nbsp;
 
