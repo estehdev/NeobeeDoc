@@ -356,6 +356,62 @@ response: "3.14"
 
 &nbsp;
 
+### gt(Object o1, Object o2)
+Returns true if numeric value of o1 is greater than o2
+
+#### Example
+vtl: `$library_math.gt(2, 3)`
+
+response: "false"
+
+&nbsp;
+
+### ge(Object o1, Object o2)
+Returns true if numeric value of o1 is greater than or equal to o2
+
+#### Example
+vtl: `$library_math.ge(2, 3)`
+
+response: "false"
+
+&nbsp;
+
+### lt(Object o1, Object o2)
+Returns true if numeric value of o1 is less than  o2
+
+#### Example
+vtl: `$library_math.lt(2, 3)`
+
+response: "true"
+
+### le(Object o1, Object o2)
+Returns true if numeric value of o1 is less than or equal to o2
+
+#### Example
+vtl: `$library_math.le(2, 3)`
+
+response: "true"
+
+### eq(Object o1, Object o2)
+Returns true if numeric value of o1 is equal to o2
+
+#### Example
+vtl: `$library_math.eq(2, 3)`
+
+response: "false"
+
+### ne(Object o1, Object o2)
+Returns true if numeric value of o1 is not equal to o2
+
+#### Example
+vtl: `$library_math.ne(2, 3)`
+
+response: "true"
+
+
+
+
+&nbsp;
 
 &nbsp;
 
