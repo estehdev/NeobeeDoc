@@ -284,6 +284,14 @@ response: "example"
 
 &nbsp;
 
+
+### extractText(String input)
+Return text from html. 
+
+### extractTitle(String input)
+Return title of html page
+
+
 ## Math Library
 
 Prefix for methods in this custom class: `library_math`
