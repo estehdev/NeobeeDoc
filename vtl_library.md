@@ -285,11 +285,13 @@ response: "example"
 &nbsp;
 
 
-### extractText(String input)
+### extractTextHtml(String input)
 Return text from html. 
 
-### extractTitle(String input)
+### extractTitleHtml(String input)
 Return title of html page
+### regex(String regex, String inputText)
+Apply regex on inputText and return match
 
 
 ## Math Library
