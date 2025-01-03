@@ -290,9 +290,8 @@ Return text from html.
 
 ### extractTitleHtml(String input)
 Return title of html page
-### regex(String regex, String inputText)
-Apply regex on inputText and return match
-
+### regexExtract(String inputText, String regex)
+Extract text from inputText using regular expression
 
 ## Math Library
 
