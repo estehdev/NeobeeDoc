@@ -8,8 +8,8 @@
 #### **Improvements**
  - Improved top menu navigation
  - NisKB remote document display: rearranged UI elements of remote document
- - Unapređenje3
+ - Improvement 3
 #### **New Features**
- - Funkcionalnost1
- - Funkcionalnost2
- - Funkcionalnost3
+ - New Feature1
+ - New Feature2
+ - New Feature3
