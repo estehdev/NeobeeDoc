@@ -1,15 +1,15 @@
 #Praćenje izmena
 ##Januar, II nedelja
 ###NeoBee
-####Ispravke
+**Ispravke**
 -Ispravka 1
 -Ispravka 2
 -Ispravka3
-####Unapređenja
+**Unapređenja**
 -Unapređenje 1
 -Unapređenje 2
 -Unapređenje3
-####Nove Funkcionalnosti
+**Nove Funkcionalnosti**
 -Funkcionalnost1
 -Funkcionalnost2
 -Funkcionalnost3
