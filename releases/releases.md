@@ -1,5 +1,5 @@
 # Releases
-## Januarry, week II
+## January, week II
 ### NeoBee
 #### **Fixes**
  - User policies: Fixed an issue with user policy rights sellection
