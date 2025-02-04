@@ -13,10 +13,13 @@
 ### **Improvements**
 - Menu cleanup: Jira reports removed
 - User permissions migrated and label changed
-- Knowledge base stzle improved
-- Reporter actions: enabled action initiaton from ticket Reporter field 
+- Knowledge base style improved
+- Reporter actions: enabled action initiaton from ticket Reporter field
+- Knowlege base UI: improved remote document display with larger popup and rearranged controls.  
 ### **Fixes**
 - Knowledge base favourite document: removed double heart symbol
+### **New Features**
+Portal language settings enabled in look^feel
 ### **Improvements**
     
 ### **New Features**
