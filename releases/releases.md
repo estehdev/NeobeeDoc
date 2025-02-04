@@ -19,7 +19,9 @@
 ### **Fixes**
 - Knowledge base favourite document: removed double heart symbol
 ### **New Features**
-Portal language settings enabled in look^feel
+- Default portal language settings enabled in look&feel
+- Added configuration option for text color and active window background color
+- Enabled creation of custom remote tables and remote sql queries 
 ### **Improvements**
     
 ### **New Features**
