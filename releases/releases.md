@@ -4,10 +4,21 @@
  - User policies: Fixed an issue with user policy rights sellection
  - User policies: Fixed an issue with remote table filtering
  - Subtask files: Corrected file transfer from task to subtask
+ - MoKnowledge project: fixed url encoding and xml parsing
 ### **Improvements**
  - Improved top menu navigation
  - NisKB remote document display: rearranged UI elements of remote document
- - Improvement 3
+
+## January, week III
+### **Improvements**
+- Menu cleanup: Jira reports removed
+- User permissions migrated and label changed
+- Knowledge base stzle improved
+- Reporter actions: enabled action initiaton from ticket Reporter field 
+### **Fixes**
+- Knowledge base favourite document: removed double heart symbol
+### **Improvements**
+    
 ### **New Features**
  - New Feature1
  - New Feature2
