@@ -1,5 +1,5 @@
 # NeoBee Releases
-##2025
+## 2025
 ## January, week II
 ### **Fixes**
  - User policies: Fixed an issue with user policy rights selection
