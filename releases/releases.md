@@ -1,4 +1,3 @@
-# 2025
 # NeoBee Releases 2025
 ## January, week II
 ### **Fixes**
