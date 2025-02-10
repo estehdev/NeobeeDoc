@@ -359,7 +359,7 @@ response: "3"
 Returns the value rounded to the specified number of decimal places or null if it's invalid
 
 #### Example
-vtl: `$library_math.round(2, 3.141592653589793238462643383279502884197)`
+vtl: `$library_math.roundTo(2, 3.141592653589793238462643383279502884197)`
 
 response: "3.14"
 
