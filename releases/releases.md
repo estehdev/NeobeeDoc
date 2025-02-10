@@ -1,7 +1,7 @@
 # 2025
 # NeoBee Releases
 ## January, week II
-### **Fixe **
+### **Fixes**
  - User policies: Fixed an issue with user policy rights selection
  - User policies: Fixed an issue with remote table filtering
  - Subtask files: Corrected file transfer from task to subtask
