@@ -1,4 +1,17 @@
 # NeoBee Releases 2025
+## February, week I
+### **Fixes**
+- Fixed dynamic resizing in AppDashboard 
+- Fixed filter in Reports column
+- Fixed files and actions manipulation in AppDashboard
+- Now policies are correctly applying on tickets created from other tickets.
+### **Improvements**
+- Dropdown lists now support user defined API and formatting
+- RichTextEditor controls are now hidden if not in use/focus
+- Improved subform for creating ticket from another ticket
+### **New Features** 
+- Under the hood features - New proxy related actions created, new jsonquery queries added
+- **Office365 conectivity and email integration supported in latest release**
 ## January, week IV
 ### **Fixes**
 - Fixed ticket export to Excel. 
