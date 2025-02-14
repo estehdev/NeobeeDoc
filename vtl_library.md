@@ -307,6 +307,21 @@ response: "230000000000000"
 
 &nbsp;
 
+### base64Encode(String input)
+Return base64 encoded string
+vtl: `$library_text.base64Encode('Neki tekst')`
+
+response: "TmVraSB0ZWtzdA=="
+
+&nbsp;
+
+### base64Decode(String input)
+Return base64 encoded string
+vtl: `$library_text.base64Decode('TmVraSB0ZWtzdA==')`
+
+response: "Neki tekst"
+
+&nbsp;
 
 ### regexExtract(String inputText, String regex)
 Extract text from inputText using regular expression
