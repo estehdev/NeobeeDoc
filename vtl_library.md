@@ -290,6 +290,24 @@ Return text from html.
 
 ### extractTitleHtml(String input)
 Return title of html page
+
+### lpad(String input, String padChar, int length)
+Left pad
+vtl: `$library_text.lpad('23','0',15)`
+
+response: "000000000000023"
+
+&nbsp;
+
+### rpad(String input, String padChar, int length)
+Right pad
+vtl: `$library_text.rpad('23','0',15)`
+
+response: "230000000000000"
+
+&nbsp;
+
+
 ### regexExtract(String inputText, String regex)
 Extract text from inputText using regular expression
 
