@@ -1,4 +1,17 @@
 # NeoBee Releases 2025
+## February, week II
+### **Fixes**
+- Default value for date type now implemented correctly
+- Translations imports now support specific labels without system matching labels
+- Fixed AppDashboard initial loading of datepicker for charts
+- Fixed code for default date on forms
+### **Improvements**
+- AppDashboard report date picker 
+- Linked tickets: added link to the ticket next to the connection
+- Added link in accordance with permission schema
+- NisKB: "the most" content ("the most evaluated", "the most viewed", "the most liked") now supports filters
+### **New Features** 
+- Bulk edit enabled
 ## February, week I
 ### **Fixes**
 - Fixed dynamic resizing in AppDashboard 
