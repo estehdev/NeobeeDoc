@@ -2,7 +2,7 @@
 ## February, week II
 ### **Fixes**
 - Default value for date type now implemented correctly
-- Translations imports now support specific labels without system matching labels
+- Translations imports now support inserting specific labels without need for coresponding system labels
 - Fixed AppDashboard initial loading of datepicker for charts
 - Fixed code for default date on forms
 ### **Improvements**
