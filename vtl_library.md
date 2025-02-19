@@ -312,6 +312,7 @@ response: "230000000000000"
 
 ### base64Encode(String input)
 Return base64 encoded string
+#### Example
 vtl: `$library_text.base64Encode('Neki tekst')`
 
 response: "TmVraSB0ZWtzdA=="
@@ -320,6 +321,7 @@ response: "TmVraSB0ZWtzdA=="
 
 ### base64Decode(String input)
 Return base64 encoded string
+#### Example
 vtl: `$library_text.base64Decode('TmVraSB0ZWtzdA==')`
 
 response: "Neki tekst"
