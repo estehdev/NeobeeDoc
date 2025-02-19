@@ -282,14 +282,15 @@ response: "example"
 
 &nbsp;
 
-&nbsp;
-
-
 ### extractTextHtml(String input)
 Return text from html. 
 
+&nbsp;
+
 ### extractTitleHtml(String input)
 Return title of html page
+
+&nbsp;
 
 ### lpad(String input, String padChar, int length)
 Left pad
