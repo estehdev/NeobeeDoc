@@ -331,6 +331,8 @@ response: "Neki tekst"
 ### regexExtract(String inputText, String regex)
 Extract text from inputText using regular expression
 
+&nbsp;
+
 ## Math Library
 
 Prefix for methods in this custom class: `library_math`
