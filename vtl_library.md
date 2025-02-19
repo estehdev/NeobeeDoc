@@ -294,6 +294,7 @@ Return title of html page
 
 ### lpad(String input, String padChar, int length)
 Left pad
+#### Example
 vtl: `$library_text.lpad('23','0',15)`
 
 response: "000000000000023"
@@ -302,6 +303,7 @@ response: "000000000000023"
 
 ### rpad(String input, String padChar, int length)
 Right pad
+#### Example
 vtl: `$library_text.rpad('23','0',15)`
 
 response: "230000000000000"
