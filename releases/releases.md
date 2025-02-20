@@ -1,4 +1,18 @@
 # NeoBee Releases 2025
+## February, week III
+### Fixes
+- Parent ticket overview now correctly displayed on subticket
+- Linked tickets:disabled auto conversion from Cyrillic to Latin characters
+- Subform components: fixed default date value settings
+### Improvements
+- Ranking of filtered "the most" content based on matching search item and document headline
+- Form item filters now support system fields ext_code, name, and description
+- Under the hood improvement of datepicker and duration data types. Also added support for negative time values
+### New Features 
+- New file manager process permission and UI with support for multi-select
+- New file manager functionality with the option for users with correct permissions to revert files from deleted
+- User data configuration handling with client and server validation
+- Added today and tomorrow as default date options
 ## February, week II
 ### **Fixes**
 - Default value for date type now implemented correctly
