@@ -6,17 +6,19 @@
 - User list with a dynamic source - Fixed issue with the filter operation
 - Bug fix for Style overflow from ticket description to the entire portal
 - BankOcrFrontend - fixed the init method for the TransferOrder
+- bankOcrFrontend - fixed init method in the TransferOder component 
 ### Improvements
 - Enhancement of Radio/ MultiCheckbox/ SegmentedControl/ ToggleButtons functionality - Support for filters in the mentioned component types implemented, related to the custom table
-- BankOcr - jQuery version upgraded due to a security test issue with the client.
-- Form dropdown functionality - Support for using source from the form included, besides the source from the properties map, in the dropdown list component where     elements are from a subform
+- BankOcr - jQuery version upgraded due to a security test issue with the client
+- Form dropdown functionality - Support for using source from the form included, besides the source from the properties map, in the dropdown list component where elements are from a subform
 - Form administration functionality - Added component search in the form at the top of the page
 - User list with a dynamic source functionality - "Filter loading mode" implemented
 - User list with a dynamic source functionality - "Set value" functionality enabled
 ### New Features 
-- Default Home Page - Mechanism for changing the default home page on the portal implemented. The setting is located on the Appearance page in Settings. It's         possible to choose default, appdashboard and Home (servicehomepage)
-- Form datepicker - Added configuration parameters to limit date selection. Parameter is relative. Time units (weeks, days, hours, minutes) are entered. Negative     values can also be entered.The minimum relative value will block all dates before the calculated time.The maximum relative value will block all dates after the     calculated time
-- BankOcr - created the onLoadImage method to display the spinner on order and reset urgentUi to false if there is no transactionType or it is empty on each loading of the transferOrder.
+- Default Home Page - Mechanism for changing the default home page on the portal implemented. The setting is located on the Appearance page in Settings. It's possible to choose default, appdashboard and Home (servicehomepage)
+- Form datepicker - Added configuration parameters to limit date selection. Parameter is relative. Time units (weeks, days, hours, minutes) are entered. Negative values can also be entered.The minimum relative value will block all dates before the calculated time.The maximum relative value will block all dates after the calculated time
+- New SQL scripts for checking internal documentation for NIS and it's subsidaries
+- BankOcr - created the onLoadImage method to display the spinner on order and reset urgentUi to false if there is no transactionType or it is empty on each loading of the transferOrder
 ## February, week III
 ### Fixes
 - Parent ticket overview now correctly displayed on subticket
