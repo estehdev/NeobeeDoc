@@ -376,16 +376,20 @@ response: "1000000000000000"
 &nbsp;
 
 ### div(Object num1, Object num2)
-Returns the quotient of the numbers or null if they're invalid or if denominator equals zero. If quotient is not whole number, result will be returned as closest whole number
+Returns the quotient of the numbers or null if they're invalid or if denominator equals zero. If quotient have Non-terminating decimal expansion, it will be ronded to 4 decimals
 
 #### Example
 vtl: `$library_math.div(1000000000000000, 10000000)`
 
 response: "100000000"
 
-vtl: `$library_math.div(20.0, 7.0)`
+vtl: `$library_math.div(5,100)`
 
-response: "3"   (result is rounded to closest integer)
+response: "0.05"   
+
+vtl: `$library_math.div(20,7)`
+
+response: "2.8571"   
 
 
 ### div(Object num1, Object num2, int precision)
