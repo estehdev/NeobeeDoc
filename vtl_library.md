@@ -375,15 +375,44 @@ response: "1000000000000000"
 
 &nbsp;
 
-### div(Object ... num)
-Returns the quotient of the numbers or null if they're invalid or if any denominator equals zero 
+### div(Object num1, Object num2)
+Returns the quotient of the numbers or null if they're invalid or if denominator equals zero. If quotient is not whole number, result will be returned as closest whole number
 
 #### Example
 vtl: `$library_math.div(1000000000000000, 10000000)`
 
 response: "100000000"
 
-&nbsp;
+vtl: `$library_math.div(20.0, 7.0)`
+
+response: "3"   (result is rounded to closest integer)
+
+
+### div(Object num1, Object num2, int precision)
+Returns the quotient of the numbers or null if they're invalid or if denominator equals zero. If quotient is not whole number, result will be rounded at given precision. Rounding mode is HALF_DOWN
+
+vtl: `$library_math.div(20.0, 7.0, 5)`
+
+response: "2.85714" 
+
+### div(Object num1, Object num2, int precision, String roundingMode)
+Returns the quotient of the numbers or null if they're invalid or if denominator equals zero. If quotient is not whole number, result will be rounded at given precision with given rounding mode. Possilbe values for rounding modes are:
+- CEILING - Rounding mode to round towards positive infinity.
+- DOWN - Rounding mode to round towards zero.
+- FLOOR - Rounding mode to round towards negative infinity.
+- HALF_DOWN - Rounding mode to round towards "nearest neighbor" unless both neighbors are equidistant, in which case round down.
+- HALF_EVEN - Rounding mode to round towards the "nearest neighbor" unless both neighbors are equidistant, in which case, round towards the even neighbor.
+- HALF_UP - Rounding mode to round towards "nearest neighbor" unless both neighbors are equidistant, in which case round up.
+- UNNECESSARY - Rounding mode to assert that the requested operation has an exact result, hence no rounding is necessary.
+- UP - Rounding mode to round away from zero.
+
+See https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html for more info
+
+vtl: `$library_math.div(20.0, 7.0, 5, 'HALF_DOWN')`
+
+response: "2.85714" 
+
+
 
 ### round(Object num)
 Returns the number rounded to the nearest whole Integer or null if it's invalid
