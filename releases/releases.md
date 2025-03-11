@@ -1,4 +1,23 @@
 # NeoBee Releases 2025
+## March, week I
+### Fixes
+- Completed fixes for maintaining mappings in project settings, including selecting existing references and directly creating new ones
+- Fixed a bug in subform validation for fields with visibility and required properties
+- Fixed a bug that allowed users to transition a ticket to the next state before the ticket finished loading
+- AdvancedTable - Fixed bugs related to different permutations of source display (edit mode, locked mode)
+- Cascade - Resolved an issue with the readonly variant
+- File Uploads - Fixed a problem with multiple file uploads where uploading more than one file simultaneously wasn't possible
+### Improvements
+- Knowledge Base - Fields like is_remote and url from process document records are now automatically indexed
+- AdvancedTable - Added a single-choice mode for data_type=data and data_type=data_def (process file)
+- Application Mapping - Connected the UI with util actions. CRUD operations now work properly. Added search and active-only filters to all queries listing application-related data. Added search and active-only filters to all queries listing application-related data
+- BankOcrFrontend - Added logOperationModal to the "Packages of Orders" page. in the TransferOrder component, created the focusAfterLoadImage method and fixed the focus on the continueOrderButton. In the CheckCheck component, fixed resetting the serialNumberDisableModValidation parameter
+- MoCentral - New "Banner" page was created on the "Settings" page, and a toasted component display was added to the BaseLayout component
+- Created a modal mode on the BaseLayout component. Added a button in the form details that opens a modal for creating a component and adds the created component to the bottom of the currently open form
+- In the processStateTransitionModal, created a link next to the "Form" field that opens the edit page for the selected form in a new tab. Sent a pull request for production
+### New Features 
+- Created a workflow for creating app map records, using an example with the SMTP endpoint in projects, along with util functions
+- Created a new BannerNotification component for modal mode and standalone notification mode
 ## February, week IV
 ### Fixes
 - SegmentedControl/ToggleButtons - Fixed issue with component rendering on the screen
