@@ -5,7 +5,7 @@
 - Fixed a bug in subform validation for fields with visibility and required properties
 - Fixed a bug that allowed users to transition a ticket to the next state before the ticket finished loading
 - AdvancedTable - Fixed bugs related to different permutations of source display (edit mode, locked mode)
-- Cascade - Resolved an issue with the readonly variant
+- Cascade - Resolved an issue with the read only variant
 - File Uploads - Fixed a problem with multiple file uploads where uploading more than one file simultaneously wasn't possible
 ### Improvements
 - Knowledge Base - Fields like is_remote and url from process document records are now automatically indexed
