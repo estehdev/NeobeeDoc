@@ -14,7 +14,7 @@
 - BankOcrFrontend - Added logOperationModal to the "Packages of Orders" page. in the TransferOrder component, created the focusAfterLoadImage method and fixed the focus on the continueOrderButton. In the CheckCheck component, fixed resetting the serialNumberDisableModValidation parameter
 - MoCentral - New "Banner" page was created on the "Settings" page, and a toasted component display was added to the BaseLayout component
 - Created a modal mode on the BaseLayout component. Added a button in the form details that opens a modal for creating a component and adds the created component to the bottom of the currently open form
-- In the processStateTransitionModal, created a link next to the "Form" field that opens the edit page for the selected form in a new tab. Sent a pull request for production
+- In the processStateTransitionModal, created a link next to the "Form" field that opens the edit page for the selected form in a new tab
 ### New Features 
 - Created a workflow for creating app map records, using an example with the SMTP endpoint in projects, along with util functions
 - Created a new BannerNotification component for modal mode and standalone notification mode
