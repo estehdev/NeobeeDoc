@@ -1,34 +1,33 @@
 # NeoBee Releases 2025
 ## March, week II
 ### Fixes
-- AdvancedTable- Fixed issues related to different source display permutations (edit mode, locked mode).
-- Cascade- Resolved bug with the readonly variant.
-- File Upload- Fixed issue preventing multiple files from being uploaded at once.
-- Featured Document- Featured document is now removed from results page when there are no results.
-- Search Quotes Handling- Quotes in search queries are now replaced with spaces.
-- File Deletion Control- The delete button in the file preview section is now hidden if it is not visible in the listing above.
-- Component Administration- Fixed issue with incorrect value saving when changing component type.
-- Ticket Loading Query- Restored ticket loading query on the Board page.
-- BankOCR Project - Validation Fixes- Fixed validation for the "reference number" field in TransferOrder and CheckOrder components.
-- BankOCR Project - Bug Fixes- Fixed a bug in the checkSrbGovermentReferenceNumber method within the TransferOrder and CheckOrder components.
+- AdvancedTable- Fixed issues related to different source display permutations (edit mode, locked mode)
+- Cascade- Resolved bug with the read only variant
+- File Upload- Fixed issue preventing multiple files from being uploaded at once
+- Featured Document- Featured document is now removed from results page when there are no results
+- Search Quotes Handling- Quotes in search queries are now replaced with spaces
+- File Deletion Control- The delete button in the file preview section is now hidden if it is not visible in the listing above
+- Component Administration- Fixed issue with incorrect value saving when changing component type
+- Ticket Loading Query- Restored ticket loading query on the Board page
+- BankOCR Project - Fixed validation for the "reference number" field in TransferOrder and CheckOrder components. Fixed a bug in the checkSrbGovermentReferenceNumber method within the TransferOrder and CheckOrder components
 ### Improvements
-- App Export/Import- Added app_map records to the export list along with NRNs for endpoint_smtp. Released to production.
-- Ticket Redirection- Added a button in the ticket selection component that opens the selected ticket in a new window. Button is only visible when a ticket is selected.
-- AdvancedTable- Added single-choice mode for data_type=data and data_type=data_def (process file).
-- Search Criteria- The doc_keywords field is now included in search criteria.
-- Search Ranking- doc_keywords and doc_kratakopis fields now contribute to search result ranking.
-- Metadata Links- Document metadata now contains a link to its corresponding ticket.
-- Homepage/Ticket List- Released optimized queries for "My Approvals" and "My Requests".
-- Library Updates- Updated Quarkus and other dependencies across listed projects.
-- Ticket Picker- Added project selection as a filter option in the configuration.
-- Required Filter (Negation)- Negation feature was already implemented but was missing in Editability; added it there as well.
-- Compare Form Item Filter- Refactored underlying components so that Visibility, Editability, and Requirement filters share the same implementation, ensuring future updates apply to all three.
-- Quarkus Update on Projects- Updated dependencies on 3/5 targeted projects (MoCat, MoCentral, MoExecutor). Faced authorization issues on one project and build errors on another.
-- UI Adjustments-Added padding below content. Replaced close icon on the banner close button.
+- App Export/Import- Added app_map records to the export list along with NRNs for endpoint_smtp
+- Ticket Redirection- Added a button in the ticket selection component that opens the selected ticket in a new window. Button is only visible when a ticket is selected
+- AdvancedTable- Added single-choice mode for data_type=data and data_type=data_def (process file)
+- Search Criteria- The doc_keywords field is now included in search criteria
+- Search Ranking- doc_keywords and doc_kratakopis fields now contribute to search result ranking
+- Metadata Links- Document metadata now contains a link to its corresponding ticket
+- Homepage/Ticket List- Released optimized queries for "My Approvals" and "My Requests"
+- Library Updates- Updated Quarkus and other dependencies across listed projects
+- Ticket Picker- Added project selection as a filter option in the configuration
+- Required Filter (Negation)- Negation feature was already implemented but was missing in Editability; added it there as well
+- Compare Form Item Filter- Refactored underlying components so that Visibility, Editability, and Requirement filters share the same implementation, ensuring future updates apply to all three
+- Quarkus Update on Projects- Updated dependencies on 3/5 targeted projects (MoCat, MoCentral, MoExecutor)
+- UI Adjustments-Added padding below content. Replaced close icon on the banner close button
 ### New Features
-- New Component - BannerNotification- Implemented with modal and notification modes. Demonstrated behavior with left-side menu and top positioning.
-- XML to JSON Conversion- Converted XML files to JSON format for imports of legacy systems data.
-- JSON Generation & SQL Script- Generated JSON for xml imports and an SQL script for NPL documents.
+- New Component - BannerNotification- Implemented with modal and notification modes. Demonstrated behavior with left-side menu and top positioning
+- XML to JSON Conversion- Converted XML files to JSON format for imports of legacy systems data
+- JSON Generation & SQL Script- Generated JSON for xml imports and an SQL script for NPL documents
 ## March, week I
 ### Fixes
 - Completed fixes for maintaining mappings in project settings, including selecting existing references and directly creating new ones
