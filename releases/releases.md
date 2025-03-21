@@ -1,7 +1,7 @@
 # NeoBee Releases 2025
 ## March, week III
 ### Fixes
-- Subtask button now visible even when the subtask field is readonly
+- Subtask button now visible even when the subtask field is read only
 - Fixed issue with Multi subform using cascade and external data causing application crash
 - Fixed ticket form issue with detecting when the form finishes loading
 - Fixed issue with adding a new property on ticket when properties were null; also ensured setting to NULL when last key is deleted from the map, preventing {} from remaining
