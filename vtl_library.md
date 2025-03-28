@@ -429,7 +429,7 @@ response: "3"
 &nbsp;
 
 ### roundTo(Object decimals, Object num)
-Returns the value rounded to the specified number of decimal places or null if it's invalid
+Returns the value rounded to the specified number of decimal places or null if it's invalid using HALF_EVEN rounding mode
 
 #### Example
 vtl: `$library_math.roundTo(2, 3.141592653589793238462643383279502884197)`
@@ -437,6 +437,20 @@ vtl: `$library_math.roundTo(2, 3.141592653589793238462643383279502884197)`
 response: "3.14"
 
 &nbsp;
+
+
+### roundTo(Object decimals, Object num, String roundingMode)
+Returns the value rounded to the specified number of decimal places or null if it's invalid using provided roundingMode
+
+#### Example
+vtl: `${library_math.roundTo(0, 4.5, 'HALF_UP')})`
+
+response: "5"
+
+&nbsp;
+
+
+
 
 ### gt(Object o1, Object o2)
 Returns true if numeric value of o1 is greater than o2
