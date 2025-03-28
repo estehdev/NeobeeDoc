@@ -429,7 +429,7 @@ response: "3"
 &nbsp;
 
 ### roundTo(Object decimals, Object num)
-Returns the value rounded to the specified number of decimal places or null if it's invalid using HALF_EVEN rounding mode
+Returns the value rounded to the specified number of decimal places using HALF_EVEN rounding mode or null if it's invalid 
 
 #### Example
 vtl: `$library_math.roundTo(2, 3.141592653589793238462643383279502884197)`
@@ -440,8 +440,8 @@ response: "3.14"
 
 
 ### roundTo(Object decimals, Object num, String roundingMode)
-Returns the value rounded to the specified number of decimal places or null if it's invalid using provided roundingMode
-
+Returns the value rounded to the specified number of decimal places using provided roundingMode or null if it's invalid using provided roundingMode
+See https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html for more info
 #### Example
 vtl: `${library_math.roundTo(0, 4.5, 'HALF_UP')})`
 
