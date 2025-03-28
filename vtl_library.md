@@ -339,6 +339,23 @@ Prefix for methods in this custom class: `library_math`
 
 &nbsp;
 
+### toNumber(Object num)
+Converts num to BigDecimal
+
+#### Example
+vtl: `${library_math.toNumber('4.5555')}`
+
+response: "4.5555"
+
+
+### toMoney(Object num)
+Converts num to decimal, multiplies it by 100 and returns it as int
+
+#### Example
+vtl: `${library_math.toMoney('4.5555')}`
+
+response: "455"
+
 ### add(Object ... num)
 Returns the sum of the numbers or null if they're invalid 
 
