@@ -445,28 +445,26 @@ response: "3"
 
 &nbsp;
 
-### roundTo(Object decimals, Object num)
+### round(Object num, Object precision)
 Returns the value rounded to the specified number of decimal places using HALF_EVEN rounding mode or null if it's invalid 
 
 #### Example
-vtl: `$library_math.roundTo(2, 3.141592653589793238462643383279502884197)`
+vtl: `$library_math.round(3.141592653589793238462643383279502884197, 2)`
 
 response: "3.14"
 
 &nbsp;
 
 
-### roundTo(Object decimals, Object num, String roundingMode)
+### round(Object num, Object precision, String roundingMode)
 Returns the value rounded to the specified number of decimal places using provided roundingMode or null if it's invalid using provided roundingMode
 See https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html for more info
 #### Example
-vtl: `${library_math.roundTo(0, 4.5, 'HALF_UP')})`
+vtl: `${library_math.roundTo(4.5, 2, 'HALF_UP')})`
 
 response: "5"
 
 &nbsp;
-
-
 
 
 ### gt(Object o1, Object o2)
