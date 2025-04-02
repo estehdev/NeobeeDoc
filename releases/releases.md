@@ -5,10 +5,10 @@
 # NeoBee Releases 2025
 ## March, week IV
 ### Fixes
--  ![Static Badge](https://img.shields.io/badge/Bug-red)Template Mapping: Fixed an issue where logic worked locally but failed in the cloud environment
+-  ![Static Badge](https://img.shields.io/badge/Bug-red) Template Mapping: Fixed an issue where logic worked locally but failed in the cloud environment
 ### New Features
 - Actions on AdvancedTable component type: Implemented an action system for the AdvancedTable component. It now allows a button click to open a form from the homepage and map values from the clicked row to the form’s initial values
-- Document Link functionality: Added a new route to display details of a single document without showing its "space" and tickets
+- ![Static Badge](https://img.shields.io/badge/Frontend-green) ![Static Badge](https://img.shields.io/badge/Form%20-%20blue) Document Link functionality: Added a new route to display details of a single document without showing its "space" and tickets
 - Endpoint: /document/content/$documentRootId
 - Hidden Pages on Homepage: Added is_visible support for homepage pages. Pages are visible by default but can be hidden while still being accessible via direct URL
 - Automatic mapping during file template creation: Displayed the app instance each template belongs to, Added 3 switches on template creation: Auto-create mapping (default: true), Allow mapping edits (default: true), Allow mapping export (default: false). Options are visible only when an app instance is selected
