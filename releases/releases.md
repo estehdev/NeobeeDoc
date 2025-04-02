@@ -1,4 +1,5 @@
-![Static Badge](https://img.shields.io/badge/Bug-red)
+![Static Badge](https://img.shields.io/badge/Bug-red) ![Static Badge](https://img.shields.io/badge/Frontend-green)
+
 
 # NeoBee Releases 2025
 ## March, week III
