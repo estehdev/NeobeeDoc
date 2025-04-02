@@ -1,13 +1,3 @@
-<div style="display: inline-block; padding: 8px 16px; background-color: #FF4444; color: white; 
-border-radius: 6px; font-weight: bold; text-align: center;">
-    BUG REPORT
-</div>
-
-<div style="display: inline-block; padding: 8px 16px; background-color: #44AA44; color: white; 
-border-radius: 6px; font-weight: bold; text-align: center; margin-top: 5px;">
-    PERFORMANCE IMPROVEMENT
-</div>
-
 # NeoBee Releases 2025
 ## March, week IV
 ### Fixes
