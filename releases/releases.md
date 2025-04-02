@@ -7,7 +7,6 @@
 - Fixed issue with adding a new property on ticket when properties were null; also ensured setting to NULL when last key is deleted from the map, preventing {} from remaining
 - CSS fixes and action testing (First Entry and Validation) on “Paketi naloga” page in bankOcr project
 ### Improvements
-- BankOcr - On “Paketi u obradi” page, tested and deployed three new modals for orders, logs, and images
 - Updated Quarkus and other dependencies across listed projects
 - Picker for tickets now allows filtering by project
 - Added missing negation for "Editability" in required filters
@@ -23,11 +22,6 @@
 - First compares current form item with another in the same form. Second compares two unrelated fields within the form
 - Action system for AdvancedTable component: allows opening a form from the Homepage via button click and mapping values from the clicked row into form’s initial values
 - Dynamic links in application header via Look and Feel configuration:Each link supports URL, ext code, icon, option to open in new tab, and tooltip. Absolute paths cause full reload; relative paths use Vue router. Tooltips support plain text or dynamic translation. Drag and drop enabled for custom sorting. 
-- BankOcr project - in TransferOrder component: added keyboard shortcuts for methods
-ctrl+enter – validateAndSave
-ctrl+4 – setPaymentPurposeWithKeyboard
-ctrl+7 – setFromAccount
-ctrl+8 – setPreviousOrderValue
 ## March, week II
 ### Fixes
 - AdvancedTable- Fixed issues related to different source display permutations (edit mode, locked mode)
