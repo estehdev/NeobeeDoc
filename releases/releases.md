@@ -1,4 +1,3 @@
-<span style="color: red;">Tag</span>
 # NeoBee Releases 2025
 ## March, week III
 ### Fixes
