@@ -32,7 +32,6 @@
 - File Deletion Control- The delete button in the file preview section is now hidden if it is not visible in the listing above
 - Component Administration- Fixed issue with incorrect value saving when changing component type
 - Ticket Loading Query- Restored ticket loading query on the Board page
-- BankOCR Project - Fixed validation for the "reference number" field in TransferOrder and CheckOrder components. Fixed a bug in the checkSrbGovermentReferenceNumber method within the TransferOrder and CheckOrder components
 ### Improvements
 - App Export/Import- Added app_map records to the export list along with NRNs for endpoint_smtp
 - Ticket Redirection- Added a button in the ticket selection component that opens the selected ticket in a new window. Button is only visible when a ticket is selected
@@ -80,7 +79,6 @@
 - bankOcrFrontend - fixed init method in the TransferOder component 
 ### Improvements
 - Enhancement of Radio/ MultiCheckbox/ SegmentedControl/ ToggleButtons functionality - Support for filters in the mentioned component types implemented, related to the custom table
-- BankOcr - jQuery version upgraded due to a security test issue with the client
 - Form dropdown functionality - Support for using source from the form included, besides the source from the properties map, in the dropdown list component where elements are from a subform
 - Form administration functionality - Added component search in the form at the top of the page
 - User list with a dynamic source functionality - "Filter loading mode" implemented
@@ -114,7 +112,7 @@
 - AppDashboard report date picker 
 - Linked tickets: added link to the ticket next to the connection
 - Added link in accordance with permission schema
-- NisKB: "the most" content ("the most evaluated", "the most viewed", "the most liked") now supports filters
+- Knowledge base "the most" content ("the most evaluated", "the most viewed", "the most liked") now supports filters
 ### **New Features** 
 - Bulk edit enabled
 ## February, week I
