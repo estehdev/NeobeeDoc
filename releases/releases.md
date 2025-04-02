@@ -9,8 +9,8 @@
 - Hidden Pages on Homepage: Added is_visible support for homepage pages. Pages are visible by default but can be hidden while still being accessible via direct URL
 - Automatic mapping during file template creation: Displayed the app instance each template belongs to, Added 3 switches on template creation: Auto-create mapping (default: true), Allow mapping edits (default: true), Allow mapping export (default: false). Options are visible only when an app instance is selected
 - Project Roles Configuration Page: Added ProcessDevData component to display extra data (e.g., id, ext_code) for project roles
-- TransferOrder Component: Improved validation for the payment model. On the Statistics page, added a new column "Branch Office" to the order table
 ###Improvements
+- TransferOrder Component: Improved validation for the payment model. On the Statistics page, added a new column "Branch Office" to the order table
 - AdvancedTable UX: Actions column is now pinned to the right side, no need to scroll horizontally to access it
 - App Dashboard Filtering: Enabled use of the filter_search event to filter another table’s content via its value event and the EMIT_EVENT mechanism
 - Form Layout: Reduced vertical spacing between fields by 30%
