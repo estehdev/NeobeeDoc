@@ -1,6 +1,8 @@
 # NeoBee Releases 2025
 ## March, week III
 ### Fixes
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 - Subtask button now visible even when the subtask field is read only
 - [BUG] [frontend] [form] Fixed issue with Multi subform using cascade and external data causing application crash
 - [BUG] Fixed ticket form issue with detecting when the form finishes loading
