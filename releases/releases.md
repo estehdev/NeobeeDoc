@@ -5,23 +5,23 @@
 # NeoBee Releases 2025
 ## March, week IV
 ### Fixes
-Template Mapping Bug: Fixed an issue where logic worked locally but failed in the cloud environment
+- Template Mapping Bug: Fixed an issue where logic worked locally but failed in the cloud environment
 ### New Features
-Actions on AdvancedTable component type: Implemented an action system for the AdvancedTable component. It now allows a button click to open a form from the homepage and map values from the clicked row to the form’s initial values
-Document Link functionality: Added a new route to display details of a single document without showing its "space" and tickets
-Endpoint: /document/content/$documentRootId
-Hidden Pages on Homepage: Added is_visible support for homepage pages. Pages are visible by default but can be hidden while still being accessible via direct URL
-Automatic mapping during file template creation: Displayed the app instance each template belongs to, Added 3 switches on template creation: Auto-create mapping (default: true), Allow mapping edits (default: true), Allow mapping export (default: false). Options are visible only when an app instance is selected
-Project Roles Configuration Page: Added ProcessDevData component to display extra data (e.g., id, ext_code) for project roles
-TransferOrder Component: Improved validation for the payment model. On the Statistics page, added a new column "Branch Office" to the order table
+- Actions on AdvancedTable component type: Implemented an action system for the AdvancedTable component. It now allows a button click to open a form from the homepage and map values from the clicked row to the form’s initial values
+- Document Link functionality: Added a new route to display details of a single document without showing its "space" and tickets
+- Endpoint: /document/content/$documentRootId
+- Hidden Pages on Homepage: Added is_visible support for homepage pages. Pages are visible by default but can be hidden while still being accessible via direct URL
+- Automatic mapping during file template creation: Displayed the app instance each template belongs to, Added 3 switches on template creation: Auto-create mapping (default: true), Allow mapping edits (default: true), Allow mapping export (default: false). Options are visible only when an app instance is selected
+- Project Roles Configuration Page: Added ProcessDevData component to display extra data (e.g., id, ext_code) for project roles
+- TransferOrder Component: Improved validation for the payment model. On the Statistics page, added a new column "Branch Office" to the order table
 ###Improvements
-AdvancedTable UX: Actions column is now pinned to the right side — no need to scroll horizontally to access it
-App Dashboard Filtering: Enabled use of the filter_search event to filter another table’s content via its value event and the EMIT_EVENT mechanism
-Form Layout: Reduced vertical spacing between fields by 30%
-Calendar Enhancements: Added a definition column to es_calendar to support: Time zones (default fallback to tenant setting), 
+- AdvancedTable UX: Actions column is now pinned to the right side, no need to scroll horizontally to access it
+- App Dashboard Filtering: Enabled use of the filter_search event to filter another table’s content via its value event and the EMIT_EVENT mechanism
+- Form Layout: Reduced vertical spacing between fields by 30%
+- Calendar Enhancements: Added a definition column to es_calendar to support: Time zones (default fallback to tenant setting), 
 Workdays (mon–sun), Working hours (stored in UTC, displayed in calendar's time zone), Breaks & holidays (datetime from / to, with description; stored as 00:00–23:59), Per-day work hours & break definitions (UI implementation in progress)
-TransitionModal Component: In the "Conditions" tab, added UserIsInGroupField and extended methods for adding/editing conditions
-Kafka & Microservice Communication: Kafka transactions and idempotent consumers, Testing Kafka integration with base transactions, Implemented Saga pattern, Orchestration-based Saga with compensation transactions in microservices
+- TransitionModal Component: In the "Conditions" tab, added UserIsInGroupField and extended methods for adding/editing conditions
+- Kafka & Microservice Communication: Kafka transactions and idempotent consumers, Testing Kafka integration with base transactions, Implemented Saga pattern, Orchestration-based Saga with compensation transactions in microservices
 ## March, week III
 ### Fixes
 - Subtask button now visible even when the subtask field is read only
