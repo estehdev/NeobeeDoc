@@ -1,3 +1,11 @@
+<h2>🚀 New Release v1.2.0</h2>
+<p><b>Major Updates:</b></p>
+<ul>
+    <li>✨ Improved UI components</li>
+    <li>🐛 Fixed critical bugs</li>
+    <li>⚡ Performance optimizations</li>
+</ul>
+
 # NeoBee Releases 2025
 ## March, week IV
 ### Fixes
