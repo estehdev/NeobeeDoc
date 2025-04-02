@@ -5,7 +5,7 @@
 # NeoBee Releases 2025
 ## March, week IV
 ### Fixes
--  ![Static Badge](https://img.shields.io/badge/Bug-red)Template Mapping Bug: Fixed an issue where logic worked locally but failed in the cloud environment
+-  ![Static Badge](https://img.shields.io/badge/Bug-red)Template Mapping: Fixed an issue where logic worked locally but failed in the cloud environment
 ### New Features
 - Actions on AdvancedTable component type: Implemented an action system for the AdvancedTable component. It now allows a button click to open a form from the homepage and map values from the clicked row to the form’s initial values
 - Document Link functionality: Added a new route to display details of a single document without showing its "space" and tickets
