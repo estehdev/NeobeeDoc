@@ -1,7 +1,3 @@
-🟥 **Bug**  
-🟦 **Frontend**  
-🟩 **Backend**  
-
 # NeoBee Releases 2025
 ## March, week IV
 ### Fixes
