@@ -1,4 +1,5 @@
-![Static Badge](https://img.shields.io/badge/Bug-red) ![Static Badge](https://img.shields.io/badge/Frontend-green)
+ ![Static Badge](https://img.shields.io/badge/Bug-red) ![Static Badge](https://img.shields.io/badge/Frontend-green) ![Static Badge](https://img.shields.io/badge/Form%20-%20blue)
+
 
 
 # NeoBee Releases 2025
