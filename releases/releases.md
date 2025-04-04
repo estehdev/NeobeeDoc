@@ -123,7 +123,7 @@ Workdays (mon–sun), Working hours (stored in UTC, displayed in calendar's time
 ### New Features 
 - Default Home Page - Mechanism for changing the default home page on the portal implemented. The setting is located on the Appearance page in Settings. It's possible to choose default, appdashboard and Home (servicehomepage)
 - Form datepicker - Added configuration parameters to limit date selection. Parameter is relative. Time units (weeks, days, hours, minutes) are entered. Negative values can also be entered.The minimum relative value will block all dates before the calculated time.The maximum relative value will block all dates after the calculated time
-- New SQL scripts for checking internal documentation for NIS and it's subsidaries
+- New SQL scripts for checking internal documentation
 - BankOcr - created the onLoadImage method to display the spinner on order and reset urgentUi to false if there is no transactionType or it is empty on each loading of the transferOrder
 ## February, week III
 ### Fixes
@@ -201,4 +201,4 @@ Workdays (mon–sun), Working hours (stored in UTC, displayed in calendar's time
  - Mo Knowledge project: fixed URL encoding and XML parsing
 ### **Improvements**
  - Improved top menu navigation
- - NisKB remote document display: rearranged UI elements of remote document
+ - KB remote document display: rearranged UI elements of remote document
