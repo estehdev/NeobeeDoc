@@ -13,7 +13,7 @@
 - Action for writing to the central space and transformations, with key and value combinations applicable
 - Improvements in mapping: Added app_instance id in CRUD operations for filters, user groups, and project roles, Added automatic insertion of app_instance_id from the backend during project creation, issue type addition, and state creation. Continuing the automation of adding app_instance_id to entities with a field for selecting the application instance where necessary
 ### New Features
-Added a new feature for linking to a document, which includes a new route for displaying the details of a single document without showing the "space" and ticket (/document/content/$documentRootId)
+- Added a new feature for linking to a document, which includes a new route for displaying the details of a single document without showing the "space" and ticket (/document/content/$documentRootId)
 - Improved functionality in App Dashboard - enabled the use of filter_search event for filtering content of another table through its value event and EMIT_EVENT mechanism in action
 - Enhancement in the Form functionality - reduced the vertical spacing between fields on the form by 30%
 - App Dashboard internal state - model revised so that components retain their state but can react to a specific subscription type from the app dashboard's external space. Minor issues being resolved for a working version tomorrow
