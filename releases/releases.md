@@ -1,18 +1,18 @@
 # NeoBee Releases 2025
 ## February, week I
-###Fixes
+### Fixes
 - App Dashboard bug fix - corrected the behavior of the popup for file previews from the table
 - AdvancedTable bug fix - removed the coloring of rows blue when a row is checked if the component is in readonly mode, as established in a meeting
 - Custom table selection bug fix - added statusId=1 parameter in several requests, so inactive tables are not visible when selecting
 - Corrected issues with ticket creation due to subform rules with files; the refresh was not resetting whether the component was loaded, leaving it in "busy" state.
-###Improvements
+### Improvements
 - App Dashboard internal state + URL - working on a mechanism for saving dashboard state in a JSON space, and linking the URL to that state
 - Improvements in Action functionality on the AdvancedTable component - introduced the source_type parameter for mapping within one action, with possible values "column" (referring to a column from the custom table) and "plainvalue" (exact/hardcoded value)
 - Various updates, including the deletion of mp4 files from the frontend application
 - Central space listening for fields, with optional JSONPath for listening: field.subfield1.subfield2
 - Action for writing to the central space and transformations, with key and value combinations applicable
 - Improvements in mapping: Added app_instance id in CRUD operations for filters, user groups, and project roles, Added automatic insertion of app_instance_id from the backend during project creation, issue type addition, and state creation. Continuing the automation of adding app_instance_id to entities with a field for selecting the application instance where necessary
-###New Features
+### New Features
 Added a new feature for linking to a document, which includes a new route for displaying the details of a single document without showing the "space" and ticket (/document/content/$documentRootId)
 - Improved functionality in App Dashboard - enabled the use of filter_search event for filtering content of another table through its value event and EMIT_EVENT mechanism in action
 - Enhancement in the Form functionality - reduced the vertical spacing between fields on the form by 30%
