@@ -1,5 +1,5 @@
 # NeoBee Releases 2025
-## February, week I
+## April, week I
 ### Fixes
 - App Dashboard bug fix - corrected the behavior of the popup for file previews from the table
 - AdvancedTable bug fix - removed the coloring of rows blue when a row is checked if the component is in readonly mode, as established in a meeting
