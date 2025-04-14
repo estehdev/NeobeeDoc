@@ -16,7 +16,7 @@
 - Float type - Implemented a new subtype for data_type=number. It is stored as a string with a decimal point in the database and rendered on the client side based on component configuration. Supported in ticket filters
 - Default values - Added functionality for default values on forms at the user level
 - Selection mode for digital signing - A setting was added for toggling the selection mode for digital signing
-- Mapping - Added automatic assignment of app_instance_id to forms and components, and created a UI to restrict component selection based on the presence of `app_instance_id`
+- Mapping - Added automatic assignment of app_instance_id to forms and components, and created a UI to restrict component selection based on the presence of app_instance_id
 - Ticket type - Added a "group type" option in ticket type administration that can only be changed at creation time
 - Export functionalities - Implemented JSON document export with a limit of 5000 for remote tables and 100000 for local ones. Added actions for exporting to Excel (exportToExcel) and for synchronizing data between custom tables
 - User Notification for Export Actions - Added pop-up notifications for users when downloading Excel for remote tables, alerting them of any limitations
