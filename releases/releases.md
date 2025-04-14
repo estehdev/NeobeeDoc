@@ -1,4 +1,25 @@
 # NeoBee Releases 2025
+## April, week II
+## Fixes
+- Issue with UD ticket creation - Resolved a problem with the subform and file upload where the form remained in a "busy" state due to the flag not resetting. A workaround was provided to bypass the file field during ticket creation
+- Ticket List (get_issue_list) filter issue - Fixed casting values in filters that used range mode (from-to) from UNSIGNED to SIGNED. This issue was previously unnoticed
+- Login issue - Resolved a problem with loading user settings forms when the user was not logged in, preventing access to the application
+- Application of filters and/or actions from parent form in subform - Fixed and ready for deployment
+- Scrollbar in popup for logs - Adjusted section heights to prevent dual scrollbars from appearing
+## Improvements
+- User settings as a filter on the Tickets page - Enabled the use of values from user settings in filters. When a field selection mode from user settings is activated, the system will insert that value into the filter, if it exists
+- Filter operator "not_equals" - Added a new filter/SQL operator for custom table filters
+- Default values on form per user - Implemented a mechanism to set default values at the user level, stored in local storage
+- Digital signature mode selection - Implemented a setting to determine whether the digital signature mode selection is available. Default is disabled, and the system automatically attempts to open the local desktop application
+- File List with subtasks on main task - Enabled file preview for subtasks similar to main ticket files (green field on hover). Editing is disabled in this mode
+## New Features
+- Float type - Implemented a new subtype for `data_type=number`. It is stored as a string with a decimal point in the database and rendered on the client side based on component configuration. Supported in ticket filters
+- Default values - Added functionality for default values on forms at the user level
+- Selection mode for digital signing - A setting was added for toggling the selection mode for digital signing
+- Mapping - Added automatic assignment of `app_instance_id` to forms and components, and created a UI to restrict component selection based on the presence of `app_instance_id`
+- Ticket type - Added a "group type" option in ticket type administration that can only be changed at creation time
+- Export functionalities - Implemented JSON document export with a limit of 5000 for remote tables and 100000 for local ones. Added actions for exporting to Excel (`exportToExcel`) and for synchronizing data between custom tables
+- User Notification for Export Actions - Added pop-up notifications for users when downloading Excel for remote tables, alerting them of any limitations
 ## April, week I
 ### Fixes
 - App Dashboard bug fix - corrected the behavior of the popup for file previews from the table
