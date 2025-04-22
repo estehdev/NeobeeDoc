@@ -1,4 +1,33 @@
 # NeoBee Releases 2025
+## April, week III
+## Fixes
+- Parent Filter/Action on Subform: Corrected propagation from parent form to subform.
+- Log Popup Scrollbar - Fixed double-scroll issue by adjusting section height
+- AdvancedTable Fullscreen Popup - Fixed value transmission and save behavior between main form and popup via OK button
+- AdvancedTable Actions Overflow - Fixed action buttons spilling into multiple lines (initial and follow-up fix)
+- Queue Item Bulk Action Restriction - Ensured that when "Disable" or "Enable Execution" is selected, the "Apply to all" option is disabled
+## Improvements
+- Subtask File List on Main Task - Enabled file preview (green hover effect), but disabled editing when viewing files from subtasks
+- Ticket Attachment Permissions - Role-based access restriction button hidden
+- Translation Export - Labels from approval workflows now included in the export
+- Quarkus & Java Upgrade - Upgraded the following apps: MoCompany, MoUser, MoAuth, MoCentral, MoMail, MoCat, NeobeeGraphQL, MoRest2
+- Custom Table Sync Optimization - Added batch insert method with upsert (on duplicate key update) functionality to boost sync performance
+- ProjectManagementPostFunction Spinner - Fixed validation spinner issue and pushed to production
+- Popup Notification for JSON Downloads - Added notification popup for users downloading remote table JSONs (MoCentral)
+- Map Field Edit (ProcessFunctionField) - Fixed styling issue where text was overflowing the div
+## New Features
+- Ticket Page Filters - Implemented classification of filters (multi/single project). In single project mode, filters are visible only when the project is selected and show only that project's state types. Includes admin-side CRUD functionality
+- Initial Language at Login - Language selected on the login screen now propagates through the application and is saved as a user parameter
+- Project Filters on Ticket Page - Finished UI adjustments and admin operations
+- AppDashboard Access Rights - Filter content in the dashboard based on process_instance_id. Uses optional execution of view_custom_table via jsonquery engine
+- AppDashboard Column Formatting - Implemented JSON formatting in columns using template syntax like ${field1.field2}, ${field3}
+- Default Filter Mapping UI - Componentized the filter mapping selector (like SMTP endpoints). Works with any supported entity type, using app_instance_id
+- Export JSON Documents: New export functionality with limits (5,000 for remote, 100,000 for local)
+- Custom Table Sync Actions - New action: sync data from one custom table to another, New queue item actions: disable_execution sets dead_letter = 1 for selected IDs only, enable_execution sets dead_letter = null
+- Word Watermark Management - Added functionality to insert and remove watermarks in Word documents
+- PDF Watermark Management - Added methods to add and remove watermarks from PDFs
+- Queue Item Execution Control (UI) - Added "Disable" and "Enable Execution" options; disables "Apply to all" when one of these is selected
+- Default Filter Mapping on Projects - Finished mapping logic and applied it on the tickets page. Code merged to master
 ## April, week II
 ## Fixes
 - Issue with UD ticket creation - Resolved a problem with the subform and file upload where the form remained in a "busy" state due to the flag not resetting. A workaround was provided to bypass the file field during ticket creation
