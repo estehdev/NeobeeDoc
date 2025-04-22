@@ -1,7 +1,7 @@
 # NeoBee Releases 2025
 ## April, week III
 ## Fixes
-- Parent Filter/Action on Subform: Corrected propagation from parent form to subform.
+- Parent Filter/Action on Subform - Corrected propagation from parent form to subform.
 - Log Popup Scrollbar - Fixed double-scroll issue by adjusting section height
 - AdvancedTable Fullscreen Popup - Fixed value transmission and save behavior between main form and popup via OK button
 - AdvancedTable Actions Overflow - Fixed action buttons spilling into multiple lines (initial and follow-up fix)
