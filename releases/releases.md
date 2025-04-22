@@ -1,12 +1,12 @@
 # NeoBee Releases 2025
 ## April, week III
-## Fixes
+### Fixes
 - Parent Filter/Action on Subform - Corrected propagation from parent form to subform.
 - Log Popup Scrollbar - Fixed double-scroll issue by adjusting section height
 - AdvancedTable Fullscreen Popup - Fixed value transmission and save behavior between main form and popup via OK button
 - AdvancedTable Actions Overflow - Fixed action buttons spilling into multiple lines (initial and follow-up fix)
 - Queue Item Bulk Action Restriction - Ensured that when "Disable" or "Enable Execution" is selected, the "Apply to all" option is disabled
-## Improvements
+### Improvements
 - Subtask File List on Main Task - Enabled file preview (green hover effect), but disabled editing when viewing files from subtasks
 - Ticket Attachment Permissions - Role-based access restriction button hidden
 - Translation Export - Labels from approval workflows now included in the export
@@ -15,7 +15,7 @@
 - ProjectManagementPostFunction Spinner - Fixed validation spinner issue and pushed to production
 - Popup Notification for JSON Downloads - Added notification popup for users downloading remote table JSONs (MoCentral)
 - Map Field Edit (ProcessFunctionField) - Fixed styling issue where text was overflowing the div
-## New Features
+### New Features
 - Ticket Page Filters - Implemented classification of filters (multi/single project). In single project mode, filters are visible only when the project is selected and show only that project's state types. Includes admin-side CRUD functionality
 - Initial Language at Login - Language selected on the login screen now propagates through the application and is saved as a user parameter
 - Project Filters on Ticket Page - Finished UI adjustments and admin operations
@@ -29,19 +29,19 @@
 - Queue Item Execution Control (UI) - Added "Disable" and "Enable Execution" options; disables "Apply to all" when one of these is selected
 - Default Filter Mapping on Projects - Finished mapping logic and applied it on the tickets page. Code merged to master
 ## April, week II
-## Fixes
+### Fixes
 - Issue with UD ticket creation - Resolved a problem with the subform and file upload where the form remained in a "busy" state due to the flag not resetting. A workaround was provided to bypass the file field during ticket creation
 - Ticket List (get_issue_list) filter issue - Fixed casting values in filters that used range mode (from-to) from UNSIGNED to SIGNED. This issue was previously unnoticed
 - Login issue - Resolved a problem with loading user settings forms when the user was not logged in, preventing access to the application
 - Application of filters and/or actions from parent form in subform - Fixed and ready for deployment
 - Scrollbar in popup for logs - Adjusted section heights to prevent dual scrollbars from appearing
-## Improvements
+### Improvements
 - User settings as a filter on the Tickets page - Enabled the use of values from user settings in filters. When a field selection mode from user settings is activated, the system will insert that value into the filter, if it exists
 - Filter operator "not_equals" - Added a new filter/SQL operator for custom table filters
 - Default values on form per user - Implemented a mechanism to set default values at the user level, stored in local storage
 - Digital signature mode selection - Implemented a setting to determine whether the digital signature mode selection is available. Default is disabled, and the system automatically attempts to open the local desktop application
 - File List with subtasks on main task - Enabled file preview for subtasks similar to main ticket files (green field on hover). Editing is disabled in this mode
-## New Features
+### New Features
 - Float type - Implemented a new subtype for data_type=number. It is stored as a string with a decimal point in the database and rendered on the client side based on component configuration. Supported in ticket filters
 - Default values - Added functionality for default values on forms at the user level
 - Selection mode for digital signing - A setting was added for toggling the selection mode for digital signing
