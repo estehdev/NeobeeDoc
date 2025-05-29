@@ -266,6 +266,20 @@ response: [{key=value}]
 
 &nbsp;
 
+
+### uuid()
+Returns random generated UUID
+
+#### Example
+vtl: `$library.uuid()`
+
+response: c2660907-b88d-46eb-86a3-8e9f4a4e75f4
+
+&nbsp;
+
+&nbsp;
+
+
 ## Text Library
 
 Prefix for methods in this custom class: `library_text`
