@@ -346,10 +346,32 @@ response: "Neki tekst"
 Extract text from inputText using regular expression
 
 &nbsp;
+## Text library
+
+Prefix for methods in this custom class: `library_text`
+
+&nbsp;
 
 ## Math Library
 
 Prefix for methods in this custom class: `library_math`
+
+LibraryTextTool enables the conversion of numerical values ​​into textual form, adapted to the Serbian language (Cyrillic and Latin) and for use in contractual documentation.
+The {convertNumberToText} method accepts:
+- amount as a string (e.g. "2000.456")
+- currency: "RSD", "EUR" or "USD"
+- script: "SR" (Cyrillic) or "SR_LAT" (Latin)
+- format:
+- DECIMALNUM: uses the format "и 00/100"
+- DECIMALTEXT: uses the text form of the decimal part, e.g. "и четрдесетшест пара"
+The result is a string representing the amount in letters,
+concatenated without spaces (e.g. "Педесетпетхиљадачетиристо динара и шест пара"),
+while the currency and decimals are always separated by a space.
+
+FLAG:
+JOIN_WORDS = true → all words of numbers are joined without spaces
+Example:
+convertNumberToText("2000.456", "RSD", "SR", "DECIMALTEXT") → "Two thousand dinars and forty-six pairs"
 
 &nbsp;
 
