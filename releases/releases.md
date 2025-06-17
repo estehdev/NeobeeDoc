@@ -1,4 +1,21 @@
 # NeoBee Releases 2025
+## June, week I
+### Fixes
+- User Search by Email - Added support for filtering by email address and inclusion of @ in allowed characters.
+- Subform Flickering During Input - Partial fix implemented for subform re-rendering issues when dropdowns are opened or data is entered; deeper nesting cases are still under investigation.
+- Fixed minor bugs related to vertical tables.
+### Improvements
+- PROCESS_CUSTOM_TABLE_LIST Query - updated to include filtering by is_remote column.
+Custom Table Details Page - two new fields added: Sort Order and Local Copy.
+- PDF Merge Utilities: Two new server-side functions for PDF merging (one that fills up to page limit, one that adds whole documents unless it would exceed page count limit) and new action attachment_merge_pdf developed and functional: successfully stores the merged PDF in the database, UI display pending fix.
+- LDAP Synchronization Page - two new fields added: userFilter and defaultRoleId.
+### New Features
+- Vue 3 Admin Panel Migration - Began project setup and component migration (e.g., table and upload components); core functionalities nearly ready for collaborative use; table component finalized; upload component under development.
+- Ticket Field Mapping on Transition - implemented support for field value mapping or hardcoded values during ticket creation, works both in pop-up and new tab modes.
+- Ticket Confidentiality - introduced support for marking individual tickets as confidential with backend validation and flexible response format
+- Form Action - Clear Field on Click - added option to trigger clearing of another field via a button click in forms.
+- Global Settings Page - implemented a search feature with keyboard navigation (Enter / Shift+Enter to move, Tab + Enter to select) and dynamic highlighting; auto-expands collapsed categories if a result is found inside.
+- App Dashboard Tables - separate settings for rows, columns, and headers (text style, background color, etc.); fixed header and optional row striping: conditional row formatting based on cell values (all types, number/date-specific); visual preview of styling changes; vertical table support added with full feature parity to horizontal tables.
 ## May, week IV
 ### Fixes
 ### Improvements
