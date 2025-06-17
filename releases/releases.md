@@ -33,8 +33,18 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 ### New Features
 ## April, week V
 ### Fixes
+- Validation on subform-multi subform – Fixed an issue where validation failed if a required field existed inside an empty multi subform.
+- User administration-User Settings page – Fixed an issue where E_NULL values were being saved for last_name.
+- User settings-local storage – Fixed an issue where user settings from local storage were incorrectly applied across users.
 ### Improvements
+- Enabled detail preview for individual rows in multiple form components when in read-only mode.
 ### New Features
+- AppDashboard-ticket creation from popup – Enabled ticket creation via popup using the existing Home Page selection mechanism.
+- Custom table filters-multiple choice dropdown – Enabled filters on custom tables for multiple choice dropdown fields.
+- Environment variable for hardcoded sign-in IDs – Introduced env variable VUE_APP_HARD_CODED_ID_FOR_SIGN_IN_FIELDS_ENABLED to optionally fix IDs of username and password fields for sign-in forms.
+- X-FRAME-OPTIONS header – Introduced X-FRAME-OPTIONS: DENY header via nginx to improve security.
+- Barcode positioning (moattachment project) – Added functionality to position text relative to barcodes on all four sides, and adjustments for barcode size.
+
 ## April, week IV
 ### Fixes
 - Special characters in search – Added new special characters (brackets, commas, semicolons) to the ASCII conversion method for dropdown list searches.
