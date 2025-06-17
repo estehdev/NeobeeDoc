@@ -29,8 +29,19 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 ### New Features
 ## May, week I
 ### Fixes
+-AppDashboard – Fixed an issue with adding actions to components on the dashboard.
+-Validation on Multi Subform – Fixed an issue where required fields inside multi-subform components failed validation when no values were present.
+-User Settings local storage – Fixed incorrect loading of other users' settings from local storage.
 ### Improvements
+-AppDashboard external Value - Added support for external values for multiple dropdown components.
+-AppDashboard date filtering – Added support for filtering a table using date component values configured in an action.
+-Barcode Text Positioning – Enabled positioning text around barcodes on all four sides, and added configuration for barcode size.
+-Sortable Table UI – Sort arrows in tables are now positioned to the left of column headers.
+-Reconciliation Deadline Display – If the individual deadline differs from the global approval deadline (approve_deadline_global), both values will now be shown.
 ### New Features
+-AppDashboard – Fixed an issue with adding actions to components on the dashboard.
+-Validation on Multi Subform – Fixed an issue where required fields inside multi-subform components failed validation when no values were present.
+-User Settings local storage – Fixed incorrect loading of other users' settings from local storage.
 ## April, week V
 ### Fixes
 - Validation on subform-multi subform – Fixed an issue where validation failed if a required field existed inside an empty multi subform.
