@@ -347,7 +347,7 @@ Extract text from inputText using regular expression
 
 &nbsp;
 
-### convertNumberToText
+### convertNumberToText(String amount, String currency, String script, String format)
 
 Enables conversion of numeric values into text format, adapted to Serbian language (Cyrillic or Latin) and use in contract documentation.
 The {convertNumberToText} method accepts:
@@ -355,8 +355,9 @@ The {convertNumberToText} method accepts:
 - currency: "RSD", "EUR" or "USD"
 - script: "SR" (Cyrillic) or "SR_LAT" (Latin)
 - format:
-- DECIMALNUM: uses the format "и 00/100"
-- DECIMALTEXT: uses the text form of the decimal part, e.g. "и четрдесетшест пара"
+  * DECIMALNUM: uses the format "и 00/100"
+  * DECIMALTEXT: uses the text form of the decimal part, e.g. "и четрдесетшест пара"
+
 The result is a string representing the amount in letters, concatenated without spaces (e.g. "Педесетпетхијадачетиристотина динара и шест пара"),
 while currency and decimals are always separated by a space.
 FLAG:
@@ -364,6 +365,7 @@ JOIN_WORDS = true → all words of numbers are joined without spaces
 #### Example
 vtl: `$library_text.convertNumberToText("2000.456", "RSD", "SR", "DECIMALTEXT")`
 &nbsp;
+
 response: "Двехиљаде динара и четрдесетшест пара"
 
 &nbsp;
