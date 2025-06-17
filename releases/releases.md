@@ -37,8 +37,18 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 ### New Features
 ## April, week IV
 ### Fixes
+- Special characters in search – Added new special characters (brackets, commas, semicolons) to the ASCII conversion method for dropdown list searches.
+- Validation on subform – Fixed issues with inconsistent triggering of validation.
 ### Improvements
+- Project filters on Ticket page – Filters are now placed in a separate section and hidden when no project filters exist.
+- Filter display on Ticket page – Simplified the filter list view, focusing on the filter name while keeping actions accessible as needed.
 ### New Features
+- Access rights in AppDashboard table – Restricted table content visibility based on process_instance_id by introducing a JOIN section within the generated get_issue_list query.
+- New tab in AppDashboard – Implemented a redirect mechanism for opening files in AppDashboard, supporting existing open_process_file events with flags for popups or new tabs, plus new events view_process_file and download_process_file.
+ - Module selection as a configuration – Added a UI option for displaying Process Modules as an auxiliary filter on "Tickets" and "Reports" pages.
+- Custom table format "User Group" – Introduced a new option for formatting columns in custom tables.
+- AppDashboard - Open in new tab – Enabled AppDashboard opening in a new browser tab via table link actions.
+- PDF watermarking – Implemented methods for adding and removing watermarks in PDF documents.
 ## April, week III
 ### Fixes
 - Parent Filter/Action on Subform - Corrected propagation from parent form to subform.
