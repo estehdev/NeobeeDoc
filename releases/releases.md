@@ -10,7 +10,6 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 - PDF Merge Utilities: Two new server-side functions for PDF merging (one that fills up to page limit, one that adds whole documents unless it would exceed page count limit) and new action attachment_merge_pdf developed and functional: successfully stores the merged PDF in the database, UI display pending fix.
 - LDAP Synchronization Page - two new fields added: userFilter and defaultRoleId.
 ### New Features
-- Vue 3 Admin Panel Migration - Began project setup and component migration (e.g., table and upload components); core functionalities nearly ready for collaborative use; table component finalized; upload component under development.
 - Ticket Field Mapping on Transition - implemented support for field value mapping or hardcoded values during ticket creation, works both in pop-up and new tab modes.
 - Ticket Confidentiality - introduced support for marking individual tickets as confidential with backend validation and flexible response format
 - Form Action - Clear Field on Click - added option to trigger clearing of another field via a button click in forms.
