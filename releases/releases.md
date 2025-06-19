@@ -30,14 +30,14 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 ZIP export duplicate file handling - Fixed issue with duplicate file names during ZIP export by appending suffixes (_1, _2, etc.).
 - File classification bugs - Multiple fixes related to validation, popups, and user interactions during file upload with mandatory classification enabled.
 ### Improvements
--Direct Homepage routing - Implemented support for URL-based navigation using homepage (ext_code) or homepageId (ID). Automatically overrides local storage settings.
--App Dashboard date filters - Integrated external value system and expanded date filtering to support range-based queries (from / to dates); Added support for filter_search events for table filtering.
--API Monitoring - Added "build time" column to the API monitoring table.
--File table on tickets - Simplified displayed columns; Added info button to show file creation date and file size on hover.
--App Dashboard visual styling - Background, text, border, and font-weight customization at the table, column, row, and header levels; Implemented fixed headers and floating component titles for easier navigation; Improved horizontal scrolling placement.
--Mandatory file classification on tickets - Added project-level parameter to enforce file classification on upload; Implemented warning popup if classification is required but not provided.
--New transition condition isDataClassifiedAll - Added transition rule to check if all files on a ticket have assigned classification.
--Rich Text Editor - Added new "Clear All" (X) button to fully clear text; Adjusted previous X button behavior to only exit bullet/numbered lists.
+- Direct Homepage routing - Implemented support for URL-based navigation using homepage (ext_code) or homepageId (ID). Automatically overrides local storage settings.
+- App Dashboard date filters - Integrated external value system and expanded date filtering to support range-based queries (from / to dates); Added support for filter_search events for table filtering.
+- API Monitoring - Added "build time" column to the API monitoring table.
+- File table on tickets - Simplified displayed columns; Added info button to show file creation date and file size on hover.
+- App Dashboard visual styling - Background, text, border, and font-weight customization at the table, column, row, and header levels; Implemented fixed headers and floating component titles for easier navigation; Improved horizontal scrolling placement.
+- Mandatory file classification on tickets - Added project-level parameter to enforce file classification on upload; Implemented warning popup if classification is required but not provided.
+- New transition condition isDataClassifiedAll - Added transition rule to check if all files on a ticket have assigned classification.
+- Rich Text Editor - Added new "Clear All" (X) button to fully clear text; Adjusted previous X button behavior to only exit bullet/numbered lists.
 ### New Features
 - New filter operators in custom tables - Support added for <, <=, >, and >= operators in custom table filters.
 - Homepage positioning - Implemented configuration parameter in Look&Feel to position the Homepage above all menu items.
