@@ -362,8 +362,13 @@ The result is a string representing the amount in letters, concatenated without 
 while currency and decimals are always separated by a space.
 FLAG:
 JOIN_WORDS = true → all words of numbers are joined without spaces
+Format_Hundreds: by default its value is "SERBIAN_LONG", if you do not send a parameter in the method, if you send it you have the option "SERBIAN_LONG (where for the value 500 it will print "petstotina") and "SERBIAN_SHORT"
+(where for the value 500 it will print "petsto")
 #### Example
-vtl: `$library_text.convertNumberToText("2000.456", "RSD", "SR", "DECIMALTEXT")`
+vtl: `$library_text.convertNumberToText("2000.456", "RSD", "SR", "DECIMALTEXT")` default
+
+#### Example
+vtl: `$library_text.convertNumberToText("2000.456", "RSD", "SR", "DECIMALTEXT",true, "SERBIAN_LONG")` (true for parameter joinWords)
 &nbsp;
 
 response: "Двехиљаде динара и четрдесетшест пара"
