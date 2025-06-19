@@ -347,7 +347,7 @@ Extract text from inputText using regular expression
 
 &nbsp;
 
-### convertNumberToText(String amount, String currency, String script, String format)
+### convertNumberToText(String amount, String currency, String script, String format, boolean joinWords, String formatHundreds)
 
 Enables conversion of numeric values into text format, adapted to Serbian language (Cyrillic or Latin) and use in contract documentation.
 The {convertNumberToText} method accepts:
@@ -357,6 +357,7 @@ The {convertNumberToText} method accepts:
 - format:
   * DECIMALNUM: uses the format "и 00/100"
   * DECIMALTEXT: uses the text form of the decimal part, e.g. "и четрдесетшест пара"
+    
 (Optional)
 - joinWords:
   * true -  all words of numbers are joined without spaces
