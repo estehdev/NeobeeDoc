@@ -357,14 +357,23 @@ The {convertNumberToText} method accepts:
 - format:
   * DECIMALNUM: uses the format "и 00/100"
   * DECIMALTEXT: uses the text form of the decimal part, e.g. "и четрдесетшест пара"
+(Optional)
+- joinWords:
+  * true -  all words of numbers are joined without spaces
+  * false - all words of numbers are separated with spaces
+- formatHundreds:
+  * SERBIAN_SHORT - where for the value 500 it will print "petsto"
+  * SERBIAN_LONG -  where for the value 500 it will print "petstotina"
 
 The result is a string representing the amount in letters, concatenated without spaces (e.g. "Педесетпетхијадачетиристотина динара и шест пара"),
 while currency and decimals are always separated by a space.
+
 FLAG:
 JOIN_WORDS = true → all words of numbers are joined without spaces.
 
 Format_Hundreds: by default its value is "SERBIAN_LONG", if you do not send a parameter in the method, if you send it you have the option "SERBIAN_LONG (where for the value 500 it will print "petstotina") and "SERBIAN_SHORT"
 (where for the value 500 it will print "petsto")
+
 #### Example
 vtl: `$library_text.convertNumberToText("2000.456", "RSD", "SR", "DECIMALTEXT")` default
 
