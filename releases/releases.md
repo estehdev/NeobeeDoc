@@ -21,8 +21,20 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 ### New Features
 ## May, week III
 ### Fixes
+- File saving error - Fixed an issue preventing file uploads from being saved properly.
+ - Component spinner bug - Fixed spinner not disappearing when no further items were available for processing.
+- Styling fixes for radio buttons and checkboxes - Corrected CSS issues for better alignment and visual consistency.
+- Subform flickering on first load - Known issue identified and scheduled for resolution (not yet fixed).
 ### Improvements
+- Custom table management - Added options to create local tables from remote definitions with prefilled CRUD popups. Included a flag to preserve original table names and displayed physical table IDs in detail view.
+- Custom filtering optimization - Improved filtering logic in get_issue_list using optimized JOIN operations.
+- Upload modal improvements - Added a new tab for easier access to table-related data in the upload modal.
+- New form condition: UserIsInUserField - Added a condition to check if the current user appears in a specific user field.
 ### New Features
+- Granular permissions for files and form components - Introduced fine-grained access control with support for view, edit, delete, and metadata updates. Permissions can be based on user roles, ticket assignment, or values in custom fields. A new admin UI and CRUD functionality were added. Permission evaluation occurs client-side using live form data.
+- Extended matrix for component permissions - Enabled extended matrix mode to set permissions directly on form fields. Permissions on files override all other levels and apply to file instances wherever displayed.
+- Custom table filtering by ticket ID - Enabled filtering of custom tables based on the column containing the ticket ID.
+- Approval comment control - Added support for per-response-type settings (Approve/Reject/Ignore) to trigger comment popups during approval actions.
 ## May, week II
 ### Fixes
 - User field loading on forms - User details are now loaded regardless of active/inactive status. User lists still default to active users only, with optional parameter to include inactive ones.
