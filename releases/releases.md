@@ -17,8 +17,22 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 - App Dashboard Tables - separate settings for rows, columns, and headers (text style, background color, etc.); fixed header and optional row striping: conditional row formatting based on cell values (all types, number/date-specific); visual preview of styling changes; vertical table support added with full feature parity to horizontal tables.
 ## May, week IV
 ### Fixes
+- Custom Table Filtering by Roles - Introduced granular filtering options using MATCH_ANY and negation logic for table row visibility.
+- Custom Table Update Method - Fixed issue in updateCustomTable method on details page.
 ### Improvements
+- App Dashboard Table Enhancements - Conditional row formatting (based on any cell’s value); Configurable text size and column width (pixels or char count); Horizontally table (headers on the left).
+- Report Overview - Added visualization of ongoing or failed report generations (red/yellow status highlights); Limited to 15 visible reports; Download button only shown for completed reports.
+- Report Monitoring Page - Lists all reports in-progress or failed, with metadata and search functionality.
+- Enabled physical renaming of SQL table names and table_name field in definitions.
+- Report Type Administration - Added ext_code column to report type admin view.
+- Tracing and Metrics - Enabled tracing for item add/return and barcode PDF upload; Displayed performance metrics (document size, number of calls, duration).
+
 ### New Features
+- App Dashboard – Added support for exporting visible columns from App Dashboard tables to Excel, with value formatting matching the UI (users, groups, date, JSON with display format, etc.).
+- App Dashboard - Enabled filtering App Dashboard tables by user's favorite tickets using process_instance_id and a showMyFavorites flag.
+- Multi-form Row Duplication - Implemented option to duplicate rows in multi-form components. Can be toggled in admin settings (default: off).
+- Conditional Visibility/Editability/Required Filters - CURRENT_USER now supports reference values (formparent.field).
+
 ## May, week III
 ### Fixes
 - File saving error - Fixed an issue preventing file uploads from being saved properly.
