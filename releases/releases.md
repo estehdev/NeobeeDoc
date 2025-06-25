@@ -1,4 +1,24 @@
 # NeoBee Releases 2025
+## June, week III
+### Fixes
+### Improvements
+### New Features
+## June, week II
+### Fixes
+- Fixed display issues in ticket detail popups opened via direct link.
+- Resolved malfunctioning of the IS_VISIBLE filter and confirmed correct behavior.
+### Improvements
+- Enabled download of uploaded report templates from the report administration page.
+- Enhanced get_issue_list to support search functionality across dashboards and subviews (My Approvals, Requests, Team, History).
+- Improved visibility logic with the IS_VISIBLE filter for compatibility in multi-form contexts.
+- Prepared custom index definitions to persist and replicate automatically during table copy operations.
+### New Features
+- Added field-level rule indicators in form administration (visibility, required status, conditions, filters, actions).
+- Enabled system font switching between Roboto and DINPro.
+- Introduced icon-only sidebar navigation mode; currently left menu only.
+- Enabled ticket creation in a different project from within approval workflows, with mapped values and system fields.
+-Implemented full CRUD for SQL indexes on custom tables, with automatic application during table creation based on stored definitions.
+
 ## June, week I
 ### Fixes
 - User Search by Email - Added support for filtering by email address and inclusion of @ in allowed characters.
