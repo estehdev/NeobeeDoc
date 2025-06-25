@@ -1,8 +1,26 @@
 # NeoBee Releases 2025
 ## June, week III
 ### Fixes
+- Fixed layout issue on the user details card where long content caused overflow across the screen.
+- Resolved bug with license update action where name parameter couldn’t be changed.
+- Fixed an issue in permission details (onChangeGrantTo method) related to role assignment logic.
+- Fixed an issue with license name updates in the License page.
 ### Improvements
+- Refined cross-project ticket creation from approval workflows: the form opens before sending the approve/reject signal, and modified mapped comments are preserved and sent correctly.
+- Signal dispatch is now delayed until the popup is closed, regardless of whether the ticket is created.
+- Added support for formParent scope in JavaScript expression evaluation on forms.
+- Continued work on report module: improved report query logic and sorting; improvements pending deployment.
+- On the moCentral project, added validation to the Modules page and.
+- In the admin frontend, improved the showErrorToast method.
 ### New Features
+- Implemented field validation for ticket creation from the user settings form, showing a warning when entered values differ from explicitly required ones.
+- Enabled evaluation of mathematical and JavaScript expressions within form actions, with results dynamically passed to other fields during execution.
+- Enabled classification of process instances (tickets), functioning similarly to file classification.
+- Added first version of reports that use a form definition to display a report generator; fields are now rendered based on that definition.
+- Developed migration functionality for custom tables, including structural changes to migration_definition, copy functionality with full definition, and upload modal in settings.
+- Created number-to-text conversion method with associated documentation.
+- Introduced RouterTabs component in the admin frontend.
+
 ## June, week II
 ### Fixes
 - Fixed display issues in ticket detail popups opened via direct link.
@@ -52,7 +70,6 @@ Custom Table Details Page - two new fields added: Sort Order and Local Copy.
 - App Dashboard - Enabled filtering App Dashboard tables by user's favorite tickets using process_instance_id and a showMyFavorites flag.
 - Multi-form Row Duplication - Implemented option to duplicate rows in multi-form components. Can be toggled in admin settings (default: off).
 - Conditional Visibility/Editability/Required Filters - CURRENT_USER now supports reference values (formparent.field).
-
 ## May, week III
 ### Fixes
 - File saving error - Fixed an issue preventing file uploads from being saved properly.
