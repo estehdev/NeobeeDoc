@@ -1,4 +1,17 @@
 # NeoBee Releases 2025
+## June, week IV
+### Fixes
+- Ticket Filters: Fixed issue when custom table key was not properly mapped in filters.
+### Improvements
+- Enabled direct form creation from the Reports admin page.
+- Attachments on Tickets - Now shows empty table when no files are attached.
+- Subtask UI - Improved distinction between ticket name and status.
+- Ticket Logs - Added popup support for transition actions in log view.
+- Form Datepicker - Added support for relative day-only input.
+- Unified icon display for tickets and files without data classification.
+### New Features
+- Enabled text-based search on user-defined fields in Tasks.
+- Added CONTAINS filter for column-level search in Tickets, including support for complex data types.
 ## June, week III
 ### Fixes
 - Fixed layout issue on the user details card where long content caused overflow across the screen.
@@ -20,7 +33,6 @@
 - Developed migration functionality for custom tables, including structural changes to migration_definition, copy functionality with full definition, and upload modal in settings.
 - Created number-to-text conversion method with associated documentation.
 - Introduced RouterTabs component in the admin frontend.
-
 ## June, week II
 ### Fixes
 - Fixed display issues in ticket detail popups opened via direct link.
