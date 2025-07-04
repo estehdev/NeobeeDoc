@@ -1,4 +1,15 @@
 # NeoBee Releases 2025
+## July, week I
+### Fixes
+- Subform Cascading Dropdown - Fixed an issue where cascading fields in single subforms lost their display values when the main form triggered a re-render.
+- Custom Table Migration Bug - Resolved a bug where migration scripts saved the original table name instead of the updated one.
+### Improvements
+- Forms for Reports - When creating a form for report field display, it is now auto-checked as a report form by default.
+- Form Transition Logic - Values in transition forms are now saved only after clicking “OK”, instead of immediate write to ticket.
+- CURRENT_USER Filter - Extended to support multiple-user fields.
+- Util - New methods in LibraryDateTool for adding/removing hours from dates.
+### New Features
+- Dynamic Filters - Added support for dynamic filtering on Assignee and Reporter components, enabling user list restriction by project-linked groups; Introduced new role_list filter to check user roles per project, and improved group_list filter using ext_code.
 ## June, week IV
 ### Fixes
 - Ticket Filters: Fixed issue when custom table key was not properly mapped in filters.
