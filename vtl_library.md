@@ -299,6 +299,18 @@ response: c2660907-b88d-46eb-86a3-8e9f4a4e75f4
 &nbsp;
 
 
+### counter(String counterName)
+Returns next number in counter(sequence) named counterName
+
+#### Example
+vtl: `$library.counter('Test1')`
+
+response: 1 
+*(every execution increments this result)*
+&nbsp;
+
+&nbsp;
+
 ## Text Library
 
 Prefix for methods in this custom class: `library_text`
