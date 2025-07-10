@@ -12,7 +12,7 @@ Prefix for methods in this custom class: `library_date`
 &nbsp;
 
 ### year()
-Returns current year in four-digit (yyyy) format.
+Returns current year (in local timezone) in four-digit (yyyy) format.
 
 #### Example
 vtl: `$library_date.year()`
@@ -22,7 +22,7 @@ response: "2024"
 &nbsp;
 
 ### today()
-Returns current date in yyyyMMdd format.
+Returns current date (in local timezone) in yyyyMMdd format.
 
 #### Example
 vtl: `$library_date.today()`
@@ -32,7 +32,7 @@ response: "20240603"
 &nbsp;
 
 ### now()
-Returns current date in yyyy-MM-dd HH:mm:ss format.
+Returns current time in GMT in yyyy-MM-dd HH:mm:ss format.
 
 #### Example
 vtl: `$library_date.now()`
