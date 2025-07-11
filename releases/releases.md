@@ -1,4 +1,16 @@
 # NeoBee Releases 2025
+## July, week II
+### Fixes
+- Fixed an issue where part of the form was re-rendered during state validation, causing the validation process to fail.
+- Fixed a bug with group picker components that used the dynamic "Group Prefix" filter, which previously did not function as expected.
+### Improvements
+- Form Actions – Added validation for value formats in form actions (set, set_fixed, eval). If the value is invalid (e.g. non-JSON for a JSON field), the action is skipped and a console log is written with the field code and problematic value.
+- User Preferences – Preferences are now stored server-side (es_ruser_data.preferences), making them available across different user sessions.
+- Central File Upload – The form.file_attachment.visible property can now be used to control the visibility of the central file upload area.
+- App Dashboard - Added configuration for setting max image width/height in dashboard content blocks.
+### New Features
+- Subtasks - Subtasks now show the full hierarchy of parent tickets above them (not just the immediate parent). Parent tickets can be visually collapsed.
+- User Preferences– User-defined preference values can now be displayed in the form footer via layout configuration using ${field.data.column} notation.
 ## July, week I
 ### Fixes
 - Subform Cascading Dropdown - Fixed an issue where cascading fields in single subforms lost their display values when the main form triggered a re-render.
