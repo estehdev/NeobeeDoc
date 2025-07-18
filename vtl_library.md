@@ -164,6 +164,19 @@ response: "31.05.2023. 12:34."
 
 &nbsp;
 
+### daysBetween(Object day1, Object day2)
+Returns number of days between two days.
+
+#### Example
+vtl: `$library_date.daysBetween(20250701, 20250901)`
+
+response: "62"
+
+&nbsp;
+
+&nbsp;
+
+
 ## Library
 
 Prefix for methods in this custom class: `library`
