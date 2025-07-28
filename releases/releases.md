@@ -1,4 +1,23 @@
 # NeoBee Releases 2025
+## July, week III
+### Fixes
+- Parent Ticket Display in Subtask - Resolved layout issue when parent ticket had a long name and code.
+- Money Field Parsing Issue - Fixed issue with value parsing when repeatedly pressing “Enter”.
+- Float Field Exit Behavior - Fixed value parsing error when leaving the input field.
+- EXECUTE_FUNCTION: Fixed problem with adding multiple EXECUTE_FUNCTION actions to the same event.
+- Linked Task Icon Consistency: Standardized icon color (orange) for opening tickets in a new tab across both simple and standard modes.
+### Improvements
+- File Upload Section - File list now refreshes automatically when ticket transitions to a state of type “STATE” (not “CODE”).
+- Decimal/Money/Float Field Validation - Minimum and maximum values now support decimals. Decimal precision is controlled via the “Max decimal places” setting.
+- Subtask Live Refresh - Subtask states now update live on the parent task detail view.
+- Form Field Admin – Auto-scroll: Admin UI now auto-scrolls to the visual position of the edited component.
+- Field Value Save Order - Field values are now saved before executing defined actions, reversing the previous logic.
+- Help Popup Categorization - Backend and frontend work done to support categorization of help documents, enabling support for more than three categories.
+### New Features
+- Report Generator – User Settings Integration - Added support for applying user-specific values to reports that use forms for field display. User settings are applied last, after all filters.
+- Ticket Creation Look & Feel Config - Added configuration for displaying the "Create Ticket" popup button on Backlog, Sprint, and Ticket/Task pages. Visible by default; can be hidden via appearance settings.
+- Advanced Table - Initial version of the new layout implemented, with available options displayed on the left and selected values on the right.
+- Linked Tasks - Implemented a simplified display mode for the linked tasks form component, with fixed relation type and read-only ticket details.
 ## July, week II
 ### Fixes
 - Fixed an issue where part of the form was re-rendered during state validation, causing the validation process to fail.
