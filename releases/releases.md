@@ -1,4 +1,12 @@
 # NeoBee Releases 2025
+## July, week IV
+### Fixes
+- Reports Page – Fixed issue where default "from–to" date range was not applied correctly when selecting a report.
+### Improvements
+- Help Popup – Improved display of categorized documents: loading spinner now appears locally when expanding/collapsing categories; Hovering over a document highlights all categories it belongs to; Implemented basic document search – narrows the list based on input without loading all categories in advance.
+- Custom Tables – Refactored ProcessCustomTable manager, with simultaneous bug fixing and logic cleanup.
+### New Features
+- Reports Page – Fixed issue where default "from–to" date range was not applied correctly when selecting a report.
 ## July, week III
 ### Fixes
 - Parent Ticket Display in Subtask - Resolved layout issue when parent ticket had a long name and code.
