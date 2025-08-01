@@ -1,4 +1,13 @@
 # NeoBee Releases 2025
+## July, week V
+### Fixes
+- Custom Tables - Fixed saving of empty values in number and boolean type columns. Previously, empty numbers couldn't be saved, and false boolean values were not handled correctly.
+- Custom Tables - Fixed unnecessary ALTER statements being triggered when modifying columns.
+- Custom Tables - Fixed issues with saving individual rows in custom tables.
+- Custom Tables - Optimized data loading in custom table settings: now only the selected tables are loaded for many-to-many columns (if such columns exist), instead of loading all tables.
+- Subtask Files Header - Fixed text wrapping issues in the file header within subtasks.
+### Improvements
+- Help Popup - Added support for disabled categories (status ≠ Y) and sorting using ordinal_no.
 ## July, week IV
 ### Fixes
 - Reports Page – Fixed issue where default "from–to" date range was not applied correctly when selecting a report.
