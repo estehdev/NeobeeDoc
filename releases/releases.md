@@ -1,4 +1,27 @@
 # NeoBee Releases 2025
+## August, week I
+### Fixes
+- AdvancedTable in Single Subform - Fixed issue where value selection visually disappeared on the UI (although values were saved correctly).
+- eval Function – formparent Scope - Bug reported when referencing formparent inside eval, but could not be reproduced.
+- AdvancedTable – "Set Value" Filter (Single Mode) - Fixed bug where "Set Value" option didn’t work correctly in single-mode AdvancedTable instances.
+- Ticket State Dropdown - Fixed an issue where the dropdown kept expanding indefinitely when clicking multiple times, especially when no available states were present.
+- Float Field – EU Number Format - Improved input handling for float fields to support comma-based decimal format (e.g., 1.234.567,89). Internally, values are still saved using dot format (1234567.89).
+### Improvements
+- Form Component Administration - When switching visuals between components of the same data type, configuration is preserved (currently supported only for date fields).
+- Masked Date Input Behavior - Cursor now auto-jumps between day → month → year fields during input, improving UX.
+### New Features
+- Partial Approval on Tickets - Prototype implemented for partial approval, allowing users to approve individual items where they have permission. Approval controls are shown per item.
+- toDatetime Function (Frontend) - Introduced a global utility function for converting barcode-style date strings to server datetime format (250720251001 → 2025-07-25 10:01:00).
+- REST – Create User Group – Added REST endpoint to create user groups.
+- REST – SFTP PUT/GET – Added REST endpoints.
+- REST – Parse Attachments – Added REST endpoint to parse attachments using a predefined configuration.
+- REST – DataSet Save Full Row – Added option in DataSet REST calls to save the entire row (data_map) for a table.
+- Added support for setting cutoffTime dynamically in state.
+- Approval Notification Template Editing – Added the ability to modify the notification template for approvals.
+- VTL – daysBetween – Added VTL function returning the number of days between two dates.
+- VTL – Excel Formula Functions – Added VTL functions for Excel formulas: coupdays, coupdaysnc, and price(library_formula).
+- Localized Date-Time Formatting – Changed date-time formatting to Serbian locale (formatDate).
+- Windows Share – Save File – Added function to save files to a Windows share and function to retrieve a file from a Windows share only if it has changed.
 ## July, week V
 ### Fixes
 - Custom Tables - Fixed saving of empty values in number and boolean type columns. Previously, empty numbers couldn't be saved, and false boolean values were not handled correctly.
