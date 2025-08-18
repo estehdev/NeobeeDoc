@@ -4,7 +4,7 @@
 - Approval Popup UI – improved visual clarity of clicked signals by changing the popup header color, making it easier to distinguish actions.
 ### New Features
 - Proxy on Post Functions – enabled configuration of a “proxy” remote endpoint in post function settings.
-- Partial Reconciliation (UI only) – implemented UI controls for editing an existing vote and submitting a new one; information is now forwarded to the backend logic.
+- Partial Reconciliation – implemented UI controls for editing an existing vote and submitting a new one; information is now forwarded to the backend logic.
 - Certificate Chains & Keystore (in progress) – added functionalities for managing certificates, certificate chains, and keystores.
 ## August, week I
 ### Fixes
