@@ -5,7 +5,7 @@
 ### New Features
 - Proxy on Post Functions – enabled configuration of a “proxy” remote endpoint in post function settings.
 - Partial Reconciliation – implemented UI controls for editing an existing vote and submitting a new one; information is now forwarded to the backend logic.
-- Certificate Chains & Keystore (in progress) – added functionalities for managing certificates, certificate chains, and keystores.
+- Certificate Chains & Keystore – added functionalities for managing certificates, certificate chains, and keystores.
 ## August, week I
 ### Fixes
 - AdvancedTable in Single Subform - Fixed issue where value selection visually disappeared on the UI (although values were saved correctly).
