@@ -1,4 +1,20 @@
 # NeoBee Releases 2025
+## August, week III
+### Fixes
+- External Links Security - Added rel="noopener noreferrer" to all links with target="_blank" to comply with security report requirements.
+- Ticket List – Adjusted sorting logic to use ordinal_no (weight) consistently.
+- Fixed issue when sorting by number-type columns.
+### Improvements
+- Ticket Status Selection (UI): Statuses are now displayed instead of status types in filters.
+- Ticket Status Selection (UI): Automatically checks/unchecks related statuses of the same type.
+- Ticket Status Selection (UI): Displays translated status names when available, otherwise the original name.
+- Ticket Status Selection (UI): Search works by name, code, or type.
+- Ticket Sorting - Saving of selected sort order in filters (user preference).
+- Certificate Chains & Keystore: Completed update cycle for certificate chains and keystore.
+- Signature Validation Function (AWS): Implemented signature validation function for a given keychain and file object. Created corresponding Lambda and REST endpoint.
+### New Features
+- Ticket Attachments: Enabled file uploads in ticket conversations. A project-level flag controls this option (enabled by default).
+- AdvancedTable – User Column: Added implicit support for arrays of users. If the stored value is an array, all users are displayed one below the other.
 ## August, week II
 ### Improvements
 - Approval Popup UI – improved visual clarity of clicked signals by changing the popup header color, making it easier to distinguish actions.
