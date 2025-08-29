@@ -1,4 +1,14 @@
 # NeoBee Releases 2025
+## August, week IV
+### Fixes
+- Filter Administration – Fixed issue where the State field was not rendered in central administration, causing its value to be lost when saving filters. Root cause was missing entry in es_form_component table.
+- Corrected issues on signer and approval dashboards matrices.
+- System Calls – Fixed evaluation of conditions.
+- XML Parsing – Adjusted parsing logic, fixed text and barcode rendering issues.
+### Improvements
+- Approval with Digital Signature – Now consults canSign parameter when user authorization is required.
+### New Features
+- Digital Signature Validation – Implemented function to validate digital signatures for a given keychain and file object, with supporting lambda and REST endpoint (validate_digital_signatures_new).
 ## August, week III
 ### Fixes
 - External Links Security - Added rel="noopener noreferrer" to all links with target="_blank" to comply with security report requirements.
