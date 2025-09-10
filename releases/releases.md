@@ -1,4 +1,7 @@
 # NeoBee Releases 2025
+## September, week I
+### Improvements
+- Approval Matrix – Added a permission that allows defined user groups to edit the money range at the column level. The client verifies group membership and shows the edit option only to authorized users.
 ## August, week IV
 ### Fixes
 - Filter Administration – Fixed issue where the State field was not rendered in central administration, causing its value to be lost when saving filters. Root cause was missing entry in es_form_component table.
