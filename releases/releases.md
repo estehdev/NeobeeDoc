@@ -5,7 +5,6 @@
 - Reworked validateDigitalSignature post function to replace iText with Apache PDFBox.
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
-- Reworked validateDigitalSignature post function to replace iText with Apache PDFBox.
 - Adjusted text and barcode position in attachmentAddBarcode to improve visual layout (top margin set to 20pt).
 ## September, week I
 ### Improvements
