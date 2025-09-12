@@ -1,13 +1,8 @@
 # NeoBee Releases 2025
 ## September, week II
-### Fixes
-- Changed validation logic to avoid long execution times with ocsp_crl_check = 1. Default value set to 2, since synchronous network checks caused 3-minute delays and errors. Future validation may require asynchronous handling or embedding OSCP/CRL data in PDFs.
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
 - Adjusted text and barcode position in attachmentAddBarcode to improve visual layout (top margin set to 20pt).
-## September, week I
-### Improvements
-- Approval Matrix – Added a permission that allows defined user groups to edit the money range at the column level. The client verifies group membership and shows the edit option only to authorized users.
 ## August, week IV
 ### Fixes
 - Filter Administration – Fixed issue where the State field was not rendered in central administration, causing its value to be lost when saving filters. Root cause was missing entry in es_form_component table.
