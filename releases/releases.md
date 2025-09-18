@@ -1,5 +1,5 @@
 # NeoBee Releases 2025
-## September, week II
+## September, week I
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
 - Adjusted text and barcode position in attachmentAddBarcode to improve visual layout (top margin set to 20pt).
