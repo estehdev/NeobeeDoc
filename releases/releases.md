@@ -1,8 +1,15 @@
 # NeoBee Releases 2025
 ## September, week II
 ### Fixes
+- Signers Matrix – fixed issue with integer formatting component (field Amount) incorrectly reporting invalid input.
+- Digital signature validation – modified post function to support multiple input files.
 ### Improvements
+- Ticket approvals ("My Approvals") – added filtering by active state instance records to improve performance.
+- Application Model – introduced automatic creation of a default permission schema at the application level, linked to the project upon creation.
+- Application Model – enabled usage of permission schema via map reference in checks (ISSUE_VIEW, ISSUE_EDIT, get_issue_list), controlled by env parameter APP_MODEL_ENABLED=1.
+- bankOcr – DateRange component – allowed selection of the same date for both dateFrom and dateTo.
 ### New Features
+
 ## September, week I
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
