@@ -9,7 +9,7 @@
 - Application Model – enabled usage of permission schema via map reference in checks (ISSUE_VIEW, ISSUE_EDIT, get_issue_list), controlled by env parameter APP_MODEL_ENABLED=1.
 - bankOcr – DateRange component – allowed selection of the same date for both dateFrom and dateTo.
 ### New Features
-
+- Application Administration – added display of developer data (id, ext_code, name) on administration pages for Applications, Application Instances, and Developers.
 ## September, week I
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
