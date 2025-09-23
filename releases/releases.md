@@ -1,4 +1,8 @@
 # NeoBee Releases 2025
+## September, week II
+### Fixes
+### Improvements
+### New Features
 ## September, week I
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
