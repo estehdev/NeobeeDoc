@@ -1,5 +1,5 @@
 # NeoBee Releases 2025
-## September, week III
+## September, week IV
 ### Fixes
 - Application Model – fixed issue with setting app_instance_id on START and CODE states during project creation – MoProcess v3.38.8.
 ### Improvements
@@ -16,7 +16,7 @@
 - File parsing post function – added functionality to parse .xml and .csv files within projects.
 - MCP (Model Context Protocol) – implemented MCP server with two tools available for AI calls: getTimeInTimeZone – returns current time for a given timezoneId; getJVMInfo – returns Java Virtual Machine system information (number of processors, free, total, and max memory).
 - MCP (Model Context Protocol) - implemented MCP client that allows the AI assistant to use existing tools in real time. The client receives user input, communicates with the LLM (local Llama 3.2 model via Ollama), processes queries, and invokes tools from the MCP server accordingly.
-## September, week II
+## September, week III
 ### Fixes
 - Signers Matrix – fixed issue with integer formatting component (field Amount) incorrectly reporting invalid input.
 - Digital signature validation – modified post function to support multiple input files.
@@ -27,10 +27,13 @@
 - bankOcr – DateRange component – allowed selection of the same date for both dateFrom and dateTo.
 ### New Features
 - Application Administration – added display of developer data (id, ext_code, name) on administration pages for Applications, Application Instances, and Developers.
-## September, week I
+## September, week II
 ### Improvements
 - Form Button Option – Implemented the Allow action when readonly setting, enabling buttons within locked forms/subforms to remain active.
 - Adjusted text and barcode position in attachmentAddBarcode to improve visual layout (top margin set to 20pt).
+- ## September, week I
+### Improvements
+- Approval Matrix – Added a permission that allows defined user groups to edit the money range at the column level. The client verifies group membership and shows the edit option only to authorized users.
 ## August, week IV
 ### Fixes
 - Filter Administration – Fixed issue where the State field was not rendered in central administration, causing its value to be lost when saving filters. Root cause was missing entry in es_form_component table.
