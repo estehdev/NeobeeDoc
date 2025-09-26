@@ -1,4 +1,21 @@
 # NeoBee Releases 2025
+## September, week III
+### Fixes
+- Application Model – fixed issue with setting app_instance_id on START and CODE states during project creation – MoProcess v3.38.8.
+### Improvements
+- EXECUTE_FUNCTION action – added support for passing form parameters, previously available only in REST button – MoCentralFrontend v1.0.58.
+- Application Model – completed first phase changes to ensure proper propagation of app_instance_id across all verticals of an application (entities created from application/project creation now inherit app_instance_id) – MoCat v3.38.1, MoProcess v3.38.7, MoCentralFrontend v1.0.55.
+- VTL Context in multiple subform – enabled VTL evaluation for default context values when adding new rows, replacing previous hardcoded-only option – MoCentralFrontend v1.0.54.
+- Post function (system/ticketfindbyfield) – added empty-value validation – MoProcess v3.39.3.
+- Post function (system/ticketfindbyfield) – added limit parameter to query (default value: 1000) – MoProcess v3.39.2.
+- Date utilities – added DateAddMinutes and DateSubMinutes methods for handling date-time calculations.
+### New Features
+- App Store / Marketplace – initial data model defined, including first iteration of API specification covering app build, push to store, and publishing.
+- Application Model (translations) – defined approach for handling es_lang_item per application, enabling flexible translation management grouped by app_instance_id, with fallback to original resource name if translation is missing.
+- Application Model (support) – additional technical clarifications and support provided for handling app_instance_id.
+- File parsing post function – added functionality to parse .xml and .csv files within projects.
+- MCP (Model Context Protocol) – implemented MCP server with two tools available for AI calls: getTimeInTimeZone – returns current time for a given timezoneId; getJVMInfo – returns Java Virtual Machine system information (number of processors, free, total, and max memory).
+- MCP (Model Context Protocol) - implemented MCP client that allows the AI assistant to use existing tools in real time. The client receives user input, communicates with the LLM (local Llama 3.2 model via Ollama), processes queries, and invokes tools from the MCP server accordingly.
 ## September, week II
 ### Fixes
 - Signers Matrix – fixed issue with integer formatting component (field Amount) incorrectly reporting invalid input.
