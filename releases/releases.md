@@ -1,4 +1,18 @@
 # NeoBee Releases 2025
+## September, week V
+### Fixes
+- JSON Data Input Component – fixed issue where key disappeared from UI when value was deleted (MoCentralFrontend v1.0.60).
+- Application Administration (Labels) – corrected wrong labels on popup (MoCentralFrontend v1.0.59).
+- Custom Tables – fixed bug with incorrect handling of optional app_instance_id parameter during table creation (MoProcess v3.40.1).
+- Mapping Display – resolved frontend issue when opening mapping pages in applications (MoCentralFrontend v1.0.63).
+### Improvements
+- State Modal Defaults – disabled automatic “insert transitions for all states” option; set IN PROGRESS as the default state type.
+### New Features
+- Application Model (Translations) – implemented application-level translations with UI integration, maintenance, and import/export support (MoCat v39.1, MoCentral v3.39.2, MoCentralFrontend v1.0.61, MoCentral v3.40.3, MoCentralFrontend v1.0.62).
+- LLM Integration (Quarkus & MCP) – initial class creation in Process API with MCP annotations for state creation; first successful Java-to-MCP endpoint call enabling two-way communication setup.
+- LLM Chat UI – new chat component created (LlmChat, LlmChatMessage) on Diagram page.
+- LLM Chat Backend – implemented send_message action with JSON payload via AppSync, Lambda, and REST API; integrated with frontend for real-time communication.
+- ID Card Reader & Scanning – infrastructure for reading personal ID cards established, including event logging (es_apptool_event), Base62 link generation, result endpoint, GraphQL notifications, and orchestration of form actions.
 ## September, week IV
 ### Fixes
 - Application Model – fixed issue with setting app_instance_id on START and CODE states during project creation – MoProcess v3.38.8.
