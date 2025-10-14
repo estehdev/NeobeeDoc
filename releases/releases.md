@@ -1,4 +1,24 @@
 # NeoBee Releases 2025
+## October, week I
+### Fixes
+- Project Creation – Fixed issue when creating a project without selecting an application (MoProcess v3.41.1).
+- Tasks Page – Fixed a frontend issue that occasionally occurred when selecting the “Single project” filter and opening the state dropdown (causing endless loading) (MoCentralFrontend v1.0.80).
+### Improvements
+- ADD_TO_LIST – Added implicit support for inserting one list into another (previously only single items could be pushed). Added type detection and duplicate control (MoCentralFrontend v1.0.66).
+- Form Cascade – Updated the icon for selecting a single level from “+” to a right arrow (MoCentralFrontend v1.0.74).
+- moCentral - Chat – Increased maxlength for chat messages to 1024 characters in LlmChat.
+- moCentral - Chat - Created new neoChatPage component and integrated it into the Diagram page.
+- moCentral - Chat - In neoChatInput, added yellow focus border and bee icon animation.
+- moCentral - Chat - Added removeMessageDots method to clear loading dots after 2 minutes if no response is received.
+### New Features
+- App Store/Repository – Defined the structure and distinction between repositories (for builds) and app stores (for installation and download).
+- App Store/Repository - Implemented operations for reading and managing both App Store and Repository, including fetching remote repo info, listing apps and builds, retrieving app details, installation, and download.
+- App Store/Repository – Repositories can now be local or remote, with App Store actions automatically handling whether the operation runs locally or via HTTP.
+Added a new definition column to the es_app table (enabling icon display in installations).
+- LLM Integration – Established frontend-to-Ollama server communication and enabled two-way message exchange via notifications.
+- LLM Integration – Created MCP client and multiple Tool operations for: creating/deleting process states, creating transitions, searching and editing tickets
+- LLM Integration – Implemented and tested tools for adding, modifying, and searching tickets.
+- ID Reader / Document Scanning – Completed full document scanning workflow: Enabled uploading multiple files per operation, automatically creating records in es_apptool_event_attachment and implemented file transfer from attachment to processfile bucket, making them active attachments on the related ticket.
 ## September, week V
 ### Fixes
 - JSON Data Input Component – fixed issue where key disappeared from UI when value was deleted (MoCentralFrontend v1.0.60).
