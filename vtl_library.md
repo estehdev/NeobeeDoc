@@ -80,6 +80,25 @@ vtl: $library_date.dateSubHours('2023-05-31 12:34:56', 3)
 response: "2023-05-31 09:34:56"
 &nbsp;
 
+### dateAddMinutes(Object object, Object add)
+Adds a specified number of minutes (add) to the passed date (object).
+
+#### Example
+vtl: $library_date.dateAddMinutes('2023-05-31 12:34:56', 10)
+
+response: "2023-05-31 12:44:56"
+&nbsp;
+
+
+### dateSubMinutes(Object object, Object sub)
+Subtracts the specified number of minutes (sub) from the passed date (object).
+
+#### Example
+vtl: $library_date.dateSubHours('2023-05-31 12:34:56', 10)
+
+response: "2023-05-31 12:24:56"
+&nbsp;
+
 ### daySub(Object date, Object daysToSubtract)
 Returns date in yyyyMMdd format that is the result of subtracting given number of days from given date.
 
