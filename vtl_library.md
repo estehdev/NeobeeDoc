@@ -713,9 +713,9 @@ Returns the number of days from the settlement date to the next coupon date.
 - basis        The type of day count basis to use. Optional. 
 
 #### Example
-vtl: `$library_formula.price(20241128, 20260111, '0.08', '0.06', 100, 1, 1)`
+vtl: `$library_formula.coupdaysnc('20230215', '20301115', 2, 1)`
 
-response: "102.080202515513832395299687050282955169677734375"
+response: "89"
 
 More Info: https://support.microsoft.com/en-us/office/coupdaysnc-function-5ab3f0b2-029f-4a8b-bb65-47d525eea547
 
@@ -731,9 +731,10 @@ Returns the price per $100 face value of a security that pays periodic interest.
 - basis        The type of day count basis to use. Optional. 
 
 #### Example
-vtl: `$library_formula.price('20230215', '20301115', 2, 1)`
 
-response: "89"
+vtl: `$library_formula.price(20241128, 20260111, '0.08', '0.06', 100, 1, 1)`
+
+response: "102.080202515513832395299687050282955169677734375"
 
 More info: https://support.microsoft.com/en-us/office/price-function-3ea9deac-8dfa-436f-a7c8-17ea02c21b0a
 
