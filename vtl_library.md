@@ -665,10 +665,77 @@ vtl: `$library_math.ne(2, 3)`
 
 response: "true"
 
-
-
-
 &nbsp;
 
 &nbsp;
+
+
+## Formula Library
+
+Prefix for methods in this custom class: `library_formula`
+
+&nbsp;
+
+### coupdays(Object settlement, Object maturity, Object frequency, Object basis)
+Returns the number of days in the coupon period that contains the settlement date.
+
+- settlement   The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer. Required.
+- maturity     The security's maturity date. The maturity date is the date when the security expires. Required. 
+- frequency    The number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4. Required.
+- basis        The type of day count basis to use. Optional. 
+
+#### Example
+vtl: `$library_formula.coupdays('20230215', '20301115', 2, 1)`
+
+response: "181"
+
+### coupdays(Object settlement, Object maturity, Object frequency, Object basis)
+Returns the number of days in the coupon period that contains the settlement date.
+
+- settlement   The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer. Required.
+- maturity     The security's maturity date. The maturity date is the date when the security expires. Required. 
+- frequency    The number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4. Required.
+- basis        The type of day count basis to use. Optional. 
+
+#### Example
+vtl: `$library_formula.coupdays('20230215', '20301115', 2, 1)`
+
+response: "181"
+
+More Info: https://support.microsoft.com/en-us/office/coupdays-function-cc64380b-315b-4e7b-950c-b30b0a76f671
+
+### coupdaysns(Object settlement, Object maturity, Object frequency, Object basis)
+Returns the number of days from the settlement date to the next coupon date.
+
+- settlement   The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer. Required.
+- maturity     The security's maturity date. The maturity date is the date when the security expires. Required. 
+- frequency    The number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4. Required.
+- basis        The type of day count basis to use. Optional. 
+
+#### Example
+vtl: `$library_formula.price(20241128, 20260111, '0.08', '0.06', 100, 1, 1)`
+
+response: "102.080202515513832395299687050282955169677734375"
+
+More Info: https://support.microsoft.com/en-us/office/coupdaysnc-function-5ab3f0b2-029f-4a8b-bb65-47d525eea547
+
+### price(Object settlement, Object maturity, Object rate, Object yld, Object redemption, Object frequency, Object basis)
+Returns the price per $100 face value of a security that pays periodic interest.
+
+- settlement   The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer. Required.
+- maturity     The security's maturity date. The maturity date is the date when the security expires. Required.
+- rate         The security's annual coupon rate. Required.
+- yld          The security's annual yield. Required
+- redemption   The security's redemption value per $100 face value. Required
+- frequency    The number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4. Required.
+- basis        The type of day count basis to use. Optional. 
+
+#### Example
+vtl: `$library_formula.price('20230215', '20301115', 2, 1)`
+
+response: "89"
+
+More info: https://support.microsoft.com/en-us/office/price-function-3ea9deac-8dfa-436f-a7c8-17ea02c21b0a
+
+
 
