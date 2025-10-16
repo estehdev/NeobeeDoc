@@ -427,6 +427,18 @@ Extract text from inputText using regular expression
 
 &nbsp;
 
+### xpathEvaluate(String xml, String xpathExpression)
+Return result of XPath expression evaluation on provided xml
+#### Example
+vtl: 
+```
+#set($xml='<bookstore><book category="programming"><title lang="en">Learning Python</title><author>Mark Lutz</author><price>39.95</price></book><book category="web">    <title lang="en">HTML &amp; CSS</title><author>Jon Duckett</author><price>29.99</price></book></bookstore>')
+$library_text.xpathEvaluate($xml, '/bookstore/book[@category="web"]/title')
+```
+response: "HTML & CSS"
+
+&nbsp;
+
 ### convertNumberToText(String amount, String currency, String script, String format, boolean joinWords, String formatHundreds)
 
 Enables conversion of numeric values into text format, adapted to Serbian language (Cyrillic or Latin) and use in contract documentation.
