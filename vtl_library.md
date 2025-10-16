@@ -343,14 +343,14 @@ response: 1
 
 &nbsp;
 
-### toMap(List<Map<String, Object>> list, String key)
+### listToMap(List<Map<String, Object>> list, String key)
 Returns Map<String, Map<String, Object> where elemets of list are returned as Map. Key of map is property sent as parametar key.
 
 #### Example
 vtl: 
 ```
 #set($list=[{'name' : 'Name A', 'code' : 'A1'}, {'name' : 'Name B', 'code' : 'B1'}])
-#set ($map=$library.toMap($list, 'code'))
+#set ($map=$library.listToMap($list, 'code'))
 $map.get('A1')
 ```
 
