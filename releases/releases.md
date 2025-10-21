@@ -1,4 +1,19 @@
 # NeoBee Releases 2025
+## October, week II
+### Fixes
+- App Export – removed the column es_process_definition.default_start_state_id from the export and dev database (it existed only on the dev environment and caused production errors).
+- Application Store – fixed an issue loading build details from remote repositories; corrected labels and minor visual bugs; aligned readonly fields with static display.
+- Application Store - Read-only fields now displayed as static text for better clarity.
+- Application Store - Field length alignment with database schema (name/ext_code: 1024, description/release notes: 65535).
+### Improvements
+- REST Endpoints – added the option to select an Application when creating REST endpoints, along with export/import support between applications.
+- Approval Process – improved behavior when canceling ticket creation; the process is now properly canceled if the user aborts form filling. Improved behavior during voting – if the user cancels while creating a ticket, the vote submission is now also canceled. MoCentralFrontend v1.0.89.
+- Application Store - Added is_installed and is_build_published flags in server actions for listing and retrieving app details, allowing the frontend to detect whether an app is already installed and whether installation is available (depends on a published build).
+- Application Store - Automatic generation of ext_code from name across all administration pages.
+- Application Store - UI improvements: added description field, redesigned build details section (expandable menu on the right side of the table), harmonized font sizes, colors, and shadows, and clarified the “Publish” button functionality.
+### New Features
+- Loop States – implemented a new Loop state type with full UI support and operations for creating and maintaining transitions. The necessary state_type is automatically created (if it doesn’t exist). Introduced new action_type (6, LOOP). MoProcess v3.42.5, MoCentralFrontend v1.0.91.
+- Developed a local RAG system: Loads and parses a PDF document, splits it into semantic chunks, and stores them in an Infinispan in-memory vector database. The system retrieves relevant text chunks based on user queries and generates contextual answers using Ollama.
 ## October, week I
 ### Fixes
 - Project Creation – Fixed issue when creating a project without selecting an application (MoProcess v3.41.1).
