@@ -13,7 +13,7 @@
 - Application Store - UI improvements: added description field, redesigned build details section (expandable menu on the right side of the table), harmonized font sizes, colors, and shadows, and clarified the “Publish” button functionality.
 ### New Features
 - Loop States – implemented a new Loop state type with full UI support and operations for creating and maintaining transitions. The necessary state_type is automatically created (if it doesn’t exist). Introduced new action_type (6, LOOP). MoProcess v3.42.5, MoCentralFrontend v1.0.91.
-- Developed a local RAG system: Loads and parses a PDF document, splits it into semantic chunks, and stores them in an Infinispan in-memory vector database. The system retrieves relevant text chunks based on user queries and generates contextual answers using Ollama.
+- Developed a local RAG system - Loads and parses a PDF document, splits it into semantic chunks, and stores them in an Infinispan in-memory vector database. The system retrieves relevant text chunks based on user queries and generates contextual answers using Ollama.
 ## October, week I
 ### Fixes
 - Project Creation – Fixed issue when creating a project without selecting an application (MoProcess v3.41.1).
