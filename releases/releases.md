@@ -1,4 +1,15 @@
 # NeoBee Releases 2025
+## October, week III
+### Fixes
+- JS eval loop on multi-form tickets – fixed infinite loop occurring when evaluated results were written back to the same triggering field (on value update → js eval → change value → on value update). Added restriction to prevent selecting the same element as a target.
+- Comment submission on tickets – fixed issue where draft comments with attachments were visible to other users, allowing them to post under another user’s name. Draft reuse mechanism removed; a new draft is now created for each comment session. (MoProcess v3.43.2, MoCentralFrontend v1.0.94)
+- Action execution in subforms – resolved cases where subforms with actions (e.g. dropdowns using “Set value” filters) lost field values after saving. Added recursive detection of delayed changes and improved handling of parallel executions. Implemented prevention of duplicate “cat item” entries from AdvancedTable components.
+### Improvements
+- MoCentral – Process State Modal – added validation ensuring that approval state changes are allowed only if at least one of the fields is selected.
+- Neobee Util – adjusted money-to-text conversion so that generated text starts with a lowercase letter.
+### New Features
+- SQL View Designer – reactivated development of the SQL View Designer module. Implemented a new canvas foundation inspired by railway.com, allowing tables to be visually connected and manipulated. Added column selection via checkboxes and visual linking between columns (including within the same table). Lines now automatically position depending on table placement. Introduced UUID generation for custom table columns and improved interaction feedback (highlight on selection, dynamic link line).
+- Remote Endpoint Types – added new admin pages Endpoints and Endpoint Types, enabling the creation of endpoint types beyond predefined ones. Each endpoint type includes name, definition, and application; each endpoint includes name, description, type, secret, and definition. ext_code is generated automatically for both entities.
 ## October, week II
 ### Fixes
 - App Export – removed the column es_process_definition.default_start_state_id from the export and dev database (it existed only on the dev environment and caused production errors).
