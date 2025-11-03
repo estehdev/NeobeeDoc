@@ -1,4 +1,12 @@
 # NeoBee Releases 2025
+## October, week IV
+### Fixes
+- Subform Execution – Verified and tested improved subform save logic when containing EXECUTE_FUNCTION and “Set value” filters.
+- Approval Deadline Requirement – Fixed a frontend issue causing execution errors when opening state details (MoCentralFrontend v1.0.100).
+### Improvements
+- App Export/Import – Enhanced export/import functionality to support proper handling of form components, REST endpoint definitions, and app developer metadata. The NRN generation logic was updated to work with appInstanceId.
+### New Features
+- State Management – Updated the default behavior for auto insert transitions and state category when creating new states. The default values are now: Auto insert transitions: off (2) and State category: INPROGRESS.
 ## October, week III
 ### Fixes
 - JS eval loop on multi-form tickets – fixed infinite loop occurring when evaluated results were written back to the same triggering field (on value update → js eval → change value → on value update). Added restriction to prevent selecting the same element as a target.
