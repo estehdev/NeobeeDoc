@@ -1,7 +1,7 @@
 # NeoBee Releases 2025
 ## October, week IV
 ### Fixes
-- Subform Execution – Verified and tested improved subform save logic when containing EXECUTE_FUNCTION and “Set value” filters.
+- Subform Execution – Improved subform save logic when containing EXECUTE_FUNCTION and “Set value” filters.
 - Approval Deadline Requirement – Fixed a frontend issue causing execution errors when opening state details (MoCentralFrontend v1.0.100).
 ### Improvements
 - App Export/Import – Enhanced export/import functionality to support proper handling of form components, REST endpoint definitions, and app developer metadata. The NRN generation logic was updated to work with appInstanceId.
