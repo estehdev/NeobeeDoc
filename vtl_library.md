@@ -689,8 +689,8 @@ vtl: `$library_formula.coupdays('20230215', '20301115', 2, 1)`
 
 response: "181"
 
-### coupdays(Object settlement, Object maturity, Object frequency, Object basis)
-Returns the number of days in the coupon period that contains the settlement date.
+### coupdaybs(Object settlement, Object maturity, Object frequency, Object basis)
+Returns the number of days from the beginning of a coupon period until its settlement date.
 
 - settlement   The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer. Required.
 - maturity     The security's maturity date. The maturity date is the date when the security expires. Required. 
@@ -698,9 +698,9 @@ Returns the number of days in the coupon period that contains the settlement dat
 - basis        The type of day count basis to use. Optional. 
 
 #### Example
-vtl: `$library_formula.coupdays('20230215', '20301115', 2, 1)`
+vtl: `$library_formula.coupdaybs('20230215', '20301115', 2, 1)`
 
-response: "181"
+response: "92"
 
 More Info: https://support.microsoft.com/en-us/office/coupdays-function-cc64380b-315b-4e7b-950c-b30b0a76f671
 
