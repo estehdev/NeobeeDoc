@@ -242,6 +242,18 @@ response: "folder%2ffile"
 
 &nbsp;
 
+### escCsv(Object input, String delimier)
+Esacpes input to conform to CSV format. If input contains delimiter, whole input will be returned quoted. If input contains double quote character, it will be esacped with another double quote character and whole input will be quoted. 
+delimiter is optional. Default is comma character.
+
+#### Example
+vtl: `$library.escCsv("The Rime of the Ancient Mariner, Iron Maiden")`
+
+response: ""The Rime of the Ancient Mariner, Iron Maiden""
+
+&nbsp;
+
+
 ### quote(Object input)
 If object is instance of String, returns given value between double quotes. Else, returns object.toString
 
