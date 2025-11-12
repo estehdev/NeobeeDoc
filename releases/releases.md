@@ -1,4 +1,8 @@
 # NeoBee Releases 2025
+## November, week I
+### Fixes
+- Subform Actions: Fixed issues in multi-subforms with “Show value as form” enabled, where values were not saved or snapshots were taken at incorrect times.
+- EXECUTE_FUNCTION Action: Fixed issue preventing modification of actions that initially had no assigned function. 
 ## October, week IV
 ### Fixes
 - Subform Execution – Improved subform save logic when containing EXECUTE_FUNCTION and “Set value” filters.
