@@ -1,4 +1,19 @@
 # NeoBee Releases 2025
+## November, week II
+### Fixes
+- Error State Deletion – Fixed issues preventing deletion of error states in the post-functions tab.
+- Cascade in Subforms – Corrected missing cascade items when the cascade is placed inside a subform.
+- Form Context – Prevented automatic creation of form context when the APP_MODEL_ENABLED flag is active (MoProcess v3.46.11). 
+- Project–Component Links – Ensured components inserted into forms are correctly linked to the project.
+- Form Schemas – Corrected app_instance_id assignment on form schema items (MoProcess v3.46.11).
+- Process Creation in Projects – Fixed template selection so that form items are derived from the project’s template type rather than always using the Scrum template.
+- App Export / Import – Fixed the issue where default_issue_type_id was not set correctly during the transfer of project definitions.
+### Improvements
+- App Export / Import – Improved the generation of NRN values across multiple parts of the export process.
+- App Export / Import – Refactored the entire export model by removing dynamic resource detection, enforcing strict grouping of resources by app_instance_id, and moving all exported data to the root level of the JSON structure.
+- App Export / Import – Added support for exporting process filters, filter links, the homepage, and homepage items.
+### New Features
+- Ticket List – current_user Filter – Added support for a new filter that checks the current user across multiple user fields (single/multi), including system fields assignee and reporter (MoProcess v3.46.8, MoCentralFrontend v1.0.114).
 ## November, week I
 ### Fixes
 - Subform Actions: Fixed issues in multi-subforms with “Show value as form” enabled, where values were not saved or snapshots were taken at incorrect times.
