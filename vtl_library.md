@@ -222,32 +222,32 @@ response: "folder\\/file"
 
 &nbsp;
 
-### escQuery(Object input)
+### escapeQuery(Object input)
 Returns url encoded value of given object to be used in url query parameters.
 
 #### Example
-vtl: `$library.escQuery('folder/file')`
+vtl: `$library.escapeQuery('folder/file')`
 
 response: "folder%2Ffile"
 
 &nbsp;
 
-### escPath(Object input)
+### escapePath(Object input)
 Returns url encoded value of given object to be used in url path parameters.
 
 #### Example
-vtl: `$library.escPath('folder/file')`
+vtl: `$library.escapePath('folder/file')`
 
 response: "folder%2ffile"
 
 &nbsp;
 
-### escCsv(Object input, String delimier)
+### escapeCsv(Object input, String delimier)
 Esacpes input to conform to CSV format. If input contains delimiter, whole input will be returned quoted. If input contains double quote character, it will be esacped with another double quote character and whole input will be quoted. 
 delimiter is optional. Default is comma character.
 
 #### Example
-vtl: `$library.escCsv("The Rime of the Ancient Mariner, Iron Maiden")`
+vtl: `$library.escapeCsv("The Rime of the Ancient Mariner, Iron Maiden")`
 
 response: ""The Rime of the Ancient Mariner, Iron Maiden""
 
