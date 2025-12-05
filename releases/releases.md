@@ -1,4 +1,15 @@
 # NeoBee Releases 2025
+## November, week III
+### Fixes
+- Fixed Serbian Latin locale issue on the portal.
+- Fixed issue where ticket links containing a “-” in ext_code did not resolve correctly.
+- Fixed export filter issue where definition content was not serialized correctly.
+- Fixed issues with missing or incorrect ext_code values for app dashboard components on core.
+- Fixed various CSS inconsistencies and icon rendering issues.
+### Improvements
+- Added XML file extension support in the Allowed File Extensions module.
+- Updated application installation flow to properly set NRN on app, app instance, and app developer during installation.
+- Improved project creation logic: Actions on states - mode is now enabled by default when creating a new project.
 ## November, week II
 ### Fixes
 - Error State Deletion – Fixed issues preventing deletion of error states in the post-functions tab.
