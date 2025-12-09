@@ -1,4 +1,10 @@
 # NeoBee Releases 2025
+## November, week IV
+### Improvements
+- Uniqueness of State and State-Type Codes - Introduced automatic trimming to 20 characters with appended random suffix - MoProcess v3.47.25.
+- Uniqueness of State and State-Type Codes - Further restricted allowed characters to alphanumeric only - MoProcess v3.48.4, MoCentralFrontend v1.0.130, NeobeeFrontendProject v1.0.34, NeobeeFrontendSettings v1.0.40.
+### New Features
+- TEMP_MAP_SELECT_KEY_TO_EXT_CODE - Completed implementation on forms (read/write), filters, and reports.
 ## November, week III
 ### Fixes
 - Fixed Serbian Latin locale issue on the portal.
