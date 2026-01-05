@@ -1,4 +1,19 @@
 # NeoBee Releases 2025
+## December, week II
+### Fixes
+- Actions on user fields: Fixed issue where IDs from reporter or assignee were not converted to strings during value setting (MoCentralFrontend v1.0.151).
+- AdvancedTable file button: Fixed missing file preview button in readonly mode (MoCentralFrontend v1.0.150).
+- Masked date input: Fixed issue where initial value was not displayed (MoCentralFrontend v1.0.154).
+- Backlog user list: Fixed issue where the user list did not update after changing project.
+### Improvements
+- Dashboard Excel export: Fixed array display issue where users/groups appeared in a single column. MoProcess v3.49.19.
+- Error monitoring: Added APP_MODE_ENABLED mode to group errors only by project, bypassing application-level grouping (MoCentralFrontend v1.0.152, MoProcess v3.50.2).
+- State filters on Tickets: Filter popups now display states instead of state types when a project is selected. Selecting one state auto-selects all states of the same type (MoCentralFrontend v1.0.153).
+- Custom Excel export filename: Support for defining a custom filename during Excel export.
+### New Features
+- Action-level access rights: Added support for defining access rights for individual actions in AdvancedTable using project, state, and role combinations. Included user selection for single/multiple column (MoProcess v3.49.17, MoCentralFrontend v1.0.149).
+- Environment settings for links: Added env configuration to disable project/global settings links on the current frontend.
+- Reorderable Table component: Added drag-and-drop reorder functionality on Table components in AI sections and other modules.
 ## December, week I
 ### Fixes
 - Fixed issue in custom-table administration where table columns were sent incorrectly at root JSON level, causing collisions with request parameters. Introduced isolated column_map structure (MoProcess v3.48.14, MoCentralFrontend v1.0.133, NeobeeFrontendSettings v1.0.45).
