@@ -6,7 +6,7 @@
 - Masked date input: Fixed issue where initial value was not displayed (MoCentralFrontend v1.0.154).
 - Backlog user list: Fixed issue where the user list did not update after changing project.
 ### Improvements
-- Dashboard Excel export: Fixed array display issue where users/groups appeared in a single column. MoProcess v3.49.19.
+- Dashboard Excel export: Fixed array display issue where users/groups appeared in a single column (MoProcess v3.49.19).
 - Error monitoring: Added APP_MODE_ENABLED mode to group errors only by project, bypassing application-level grouping (MoCentralFrontend v1.0.152, MoProcess v3.50.2).
 - State filters on Tickets: Filter popups now display states instead of state types when a project is selected. Selecting one state auto-selects all states of the same type (MoCentralFrontend v1.0.153).
 - Custom Excel export filename: Support for defining a custom filename during Excel export.
