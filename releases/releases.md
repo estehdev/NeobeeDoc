@@ -1,19 +1,35 @@
 # NeoBee Releases 2025
+## December, week III
+### Fixes
+- App Dashboard - Fixed Excel export crash when exporting empty datasets (empty table or filtered result set) (MoProcess v3.50.7, MoCentralFrontend v1.0.157).
+- Fixed inability to change selected application on forms (MoCentralFrontend v1.0.158).
+- Fixed incorrect handling of primitive values in eval actions, where formatted values were passed instead of stored values (MoCentralFrontend v1.0.163).
+- Fixed filtering of components in appModel mode where components without app_instance_id were incorrectly visible.
+- Fixed float input handling to correctly ignore thousand separators (MoCentralFrontend v1.0.164).
+- App Dashboard - Fixed dashboard designer issue where components could become non-resizable due to invalid zero width/height values.
+- Filters & Dashboards - Fixed filter loading logic by resolving filters by ID instead of restricting results to user-visible filters only.
+### Improvements
+- App Export - Added application version metadata to export files (MoProcess v3.50.7).
+- Components & Applications - Added filtering of available components in form administration based on current app_instance_id, NeobeeUtil app, or components without app_instance_id. Added display of the application an individual component belongs to.
+- Form Default Values - Introduced a new UI for managing default form values (MoCentralFrontend v1.0.164).
+- Аdded Project Settings, Global Settings, and main portal navigation links to project sites (NeobeeFrontendProject v1.0.69, NeobeeFrontendSettings v1.0.83, MoCentralFrontend v1.0.165).
+- Self-Assignment - Added validation on user fields to ensure assignment respects defined user constraints.
+- App Store - Improved UI to clearly indicate installed applications and available updates. Added display of currently installed version in application details and admin views. Added preview of target version on update action hover. Limited store listings to applications and builds that were published at least once. Added Install / Installed / Update / Download actions for all previously or currently published builds.
 ## December, week II
 ### Fixes
-- Actions on user fields: Fixed issue where IDs from reporter or assignee were not converted to strings during value setting (MoCentralFrontend v1.0.151).
-- AdvancedTable file button: Fixed missing file preview button in readonly mode (MoCentralFrontend v1.0.150).
-- Masked date input: Fixed issue where initial value was not displayed (MoCentralFrontend v1.0.154).
-- Backlog user list: Fixed issue where the user list did not update after changing project.
+- Actions on user fields - Fixed issue where IDs from reporter or assignee were not converted to strings during value setting (MoCentralFrontend v1.0.151).
+- AdvancedTable file button - Fixed missing file preview button in readonly mode (MoCentralFrontend v1.0.150).
+- Masked date input - Fixed issue where initial value was not displayed (MoCentralFrontend v1.0.154).
+- Backlog user list - Fixed issue where the user list did not update after changing project.
 ### Improvements
-- Dashboard Excel export: Fixed array display issue where users/groups appeared in a single column (MoProcess v3.49.19).
-- Error monitoring: Added APP_MODE_ENABLED mode to group errors only by project, bypassing application-level grouping (MoCentralFrontend v1.0.152, MoProcess v3.50.2).
-- State filters on Tickets: Filter popups now display states instead of state types when a project is selected. Selecting one state auto-selects all states of the same type (MoCentralFrontend v1.0.153).
-- Custom Excel export filename: Support for defining a custom filename during Excel export.
+- Dashboard Excel export - Fixed array display issue where users/groups appeared in a single column (MoProcess v3.49.19).
+- Error monitoring - Added APP_MODE_ENABLED mode to group errors only by project, bypassing application-level grouping (MoCentralFrontend v1.0.152, MoProcess v3.50.2).
+- State filters on Tickets - Filter popups now display states instead of state types when a project is selected. Selecting one state auto-selects all states of the same type (MoCentralFrontend v1.0.153).
+- Custom Excel export filename - Support for defining a custom filename during Excel export.
 ### New Features
-- Action-level access rights: Added support for defining access rights for individual actions in AdvancedTable using project, state, and role combinations. Included user selection for single/multiple column (MoProcess v3.49.17, MoCentralFrontend v1.0.149).
-- Environment settings for links: Added env configuration to disable project/global settings links on the current frontend.
-- Reorderable Table component: Added drag-and-drop reorder functionality on Table components in AI sections and other modules.
+- Action-level access rights - Added support for defining access rights for individual actions in AdvancedTable using project, state, and role combinations. Included user selection for single/multiple column (MoProcess v3.49.17, MoCentralFrontend v1.0.149).
+- Environment settings for links - Added env configuration to disable project/global settings links on the current frontend.
+- Reorderable Table component - Added drag-and-drop reorder functionality on Table components in AI sections and other modules.
 ## December, week I
 ### Fixes
 - Fixed issue in custom-table administration where table columns were sent incorrectly at root JSON level, causing collisions with request parameters. Introduced isolated column_map structure (MoProcess v3.48.14, MoCentralFrontend v1.0.133, NeobeeFrontendSettings v1.0.45).
