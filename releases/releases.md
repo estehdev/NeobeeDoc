@@ -1,4 +1,16 @@
 # NeoBee Releases 2025
+## December, week I
+### Fixes
+- Fixed issue in custom-table administration where table columns were sent incorrectly at root JSON level, causing collisions with request parameters. Introduced isolated column_map structure (MoProcess v3.48.14, MoCentralFrontend v1.0.133, NeobeeFrontendSettings v1.0.45).
+- Fixed column-naming conflicts for special columns inside AdvancedTable; system now ensures unique internal column names (MoCentralFrontend v1.0.133).
+- Fixed a Datepicker UI issue where the option to allow selecting dates earlier than the default was visible even when no default value was defined. Fixed rendering defect in datepicker with predefined values (syntax error).
+- Fixed automatic default-value assignment on read-only time-based components (MoCentralFrontend v1.0.144).
+### Improvements
+- Introduced mass-update support for “Author” field (MoCentralFrontend v1.0.144).
+- Added new configuration for datepickers that blocks selection of dates earlier than the calculated default value. Introduced controls for clearing masked datepicker values (x-button). Improved default-value calculation logic across date/time components.
+### New Features
+- Introduced Error Monitoring page with filtering by application and project.
+- Introduced mass-update support for “Author” field (MoCentralFrontend v1.0.144).
 ## November, week IV
 ### Improvements
 - Uniqueness of State and State-Type Codes - Introduced automatic trimming to 20 characters with appended random suffix - MoProcess v3.47.25.
