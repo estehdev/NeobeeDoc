@@ -1,4 +1,16 @@
 # NeoBee Releases 2025
+## December, week IV
+### Fixes
+- App Export – Export now only includes categories with app_instance_id for tag components.
+- Form Default Values: Fixed unnecessary network calls when default values are empty; required field marking now works after setting default values.
+- Template File Copying: Corrected app_instance_id assignment to use current record; safe JSON paste mechanism implemented.
+- AppDashboard Filtering: Fixed multiple dropdown filter issue where untrimmed values prevented filtering (MoCentralFrontend v1.0.179).
+- Fixed getCurrentActiveCreateStateTab method for setting active tab.
+### Improvements
+- Saving id in es_cat.ext_code: Now saves the generated category ID in its ext_code field, regardless of whether it's a tag, regular select, or create/update operation in forms or administration (MoProcess v3.51.20, MoCat v3.51.6).
+- Role Selection on Project / Semi Permissions: Display logic updated to show only roles from current and NeobeeUtil applications when APP_MODEL_ENABLED=1.
+### New Features
+- AppDashboard – Subscription Mapping: Implemented support for mapping event fields directly on the subscription, instead of on the action emitting the event (MoCentralFrontend v1.0.178).
 ## December, week III
 ### Fixes
 - App Dashboard - Fixed Excel export crash when exporting empty datasets (empty table or filtered result set) (MoProcess v3.50.7, MoCentralFrontend v1.0.157).
