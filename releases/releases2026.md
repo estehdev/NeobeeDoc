@@ -1,4 +1,15 @@
 # NeoBee Releases 2026
+## January, week IV
+### Fixes
+- Endpoint administration – Fixed missing dynamic fields when creating records in the es_endpoint table and aligned endpoint type definitions with naming conventions (values to values_list) (NeobeeFrontendSettings v1.0.137).
+- AppDashboard – Fixed issues related to tables configured with external_value settings that were introduced during migration (NeobeeFrontendCentral v1.0.65).
+- App map editability – Fixed handling of es_app_map.is_edit_enabled for installed applications, ensuring that mappings cannot be modified when editing is disabled. Additional optimizations were applied to application administration pages to reduce unnecessary server requests (MoCentralFrontend v1.0.235, NeobeeFrontendSettings v1.0.140, NeobeeFrontendProject v1.0.97, NeobeeFrontendCentral v1.0.68).
+- ProcessDataModal – Improved UI behavior and usability by removing obsolete conditions for opening processStateModal, fixing table scrollbar rendering issues, and updating the Errors tab to remove redundant columns and add an action button for opening a detailed error popup. The Monitoring Errors view was extended with additional state-related information.
+- Alert component – Fixed CSS padding issues.
+### Improvements
+- /neobee/api/base routing – Introduced a mechanism for permanent and temporary API mappings under /neobee/api/base. Permanently mapped APIs no longer depend on the VUE_APP_NEOBEE_API_BASE_ENABLED environment flag, while temporarily mapped APIs still rely on it.
+- GitHub Actions / frontend utilities – Established a complete development flow for the frontend eutil library, covering cloud, on-prem token stored in secrets, and local development via CLI. The estehdev/eutil library was integrated into additional frontend projects, providing a basis for extracting shared code into installable libraries and reducing manual code synchronization (NeobeeFrontendSettings v1.0.138, NeobeeFrontendProject v1.0.96).
+- Select component (forms) – Continued UX refinement, including upcoming support for removing trailing zeros from float values.
 ## January, week III
 ### Fixes
 - On-prem file download – Fixed incorrect filename handling during file downloads, which previously resulted in invalid or meaningless file names.
