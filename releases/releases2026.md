@@ -1,4 +1,21 @@
 # NeoBee Releases 2026
+## February, week I
+### Fixes
+- Project matrix component – Fixed crashes when toggling editability, visibility, and mandatory flags (NeobeeFrontendProject v1.0.99).
+- Components administration – Fixed improper form reset behavior when switching custom tables, which caused stale data to remain in memory and validation to fail. The form is now fully re-rendered on table change (NeobeeFrontendSettings v1.0.145, NeobeeFrontendProject v1.0.102, NeobeeFrontendCentral v1.0.77).
+- AppDashboard table – Fixed text alignment issues when column text is truncated to a fixed character limit.
+- Application ext_code validation – Added frontend and backend validation to allow only lowercase letters and numbers.
+- Process diagrams – state coordinates – Fixed missing state coordinates during project creation by automatically assigning coordinates to all states. This prevents diagram corruption and ensures correct rendering on target systems.
+### Improvements
+- PDF preview – Added native browser-based PDF preview as a replacement for OnlyOffice when viewing PDF files. OnlyOffice remains in use for document editing and other Office formats when available (MoCentralFrontend v1.0.249, MoProcess v3.56.5).
+- AppDashboard – Dropdown search – Added support for disabling ASCII conversion during search (MoCentralFrontend v1.0.238, NeobeeFrontendCentral v1.0.70).
+- Base API routing (cloud) – Extended API routing logic previously available on on-prem to cloud environments for dashboard, endpoint, knowledge, notification, and calendar APIs. All frontends now route these APIs exclusively through the base stack (MoCentralFrontend v1.0.239, NeobeeFrontendCentral v1.0.71, NeobeeFrontendProject v1.0.98, NeobeeFrontendSettings v1.0.142).
+- AppDashboard – table column mapping – Added support for mapping table columns to fields in CREATE_ISSUE actions.
+Issue list filters (backend) – Added support for filtering ticket fields of type data / custom table with multiple cardinality. Previously, filters only supported single-value fields (MoProcess v3.56.4).
+- Application export – Implemented detection and conversion of file template references on POST functions into NRN format (MoProcess v3.56.11).
+### New Features
+- AppDashboard – IssueStateFilter – Introduced a new component type used for filtering IssueList components by issue states (MoCentralFrontend v1.0.238, NeobeeFrontendCentral v1.0.70).
+- Application export – Added support for exporting es_process_file_template.file_data (LONG_BLOB) as a Base64-encoded string (MoProcess v3.56.8).
 ## January, week IV
 ### Fixes
 - Endpoint administration – Fixed missing dynamic fields when creating records in the es_endpoint table and aligned endpoint type definitions with naming conventions (values to values_list) (NeobeeFrontendSettings v1.0.137).
