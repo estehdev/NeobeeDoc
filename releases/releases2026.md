@@ -1,4 +1,21 @@
 # NeoBee Releases 2026
+## February, week II
+### Fixes
+- Fixed float field handling in EU number format, preventing value corruption when entering invalid decimal precision (MoCentralFrontend v1.0.258, NeobeeFrontendSettings v1.0.152, NeobeeFrontendProject v1.0.107, NeobeeFrontendCentral v1.0.81).
+- Fixed horizontal scrollbar visibility in App Dashboard issue list.
+### Improvements
+- Optimized file opening and downloading to always load the latest file version when opening or editing in OnlyOffice (MoCentralFrontend v1.0.252, MoProcess v3.56.16).
+- Enhanced file templates download by introducing a new action that supports file_data column handling (MoCentralFrontend v1.0.253, NeobeeFrontendSettings v1.0.147).
+- Added JSON formatting configuration for AdvancedTable components, aligned with AppDashboard behavior (MoCentralFrontend v1.0.256).
+- Introduced configurable float number formatting to remove trailing zeros (MoCentralFrontend v1.0.258, NeobeeFrontendSettings v1.0.152, NeobeeFrontendProject v1.0.107, NeobeeFrontendCentral v1.0.81).
+- Improved AppMapPicker behavior to correctly respect is_edit_enabled and app_is_locked settings (MoCentralFrontend v1.0.260, NeobeeFrontendSettings v1.0.154, NeobeeFrontendProject v1.0.109, NeobeeFrontendCentral v1.0.83).
+### New Features
+- Introduced Remote Points Interface with REST endpoint / process function integration, including endpoint selection restricted to endpoint types implementing the required interface (MoProcess v3.56.20, NeobeeBase v3.56.1, MoCentralFrontend v1.0.255, NeobeeFrontendSettings v1.0.149, NeobeeFrontendProject v1.0.104).
+- Added logging on form component creation, storing creator user and creation timestamp (MoCat v3.56.2).
+- Added frontend application version display (MoCentralFrontend v1.0.259, NeobeeFrontendSettings v1.0.153, NeobeeFrontendProject v1.0.108, NeobeeFrontendCentral v1.0.82).
+- Enabled selection of inactive users on forms (MoCentralFrontend v1.0.261, NeobeeFrontendSettings v1.0.155, NeobeeFrontendProject v1.0.110, NeobeeFrontendCentral v1.0.84).
+- Implemented Custom Tables – VIEW type, including CRUD support and physical DB view creation/update (CREATE OR REPLACE).
+- Prepared the Infrastructure Limits page, including validation logic and a delete confirmation popup.
 ## February, week I
 ### Fixes
 - Project matrix component – Fixed crashes when toggling editability, visibility, and mandatory flags (NeobeeFrontendProject v1.0.99).
