@@ -1,4 +1,13 @@
 # NeoBee Releases 2026
+## February, week III
+### Fixes
+- Improved the Custom Tables administration UI by preventing column deletion when only one column remains, fixing primary key selection when the primary column is removed, disabling unselecting of the primary column, automatically setting the column type to text when adding a new column, and applying the same logic consistently across TABLE, VIEW, and PROCEDURE types.
+### Improvements
+- Extended the Infrastructure Limits page with support for displaying inactive records and implemented full CRUD operations.
+- Enhanced Tab component to support inline rendering of additional UI elements alongside tab headers, reducing unnecessary empty space between tabs and page content.
+- Added support in Select form components to display ext_code or id in dev data based on the VUE_APP_TEMP_MAP_SELECT_KEY_TO_EXT_CODE environment variable.
+### New Features
+- Completed implementation of Custom Tables – VIEW type, including full CRUD support and correct handling of configuration changes with conditional creation and removal of physical tables and views.
 ## February, week II
 ### Fixes
 - Fixed float field handling in EU number format, preventing value corruption when entering invalid decimal precision (MoCentralFrontend v1.0.258, NeobeeFrontendSettings v1.0.152, NeobeeFrontendProject v1.0.107, NeobeeFrontendCentral v1.0.81).
