@@ -1,4 +1,11 @@
 # NeoBee Releases 2026
+## February, week IV
+### Fixes
+- Fixed permission schema listing to correctly display only active schemas (MoCentralFrontend v1.0.265, NeobeeAdminTenantFrontend v1.0.167).
+- Fixed permission validation logic by extending checkProcessPermission to also validate app_instance_id, ensuring correct permission scoping beyond map_reference (MoProcess v3.58.5).
+- Fixed application selection during user group creation by removing the mandatory application requirement (NeobeeFrontendSettings v1.0.171).
+- Fixed missing toast notifications after custom table import actions (success and failure states).
+- Fixed App and App Instance administration where name and description fields were not persisted during update operations, and added an icon column to administration tables.
 ## February, week III
 ### Fixes
 - Improved the Custom Tables administration UI by preventing column deletion when only one column remains, fixing primary key selection when the primary column is removed, disabling unselecting of the primary column, automatically setting the column type to text when adding a new column, and applying the same logic consistently across TABLE, VIEW, and PROCEDURE types.
