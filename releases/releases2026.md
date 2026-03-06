@@ -1,4 +1,23 @@
 # NeoBee Releases 2026
+## March, week I
+### Fixes
+- Mapping administration – Disabled creation of mappings when the application is locked (NeobeeFrontendSettings v1.0.176).
+- Mapping update logic – Mapping updates are now executed using the record ID instead of the previous mechanism (MoProcess v3.58.7, NeobeeFrontendSettings v1.0.175, NeobeeFrontendProject v1.0.123).
+- Entity filtering in mappings – Corrected filtering so that only entities from the current application or system entities (without app_instance_id) are displayed (MoUser v3.58.1, MoProcess v3.58.7, MoCentralFrontend v1.0.268, NeobeeFrontendSettings v1.0.175, NeobeeFrontendProject v1.0.123).
+- Permission validation – Permission checks no longer incorrectly depend on app_instance_id in permission scheme items (MoProcess v3.58.7).
+- Project page access – Access to the project page is now disabled when isAppModelEnabled=true(MoCentralFrontend v1.0.267).
+- Dropdown component (multiple mode) – Fixed rendering issue when the dropdown is disabled, in multiple selection mode and without a value (MoCentralFrontend v1.0.271, NeobeeFrontendSettings v1.0.179, NeobeeFrontendProject v1.0.125, NeobeeFrontendCentral v1.0.102).
+- AppDashboard dropdown behavior – Fixed paste behavior to ensure consistent entity lookup without converting spaces into commas (MoCentralFrontend v1.0.273, NeobeeFrontendSettings v1.0.105).
+- AppDashboard startup page detection – Fixed dynamic detection of the initial page when AppDashboard entries exist in the menu (NeobeeFrontendCentral v1.0.106)
+### Improvements
+- Mapping configuration UI – Field Opis is no longer mandatory; the field is renamed to Naziv, and when left empty the mapping type is automatically used as the name (NeobeeFrontendSettings v1.0.175, NeobeeFrontendProject v1.0.123).
+- Mapping administration – Added display of the target entity name referenced by the mapping (MoProcess v3.58.8, NeobeeFrontendSettings v1.0.178, NeobeeFrontendProject v1.0.124, MoCentralFrontend v1.0.269).
+- Permission scheme administration – Added display of permission scheme names in the administration view (NeobeeFrontendSettings v1.0.177).
+- Post function validation – Improved validation and error feedback when saving post functions to clearly indicate invalid fields in the root function configuration (MoCentralFrontend v1.0.272, NeobeeFrontendSettings v1.0.180, NeobeeFrontendProject v1.0.126, NeobeeFrontendCentral v1.0.103).
+- Tickets page – authorizations UI – Authorization section is hidden when no project is selected (MoCentralFrontend v1.0.276).
+- NeobeeUI library – Additional business UI components migrated to the centralized NeobeeUI package (NeobeeFrontendCentral v1.0.106, NeobeeFrontendProject v1.0.128, NeobeeFrontendSettings v1.0.182).
+### New Features
+- Tickets page – delegations / authorizations – Initial implementation of the UI and authorization logic for displaying tickets to delegated users (MoCentralFrontend v1.0.275).
 ## February, week IV
 ### Fixes
 - Fixed permission schema listing to correctly display only active schemas (MoCentralFrontend v1.0.265, NeobeeAdminTenantFrontend v1.0.167).
