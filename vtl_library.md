@@ -129,6 +129,16 @@ response: "2023-05-31 14:34:56"
 
 &nbsp;
 
+### convertToDay(Object date, String requestedTimeZone)
+Returns date in yyyyMMdd format for the given date and time in UTC and given time zone.
+
+#### Example
+vtl: `$library_date.convertToDay('2026-03-10 01:00:00', 'America/Denver')`
+
+response: "20260309"
+
+&nbsp;
+
 ### format(Object date, String requestedFormat)
 Returns date in requested format for the given date in yyyy-MM-dd HH:mm:ss format.
 
@@ -190,6 +200,16 @@ Returns number of days between two days.
 vtl: `$library_date.daysBetween(20250701, 20250901)`
 
 response: "62"
+
+&nbsp;
+
+### dayOfWeek(Object day)
+Returns day of week for the given date in yyyyMMdd format. Monday is 1, Sunday is 7.
+
+#### Example
+vtl: `$library_date.dayOfWeek('20260310')`
+
+response: "2"
 
 &nbsp;
 
