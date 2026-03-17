@@ -1,4 +1,18 @@
 # NeoBee Releases 2026
+## March, week II
+### Fixes
+- Improved hierarchical filtering and permission validation logic by aligning path comparison between orgunitidspath and unididpath and fixed duplicate ticket entries caused by incorrect query conditions(MoProcess v3.59.7, MoProcess v3.59.10).
+- Remote endpoints administration – Fixed issue preventing parameter input and ensured proper reflection of stored secrets (NeobeeBase v3.59.7).
+- Menu items administration – Restored visibility of the control for deactivating individual menu items (NeobeeFrontendSettings v1.0.184).
+### Improvements
+- User delegation (Tickets page) – Enabled persistence of selected substitute user when leaving the page, with automatic reset on project change or expired/invalid authorization (MoCentralFrontend v1.0.278).
+- NeoChat – Added Markdown parser for rendering AI responses as HTML (NeobeeFrontendCentral v1.0.111).
+File versions – Added display of the user who created each file version (MoCentralFrontend v1.0.281).
+- Look & Feel – Moved default user form selection into the Look & Feel configuration section (MoCompany v3.59.2, MoCat v3.59.2, MoCentralFrontend v1.0.284, NeobeeFrontendSettings v1.0.186, NeobeeFrontendProject v1.0.130).
+- Application tags (App Store) – Implemented tag-based filtering for applications and builds, including logic for assigning tags to builds with automatic removal from other builds.
+### New Features
+- Banners / notifications system – Implemented full functionality including backend (data model, CRUD operations, and user-specific filtering) and frontend (administration and display).
+- Look & Feel configuration – Added option to control visibility of the Help section in the top menu (MoCompany v3.59.3, MoCentralFrontend v1.0.285, NeobeeFrontendSettings v1.0.187, NeobeeFrontendCentral v1.0.116).
 ## March, week I
 ### Fixes
 - Mapping administration – Disabled creation of mappings when the application is locked (NeobeeFrontendSettings v1.0.176).
