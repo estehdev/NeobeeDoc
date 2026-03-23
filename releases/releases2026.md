@@ -1,4 +1,21 @@
 # NeoBee Releases 2026
+## March, week III
+### Fixes
+- Nested subforms – Fixed issue with subform rendering inside another subform (MoCentralFrontend v1.0.296).
+- Application tags (build process) – Fixed issue with tag application during build execution.
+- Form item list – Removed redundant form_item_app_instance_id field from UI display.
+- App Dashboard locked state – Disabled unsupported actions in locked mode and improved overall validation logic.
+### Improvements
+- Translation export (forms) – Enhanced export by adding the “default” column, excluding system components, and improving UI behavior and visibility rules for application-bound forms (MoProcess v3.60.1, MoCentralFrontend v1.0.298).
+- Application tags (App Store) – Completed full implementation of tag-based filtering and build tagging logic across environments, including remote repository scenarios.
+- OpenSearch AppDashboard – Introduced support for index selection per component by enabling backend index_id handling and partial frontend integration.
+- State type management – Improved application selection during state type creation and editing (MoProcess v3.60.5, NeobeeFrontendSettings v1.0.199).
+### New Features
+- Translation export – Implemented translation export mechanism (MoCentral v3.59.3, NeobeeFrontendSettings v1.0.104, NeobeeFrontendProject v1.0.134, MoCentralFrontend v1.0.295). 
+- AppDashboard – Added advanced configuration for dropdown components using custom tables, including sorting options (column and direction) and automatic value selection with event emission (MoProcess v3.60.1, MoCentralFrontend v1.0.300, NeobeeFrontendCentral v1.0.122).
+- Label / Alert component – Introduced new “success” type for visual feedback (MoCentralFrontend v1.0.301, NeobeeFrontendSettings v1.0.197, NeobeeFrontendProject v1.0.138, NeobeeFrontendCentral v1.0.123).
+- App Dashboard duplication – Implemented functionality for duplicating dashboards with all components, actions, and subscriptions, without linkage to the source dashboard.
+
 ## March, week II
 ### Fixes
 - Improved hierarchical filtering and permission validation logic by aligning path comparison between orgunitidspath and unididpath and fixed duplicate ticket entries caused by incorrect query conditions(MoProcess v3.59.7, MoProcess v3.59.10).
