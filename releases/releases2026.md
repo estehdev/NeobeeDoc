@@ -1,4 +1,20 @@
 # NeoBee Releases 2026
+## March, week IV
+### Fixes
+- Custom Tables orderBy – Fixed incorrect automatic addition of ASC parameter (MoProcess v3.60.10).
+- Subtask View – Fixed popup sizing issue when opened from parent ticket (MoCentralFrontend v1.0.323).
+- Ticket Details Page – Fixed layout issue preventing independent scrolling of sections (MoCentralFrontend v1.0.324, NeobeeFrontendCentral v1.0.133).
+- Fixed issue with storing formatted numeric values (now stored as raw numbers and formatted on display).
+### Improvements
+- Ticket Filters – Added support for integer-type fields in ticket and form filters (MoCentralFrontend v1.0.315, NeobeeFrontendCentral v1.0.128, NeobeeFrontendSettings v1.0.206).
+- Post Functions – Improved UI filtering to display only relevant sources, current app or neobeeutil app (MoCentralFrontend v1.0.317, NeobeeFrontendSettings v1.0.208, NeobeeFrontendProject v1.0.144, NeobeeFrontendCentral v1.0.130, MoProcess v3.60.11, MoCat v3.60.1).
+- Project Creation – Automatically generates a default permission scheme if missing and establishes appmap linkage (MoProcess v3.60.14).
+- Form Item Conditions – Legacy Conditions tab hidden when empty, preventing adding deprecated conditions to new components while keeping existing ones visible (MoCentralFrontend v1.0.327, NeobeeFrontendSettings v1.0.215, NeobeeFrontendProject v1.0.149).
+- AI Configuration UI – Initial interface setup and data visualization prepared on admin tenant frontend.
+### New Features
+- OpenSearch AppDashboard – Implemented index selection across all OpenSearch components, along with backend support for reading index_id from request parameters; added fixed category filtering mode with single-category constraint (MoCentralFrontend v1.0.311, NeobeeBase v3.60.3).
+- AppDashboard OpenSearch Results – Added configuration for opening result links directly via title click, with optional new tab behavior (MoCentralFrontend v1.0.328, NeobeeFrontendCentral v1.0.136).
+
 ## March, week III
 ### Fixes
 - Nested subforms – Fixed issue with subform rendering inside another subform (MoCentralFrontend v1.0.296).
