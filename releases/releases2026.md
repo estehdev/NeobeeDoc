@@ -1,4 +1,14 @@
 # NeoBee Releases 2026
+## March, week V
+### Fixes
+- Ticket Link – Added validation for status_id=1 when accessing tickets via code-based links (MoCentralFrontend v1.0.330, NeobeeFrontendCentral v1.0.139, MoProcess v3.60.15).
+- Ticket Details – Fixed issue where ZIP download popup was rendered behind other content (MoCentralFrontend v1.0.315).
+### Improvements
+- AppDashboard DatePicker – Added automatic emission of default value (MoCentralFrontend v1.0.347, NeobeeFrontendCentral v1.0.154).
+- NeoChat – Added chat_euid validation to ensure messages are displayed only in the correct chat context.
+### New Features
+- AppDashboardTable – Enabled JSON column formatting with “row” context support, allowing access to values from other columns during client-side evaluation (MoCentralFrontend v1.0.331, NeobeeFrontendCentral v1.0.140).
+- Keycloak Integration – Enabled Keycloak authentication across Central, Settings, and Project applications on a1 environment (MoCentralFrontend v1.0.346, NeobeeFrontendSettings v1.0.235, NeobeeFrontendProject v1.0.161, NeobeeFrontendCentral v1.0.153).
 ## March, week IV
 ### Fixes
 - Custom Tables orderBy – Fixed incorrect automatic addition of ASC parameter (MoProcess v3.60.10).
