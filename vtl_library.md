@@ -99,6 +99,46 @@ vtl: $library_date.dateSubHours('2023-05-31 12:34:56', 10)
 response: "2023-05-31 12:24:56"
 &nbsp;
 
+### dateAddYear(Object date, Object yearsToAdd)
+Returns date in yyyy-MM-dd HH:mm:ss format that is the result of adding given number of years to given date.
+
+#### Example
+vtl: `$library_date.dateAddYear('2023-05-31 12:34:56', 2)`
+
+response: "2025-05-31 12:34:56"
+
+&nbsp;
+
+### dateSubYear(Object date, Object yearsToSubtract)
+Returns date in yyyy-MM-dd HH:mm:ss format that is the result of subtracting given number of years from given date.
+
+#### Example
+vtl: `$library_date.dateSubYear('2023-05-31 12:34:56', 2)`
+
+response: "2021-05-31 12:34:56"
+
+&nbsp;
+
+### dateAddMonths(Object date, Object monthsToAdd)
+Returns date in yyyy-MM-dd HH:mm:ss format that is the result of adding given number of months to given date.
+
+#### Example
+vtl: `$library_date.dateAddMonths('2023-05-31 12:34:56', 3)`
+
+response: "2023-08-31 12:34:56"
+
+&nbsp;
+
+### dateSubMonths(Object date, Object monthsToSubtract)
+Returns date in yyyy-MM-dd HH:mm:ss format that is the result of subtracting given number of months from given date.
+
+#### Example
+vtl: `$library_date.dateSubMonths('2023-05-31 12:34:56', 2)`
+
+response: "2023-03-31 12:34:56"
+
+&nbsp;
+
 ### daySub(Object date, Object daysToSubtract)
 Returns date in yyyyMMdd format that is the result of subtracting given number of days from given date.
 
@@ -116,6 +156,46 @@ Returns date in yyyyMMdd format that is the result of adding given number of day
 vtl: `$library_date.dayAdd('20230531', 2)`
 
 response: "20230602"
+
+&nbsp;
+
+### dayAddMonths(Object date, Object monthsToAdd)
+Returns date in yyyyMMdd format that is the result of adding given number of months to given date.
+
+#### Example
+vtl: `$library_date.dayAddMonths('20230531', 3)`
+
+response: "20230831"
+
+&nbsp;
+
+### daySubMonths(Object date, Object monthsToSubtract)
+Returns date in yyyyMMdd format that is the result of subtracting given number of months from given date.
+
+#### Example
+vtl: `$library_date.daySubMonths('20230531', 2)`
+
+response: "20230331"
+
+&nbsp;
+
+### dayAddYears(Object date, Object yearsToAdd)
+Returns date in yyyyMMdd format that is the result of adding given number of years to given date.
+
+#### Example
+vtl: `$library_date.dayAddYears('20230531', 2)`
+
+response: "20250531"
+
+&nbsp;
+
+### daySubYears(Object date, Object yearsToSubtract)
+Returns date in yyyyMMdd format that is the result of subtracting given number of years from given date.
+
+#### Example
+vtl: `$library_date.daySubYears('20230531', 2)`
+
+response: "20210531"
 
 &nbsp;
 
