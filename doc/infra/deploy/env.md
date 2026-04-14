@@ -1,4 +1,4 @@
-# environment variables
+# Environment variables
 ## APP MODE
 ### api-process-deployment
         - name: APP_MODEL_ENABLED
