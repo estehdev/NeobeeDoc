@@ -10,7 +10,7 @@
         - name: CUSTOM_TABLE_MIGRATION_ENABLED
           value: "1"
 ### frontend-deployment
-add to all frontend apps
+#### add to all frontend apps
         - name: VUE_APP_APP_MODEL_ENABLED
           value: "1"
         - name: VUE_APP_TEMP_MAP_SELECT_KEY_TO_EXT_CODE
