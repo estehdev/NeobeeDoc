@@ -30,10 +30,10 @@
         - name: APP_DOWNLOAD_ENABLED
           value: "1"
 ## graphql
-process
+#### process
         - name: APPSYNC_PROCESS_RECORD_API_URL
           value: "http://neobee-api-graphql/graphql/graphql"
-frontend
+#### frontend
        - name: VUE_APP_IS_GRAPHQL_ENABLED
           value: "1"
 ## services
