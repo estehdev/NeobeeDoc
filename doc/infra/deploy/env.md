@@ -31,11 +31,11 @@
           value: "1"
 ## graphql
 #### process
-        - name: APPSYNC_PROCESS_RECORD_API_URL
-          value: "http://neobee-api-graphql/graphql/graphql"
+       - name: APPSYNC_PROCESS_RECORD_API_URL
+         value: "http://neobee-api-graphql/graphql/graphql"
 #### frontend
        - name: VUE_APP_IS_GRAPHQL_ENABLED
-          value: "1"
+         value: "1"
 ## services
        - name: API_USER
           value: "http://neobee-api-user/user"
