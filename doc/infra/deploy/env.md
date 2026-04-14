@@ -21,7 +21,7 @@ add to all frontend apps
 ## Backend cache
 ## Frontend cache
 ## Signing app
-       - name: APP_PATH
+        - name: APP_PATH
           value: "/download/NeobeeSignSetup_1_2_66.msi"
         - name: APP_VERSION
           value: "2.1.2.66"
