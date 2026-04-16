@@ -1,7 +1,7 @@
 # NeoBee Releases 2026
 ## April, week I
 ### Fixes
- -AppDashboard DatePicker – Fixed incorrect positioning logic (MoCentralFrontend v1.0.349, NeobeeFrontendCentral v1.0.156).
+- AppDashboard DatePicker – Fixed incorrect positioning logic (MoCentralFrontend v1.0.349, NeobeeFrontendCentral v1.0.156).
 - AppDashboard Issue List – Fixed sorting not being applied from filters (MoCentralFrontend v1.0.350, NeobeeFrontendCentral v1.0.157).
 - App Export – Fixed missing form reference mapping in subforms (MoProcess v3.61.5).
 - App Export – Updated process function export to prevent failures when referenced file templates are missing (MoProcess v3.61.10).
