@@ -1,4 +1,23 @@
 # NeoBee Releases 2026
+## April, week I
+### Fixes
+ -AppDashboard DatePicker – Fixed incorrect positioning logic (MoCentralFrontend v1.0.349, NeobeeFrontendCentral v1.0.156).
+- AppDashboard Issue List – Fixed sorting not being applied from filters (MoCentralFrontend v1.0.350, NeobeeFrontendCentral v1.0.157).
+- App Export – Fixed missing form reference mapping in subforms (MoProcess v3.61.5).
+- App Export – Updated process function export to prevent failures when referenced file templates are missing (MoProcess v3.61.10).
+- AppDashboard DatePicker Report – Fixed missing event payload emission when mapping is not defined (MoCentralFrontend v1.0.354).
+- Form Administration – Fixed custom time validator issue in time components (NeobeeFrontendProject v1.0.163, NeobeeFrontendSettings v1.0.237).
+- Ticket Details - Fixed incorrect display of alternative transition names (including translations) when actions are not available (MoCentralFrontend v1.0.361, NeobeeFrontendCentral v1.0.164).
+- AppDashboard Table – Fixed conditional formatting issues for jsonquery and data variants.
+### Improvements
+- AppDashboard – Added option to disable responsive behavior, preserving grid layout across all screen resolutions (MoCentralFrontend v1.0.348, NeobeeFrontendCentral v1.0.155).
+- Reports – Removed BIRT reports without associated files from Reports page (NeobeeBase v3.61.2).
+- Ticket Locking – Updated behavior to keep forms locked in code-type states, with transitions available only to users with debugging enabled (MoCentralFrontend v1.0.356).
+- Approval Workflow (Tag-based) – Improved tag display and handling of partially processed approvals (MoCentralFrontend v1.0.360, NeobeeFrontendCentral v1.0.163)
+- NeoChat Sidebar – Improved responsiveness and layout on smaller screens.
+### New Features
+- Approval Workflow (Tag-based) – Implemented initial version of split approval mechanism based on tags, including deadline handling and partial approval support (MoCentralFrontend v1.0.355).
+- AppDashboard – Added new queries in MoDashboard API to support chart creation in dashboards.
 ## March, week V
 ### Fixes
 - Ticket Link – Added validation for status_id=1 when accessing tickets via code-based links (MoCentralFrontend v1.0.330, NeobeeFrontendCentral v1.0.139, MoProcess v3.60.15).
