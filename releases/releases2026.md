@@ -1,4 +1,12 @@
 # NeoBee Releases 2026
+## April, week II
+### Fixes
+- App Context Key – limited maximum length of the key field to 255 (MoCentralFrontend v1.0.365, NeobeeFrontendSettings v1.0.245).
+### Improvements
+- User Group Details – introduced a dedicated details tab for user groups (aligned with user details view); group code is now hidden outside the details tab (MoCentralFrontend v1.0.362, NeobeeFrontendSettings v1.0.242, NeobeeFrontendProject v1.0.167, NeobeeFrontendCentral v1.0.165).
+- App Context – removed app_context from appmap types; export procedure updated to exclude the value field (MoCentralFrontend v1.0.367, NeobeeFrontendSettings v1.0.247).
+### New Features
+- App Context (Config) – implemented support for new map_type app_context, enabling mappings to the new es_app_context table for application-level configurations (MoProcess v3.62.6, MoCentralFrontend v1.0.364, NeobeeFrontendSettings v1.0.244).
 ## April, week I
 ### Fixes
 - AppDashboard DatePicker – Fixed incorrect positioning logic (MoCentralFrontend v1.0.349, NeobeeFrontendCentral v1.0.156).
