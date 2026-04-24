@@ -1,4 +1,14 @@
 # NeoBee Releases 2026
+## April, week III
+### Fixes
+- Default Form Values – fixed issue with applying default values in forms (MoCentralFrontend v1.0.369).
+- Select Component (TEMP_MAP_SELECT_KEY_TO_EXT_CODE) – fixed ID resolution issue by moving lookup logic to the server, where ID is resolved based on ext_code (MoCentralFrontend v1.0.371, MoCat v3.62.2).
+- Text Fields Rendering – fixed issues with rendering diacritic characters (ŠČĆŽ) in Firefox (MoCentralFrontend v1.0.373, v1.0.375, NeobeeFrontendSettings v1.0.253, NeobeeFrontendProject v1.0.175, NeobeeFrontendCentral v1.0.175).
+### Improvements
+- AppDashboard ASCII Search – introduced ASCII search mode for dashboard tables and dropdowns (custom table sources), enabling SQL-based ASCII conversion for both search terms and columns (MoCentralFrontend v1.0.372, v1.0.374, NeobeeFrontendCentral v1.0.170, v1.0.173, MoProcess v3.62.12).
+- User Group Administration – added paging to the user groups page (previously all groups were listed without limits), highlighted inactive groups, introduced sorting by group name (MoUser v3.62.5, MoCentralFrontend v1.0.376, NeobeeFrontendSettings v1.0.254, NeobeeFrontendProject v1.0.176, NeobeeFrontendCentral v1.0.176).
+### New Features
+- VTL Context in Default Values – implemented evaluation of VTL context for setting default form values (MoCentralFrontend v1.0.369, MoProcess v3.62.11).
 ## April, week II
 ### Fixes
 - App Context Key – limited maximum length of the key field to 255 (MoCentralFrontend v1.0.365, NeobeeFrontendSettings v1.0.245).
