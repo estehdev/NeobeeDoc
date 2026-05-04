@@ -1,4 +1,15 @@
 # NeoBee Releases 2026
+## April, week IV
+### Fixes
+- AppMap Mapping Display – fixed formatting issue for selected values in locked mapping fields (MoCentralFrontend v1.0.380, NeobeeFrontendSettings v1.0.256, NeobeeFrontendProject v1.0.180, NeobeeFrontendCentral v1.0.180).
+### Improvements
+- Split Approval – redesigned UI for split/individual approval, including support for marking items as “Opinion” (MoCentralFrontend v1.0.378, MoCentralFrontend v1.0.379).
+- AppDashboard Filters – implemented filter combination logic for issue list (MoCentralFrontend v1.0.379).
+- AppMap Export – updated export behavior to exclude map_reference_to when is_export_enabled is not set; flag renamed and hidden for non-exportable entities (MoCentralFrontend v1.0.381, NeobeeFrontendSettings v1.0.257, NeobeeFrontendProject v1.0.181, NeobeeFrontendCentral v1.0.181, MoProcess v3.63.6).
+- User Language Selection – extended available languages on user details page (Hungarian, Albanian, Macedonian, Turkish, Bulgarian) (MoCentralFrontend v1.0.382, NeobeeFrontendSettings v1.0.259, NeobeeFrontendProject v1.0.182, NeobeeFrontendCentral v1.0.182).
+### New Features
+- AppMap Types – added support for new appmap types content_index and ai_config; included in REST endpoint parameter definitions and process functions via appmap reference (MoCentralFrontend v1.0.381, NeobeeFrontendSettings v1.0.257, NeobeeFrontendProject v1.0.181, NeobeeFrontendCentral v1.0.181, MoProcess v3.63.6).
+- Content Index – implemented administration page with options to deactivate or permanently delete entries, including confirmation flow; added application selection component and updated handling via status_id.
 ## April, week III
 ### Fixes
 - Default Form Values – fixed issue with applying default values in forms (MoCentralFrontend v1.0.369).
