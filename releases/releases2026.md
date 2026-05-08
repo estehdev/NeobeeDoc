@@ -1,4 +1,16 @@
 # NeoBee Releases 2026
+## May, week I
+### Fixes
+- Approval Controls – fixed issue causing voting controls not to appear after split approval changes (MoCentralFrontend v1.0.384, NeobeeFrontendCentral v1.0.187).
+- Application Installation – added duplicate validation by ext_code during manual application installation and UI-based creation to prevent duplicate applications (MoProcess v3.63.21, NeobeeFrontendSettings v1.0.267).
+### Improvements
+- Signed Approval State – improved approval status display by adding dedicated messages for signed items and approvals currently in progress (MoCentralFrontend v1.0.386, NeobeeFrontendCentral v1.0.190).
+- Application Build – installation file inside exported ZIP packages is now standardized as app.json while ZIP archive naming remains unchanged (MoProcess v3.63.21).
+### New Features
+- Custom Tables – implemented support for new is_locked flag in custom table administration (MoProcess v3.63.19, MoCentralFrontend v1.0.385, NeobeeFrontendSettings v1.0.264).
+- Application Installation – introduced new skip_tables_on_import flag available during manual application import (NeobeeFrontendSettings v1.0.386, MoProcess v3.63.22).
+- Application Translation Export – implemented export of language items as part of the application build process (MoProcess v3.63.25).
+- Remove-only Mode – added form dropdown configuration allowing only value removal without adding new entries.
 ## April, week IV
 ### Fixes
 - AppMap Mapping Display – fixed formatting issue for selected values in locked mapping fields (MoCentralFrontend v1.0.380, NeobeeFrontendSettings v1.0.256, NeobeeFrontendProject v1.0.180, NeobeeFrontendCentral v1.0.180).
