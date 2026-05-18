@@ -1,4 +1,20 @@
 # NeoBee Releases 2026
+## May, week II
+### Fixes
+- Ticket Creation via Task – Fixed issue with homepage opening from AppDashboard during ticket creation workflow.
+- Approval Section – Fixed missing mapping list display on homepage approval configuration.
+### Improvements
+- Ticket List Actions – Added support for displaying action buttons in ticket lists, disabled by default.
+- JWT / User Details – Moved JWT-related user fields (ruser_id, ruser_euid, company_id, company_euid) to get_user_details, removing dependency on token claims (MoUser v3.64.1, MoCentralFrontend v1.0.392, NeobeeFrontendSettings v1.0.277, NeobeeFrontendProject v1.0.191, NeobeeFrontendCentral v1.0.195).
+Process Functions – Removed app_instance_id restriction from custom table listing queries in process functions (MoCentralFrontend v1.0.393, NeobeeFrontendSettings v1.0.279, NeobeeFrontendProject v1.0.192, NeobeeFrontendCentral v1.0.196).
+- Applications – Blocked reinstall of source system applications and prevented installation of older or equal application versions.
+- App Instance Readonly – Extended readonly handling across project application components, including UI restrictions and backend 403 Forbidden validation.
+- Ticket Lists – Added readonly handling and approval section fixes for locked app instances.
+### New Features
+- Application Translations – Implemented new application translation key format using NRN and app_instance_id, with support added for states, transitions, form components, resolutions, priorities, process modules, and related resources (MoProcess v3.64.6, MoCat v3.64.1, MoCentralFrontend v1.0.391, NeobeeFrontendCentral v1.0.193, NeobeeFrontendProject v1.0.189, NeobeeFrontendSettings v1.0.273).
+- Application Translations – Improved export format for application translations (MoCat v3.64.2, NeobeeBase v3.64.1, MoCentral v3.64.2, MoCentralFrontend v1.0.392, NeobeeFrontendSettings v1.0.277, NeobeeFrontendProject v1.0.191, NeobeeFrontendCentral v1.0.195).
+- Application Translations – Implemented Excel import support for application translations (MoCentral v3.64.3, NeobeeFrontendSettings v1.0.281).
+- Approval Tab – Enabled removal of selected values from the “Exclude – Isključi” field and added unsaved changes warning popup.
 ## May, week I
 ### Fixes
 - Approval Controls – fixed issue causing voting controls not to appear after split approval changes (MoCentralFrontend v1.0.384, NeobeeFrontendCentral v1.0.187).
