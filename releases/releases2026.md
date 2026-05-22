@@ -1,4 +1,24 @@
 # NeoBee Releases 2026
+## May, week III
+### Fixes
+- Permission Scheme Export – Excluded SINGLE_USER types and non-application groups from permission scheme export (MoProcess v3.64.10).
+- Ticket Creation – Fixed issue where pressing Enter in the “Name” field could block the Create button during ticket creation (MoCentralFrontend v1.0.399, NeobeeFrontendCentral v1.0.200, NeobeeFrontendSettings v1.0.284, NeobeeFrontendProject v1.0.196).
+- Approval Controls – Expanded split approval buttons and adjusted layout to properly display the “Outside of responsibility” label (MoCentralFrontend v1.0.400).
+- Ticket Creation Value Mapping Priority – Fixed issue where default form values were overriding transition parameters when opening ticket creation forms via transition popup (MoCentralFrontend v1.0.406, NeobeeFrontendSettings v1.0.291, NeobeeFrontendProject v1.0.202, NeobeeFrontendCentral v1.0.205).
+- Notification Colors – Fixed notification color inconsistency on Vue 3 applications (Central, Settings, Project) affecting bottom-right notification display (MoCentralFrontend v1.0.406, NeobeeFrontendSettings v1.0.291, NeobeeFrontendProject v1.0.202, NeobeeFrontendCentral v1.0.205).
+- AppDashboardDatepickerReport – Fixed range datepicker popup positioning issue where the popup could appear behind page content (MoCentralFrontend v1.0.402).
+### Improvements
+- Issue Field – Simplified ticket list display on forms in both multi and single selection modes (MoCentralFrontend v1.0.400, v1.0.401, NeobeeFrontendSettings v1.0.285/v1.0.286, NeobeeFrontendProject v1.0.197/v1.0.199, NeobeeFrontendCentral v1.0.201/v1.0.202).
+- Permission Schemes – Restricted available resources in permission schemes while working in application mode (MoCat v3.64.3, MoUser v3.64.2, MoCentralFrontend v1.0.400, NeobeeFrontendSettings v1.0.285, NeobeeFrontendProject v1.0.197, NeobeeFrontendCentral v1.0.201).
+- Utility Applications – Refactored API queries and jsonquery logic to use dynamically resolved utility applications instead of hardcoded neobee:neobeeutil references (MoProcess v3.64.17, MoCat v3.64.5, MoUser v3.64.3).
+- Form Administration – Improved role display in form item configuration by showing role name, code, and associated application during lookup rendering (MoCentralFrontend v1.0.404, NeobeeFrontendSettings v1.0.288, NeobeeFrontendProject v1.0.201, NeobeeFrontendCentral v1.0.204).
+- Application Build – Added validation of resource ownership against referenced applications during application build process and improved build logs (MoProcess v3.64.27).
+- Application Build List – Implemented paging support for application build history pages (MoProcess v3.64.28, NeobeeFrontendSettings v1.0.292).
+- App Instance Readonly – Extended readonly support across all pages and functionalities in NeobeeFrontendProject, including backend 403 validation handling.
+### New Features
+- Post Functions – Implemented support for direct text input of resource references (form/table/json/code) when Remote Server mode is enabled (MoCentralFrontend v1.0.403, NeobeeFrontendSettings v1.0.287, NeobeeFrontendProject v1.0.200, NeobeeFrontendCentral v1.0.203).
+- AI Config Designer – Implemented AI configuration designer with VueFlow-based node management, Agent/LLM configuration support, MCP/RAG handling, auto-save with debounce, auto layout, project integration, and advanced node interaction features.
+- AI Config Designer – Added project section with mcp_enabled support and automatic layout synchronization based on configuration definitions.
 ## May, week II
 ### Fixes
 - Ticket Creation via Task – Fixed issue with homepage opening from AppDashboard during ticket creation workflow.
