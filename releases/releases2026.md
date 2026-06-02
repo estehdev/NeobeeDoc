@@ -1,4 +1,21 @@
 # NeoBee Releases 2026
+## May, week IV
+### Fixes
+- Application Export Logs – Fixed incorrect entity reporting in export/build logs related to NRN conversion processing (MoProcess v3.64.31).
+- Keycloak Configuration – Fixed issues with applying newly introduced Keycloak environment configuration values (MoCentralFrontend v1.0.409, NeobeeFrontendSettings v3.65.3, NeobeeFrontendProject v3.65.3, NeobeeFrontendCentral v3.65.4, NeobeeFrontendDeveloper v3.65.5).
+- Description Component Value Persistence – Fixed unexpected value saving caused by the Description component emitting change events when no actual changes occurred (MoCentralFrontend v1.0.410, NeobeeFrontendSettings v3.65.5, NeobeeFrontendProject v3.65.4, NeobeeFrontendCentral v3.65.7, NeobeeFrontendDeveloper v3.65.6).
+- Invalid Form Value Handling – Implemented validation and automatic deactivation of empty form records, preventing submission of invalid values from the frontend (MoCat v3.65.1, MoCentralFrontend v1.0.411, NeobeeFrontendSettings v3.65.11, NeobeeFrontendProject v3.65.7, NeobeeFrontendCentral v3.65.11, NeobeeFrontendDeveloper v3.65.9).
+### Improvements
+- Form Item Usage Detection – Implemented dependency detection for form items, providing visibility into where an item is referenced before deletion (visibility rules, editability, required fields, actions, etc.) (MoCentralFrontend v1.0.407, NeobeeFrontendSettings v1.0.298, NeobeeFrontendProject v1.0.207, NeobeeFrontendCentral v1.0.213).
+- Frontend Performance Optimization – Introduced the first phase of frontend performance improvements, including CSS, font, static resource, look&feel  loading optimizations (MoCentralFrontend v1.0.410, NeobeeFrontendSettings v3.65.5, NeobeeFrontendProject v3.65.4, NeobeeFrontendCentral v3.65.7, NeobeeFrontendDeveloper v3.65.6).
+- Application Export – Added NRN conversion for local_copy_table_id and sync_config.source_table_id references in es_process_custom_table.definition (MoProcess v3.65.5).
+- Application Build Validation – Added validation of AppMap resource references during application build to prevent packaging projects with missing permission scheme or SMTP endpoint mappings (MoProcess v3.65.11).
+
+### New Features
+- Keycloak Configuration Environment Variables – Added new environment variables for Keycloak URL, realm, and client ID configuration (MoCentralFrontend v1.0.407, NeobeeFrontendSettings v1.0.298, NeobeeFrontendProject v1.0.207, NeobeeFrontendCentral v1.0.213).
+- App Dashboard – Added new APP_DASHBOARD_SLA_BREACH query for AppDashboard reporting (NeobeeBase v3.64.8).
+- AI Config Designer – Added support for Custom Table nodes and configurable filtering options for Content Index and Custom Table components based on user and company context attributes.
+- NeoChat – Added support for displaying TOOL_CALL and TOOL_RESULT messages in chat conversations.Custom Table Administration – Added mcp_enabled and mcp_description fields to custom table configuration forms.
 ## May, week III
 ### Fixes
 - Permission Scheme Export – Excluded SINGLE_USER types and non-application groups from permission scheme export (MoProcess v3.64.10).
