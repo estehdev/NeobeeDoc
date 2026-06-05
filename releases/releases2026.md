@@ -1,4 +1,28 @@
 # NeoBee Releases 2026
+## May, week V
+### Fixes
+- AdvancedTable – Fixed value refresh issues when AdvancedTable components are used inside subforms (MoCentralFrontend v1.0.417, NeobeeFrontendSettings v3.65.16, NeobeeFrontendProject v3.65.11, NeobeeFrontendCentral v3.65.16, NeobeeFrontendDeveloper v3.65.13).
+- AdvancedTable Files – Fixed file loading in multiform popups by ensuring processInstanceId is properly passed (MoCentralFrontend v1.0.417, NeobeeFrontendSettings v3.65.16, NeobeeFrontendProject v3.65.11, NeobeeFrontendCentral v3.65.16, NeobeeFrontendDeveloper v3.65.13).
+- Form Tables – Added minimum row height to improve table rendering consistency on forms (MoCentralFrontend v1.0.419, NeobeeFrontendSettings v3.65.18, NeobeeFrontendProject v3.65.14, NeobeeFrontendCentral v3.65.18, NeobeeFrontendDeveloper v3.65.15).
+- State Error Indicators – Fixed incorrect display of error-state warnings while editing post functions (MoCentralFrontend v1.0.419, NeobeeFrontendSettings v3.65.18, NeobeeFrontendProject v3.65.14, NeobeeFrontendCentral v3.65.18, NeobeeFrontendDeveloper v3.65.15).
+- AdvancedTable Actions – Fixed inability to delete an action currently being edited (MoCentralFrontend v1.0.419, NeobeeFrontendSettings v3.65.18, NeobeeFrontendProject v3.65.14, NeobeeFrontendCentral v3.65.18, NeobeeFrontendDeveloper v3.65.15).
+- Form Schema Administration – Corrected label inconsistencies in form schema administration pages (MoCentralFrontend v1.0.419 and related frontend applications).
+- Form Validation – Fixed validation behavior for text, email and numeric fields, including missing email validation and hidden validation messages (NeobeeFrontendSettings v3.65.20, NeobeeFrontendProject v3.65.15, NeobeeFrontendCentral v3.65.19, NeobeeFrontendDeveloper v3.65.16).
+- Process Module Details – Fixed SQL syntax issue in the process module details query (MoProcess v3.65.28).
+- Application Build Popup – Fixed title formatting issues in the application build popup (NeobeeFrontendSettings v3.65.23).
+- Empty Tables – Fixed duplicate border rendering in empty table views (NeobeeFrontendSettings v3.65.22, NeobeeFrontendProject v3.65.16, NeobeeFrontendCentral v3.65.20, NeobeeFrontendDeveloper v3.65.17).
+### Improvements
+- App Store – Added pagination to the application listing page.
+- Error Monitoring – Simplified error loading by using a single query independent of the APP_MODEL_ENABLEDconfiguration (NeobeeFrontendSettings v3.65.19).
+- Error Monitoring – Error detail navigation now uses direct links that can be opened in a separate browser tab (NeobeeFrontendSettings v3.65.21).
+- Application Export – Added validation for App Map references during application build to prevent exporting invalid permission scheme or SMTP endpoint references (MoProcess v3.65.11).
+- Issue List Performance – Added MySQL execution time limit for get_issue_list queries to improve system stability (MoProcess v3.65.31).
+### New Features
+- Custom Table Dropdowns – Added support for using Custom Tables as a data source for dropdown components (MoCentralFrontend v1.0.418, NeobeeFrontendSettings v3.65.17, NeobeeFrontendProject v3.65.13, NeobeeFrontendCentral v3.65.17, NeobeeFrontendDeveloper v3.65.14).
+- Application Export – Added support for exporting App Dashboard menus and groups, including related administration and application assignment management (NeobeeBase v3.65.9, NeobeeFrontendSettings v3.65.21, MoProcess v3.65.27).
+- Application Build Audit Trail – Added developer tracking information (developer_username and developer_user_fullname) to application builds (MoProcess v3.65.31).
+- AI Spaces – Added process_project_id, issue_type_id, and form_id fields to AI Space configuration forms.
+
 ## May, week IV
 ### Fixes
 - Application Export Logs – Fixed incorrect entity reporting in export/build logs related to NRN conversion processing (MoProcess v3.64.31).
@@ -10,7 +34,6 @@
 - Frontend Performance Optimization – Introduced the first phase of frontend performance improvements, including CSS, font, static resource, look&feel  loading optimizations (MoCentralFrontend v1.0.410, NeobeeFrontendSettings v3.65.5, NeobeeFrontendProject v3.65.4, NeobeeFrontendCentral v3.65.7, NeobeeFrontendDeveloper v3.65.6).
 - Application Export – Added NRN conversion for local_copy_table_id and sync_config.source_table_id references in es_process_custom_table.definition (MoProcess v3.65.5).
 - Application Build Validation – Added validation of AppMap resource references during application build to prevent packaging projects with missing permission scheme or SMTP endpoint mappings (MoProcess v3.65.11).
-
 ### New Features
 - Keycloak Configuration Environment Variables – Added new environment variables for Keycloak URL, realm, and client ID configuration (MoCentralFrontend v1.0.407, NeobeeFrontendSettings v1.0.298, NeobeeFrontendProject v1.0.207, NeobeeFrontendCentral v1.0.213).
 - App Dashboard – Added new APP_DASHBOARD_SLA_BREACH query for AppDashboard reporting (NeobeeBase v3.64.8).
