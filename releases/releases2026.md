@@ -1,4 +1,17 @@
 # NeoBee Releases 2026
+## June, week II
+### Fixes
+- Ticket Priority Display – Fixed priority display issues in ticket lists (NeobeeFrontendSettings v3.66.1, NeobeeFrontendProject v3.66.1, NeobeeFrontendCentral v3.66.1, NeobeeFrontendDeveloper v3.66.2).
+- Document Content Page – Restored the document content page (/document/content/...) on the new portal after it was missed during migration (NeobeeFrontendCentral v3.66.2).
+- Application Build Export – Fixed an issue where application builds exported form item definitions field by field instead of exporting the complete es_form_item definition (MoProcess v3.65.36).
+- Signature API Integration – Updated all requests to the MoSignature service to use BaseAPI endpoints (MoCentralFrontend v1.0.431, NeobeeFrontendSettings v3.65.29, NeobeeFrontendProject v3.65.21, NeobeeFrontendCentral v3.65.36, NeobeeFrontendDeveloper v3.65.22).
+### Improvements
+- NeoChatPage – Added support for displaying chunk messages received through notifications and improved the chat experience by introducing a new chat action, upload close action, ticket ext_code display, enhanced dropdown rendering, tool approval menu actions, and message scrolling behavior.
+### New Features
+- Private WebSocket Channel – Implemented authenticated private WebSocket channels with user-level message filtering based on company and user identifiers, enabling support for private notifications and messaging (NeobeeGraphql v3.65.6, MoProcess v3.65.38, MoLlm v3.65.10, MoCentralFrontend v1.0.432, NeobeeFrontendSettings v3.65.30, NeobeeFrontendProject v3.65.23, NeobeeFrontendCentral v3.65.39, NeobeeFrontendDeveloper v3.65.23).
+- Keycloak User Refresh – Added a mechanism for detecting newly created users in Keycloak and refreshing user availability within the application (MoCentralFrontend v1.0.430, NeobeeFrontendSettings v3.65.25, NeobeeFrontendProject v3.65.18, NeobeeFrontendCentral v3.65.33, NeobeeFrontendDeveloper v3.65.19).
+- Markup Component Support – Added support for rendering markup content through a dedicated component on Vue 3 portals (NeobeeFrontendSettings v3.65.28, NeobeeFrontendProject v3.65.20, NeobeeFrontendCentral v3.65.35, NeobeeFrontendDeveloper v3.65.21).
+- AI Chat HTML Rendering – Implemented rendering of HTML content generated from Markdown documents within AI Chat (NeobeeFrontendSettings v3.65.34, NeobeeFrontendProject v3.65.29, NeobeeFrontendCentral v3.65.44, NeobeeFrontendDeveloper v3.65.26).
 ## June, week I
 ### Fixes
 - AdvancedTable – Fixed value refresh issues when AdvancedTable components are used inside subforms (MoCentralFrontend v1.0.417, NeobeeFrontendSettings v3.65.16, NeobeeFrontendProject v3.65.11, NeobeeFrontendCentral v3.65.16, NeobeeFrontendDeveloper v3.65.13).
