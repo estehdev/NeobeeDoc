@@ -1,4 +1,17 @@
 # NeoBee Releases 2026
+## June, week III
+### Fixes
+- Keycloak WebSocket Token Refresh – Implemented proactive authentication token refresh to prevent token expiration while WebSocket connections remain open in on-premise Keycloak environments.
+- AI Configuration Diagram – Fixed node label display for deactivated records, which incorrectly showed the node type instead of the configured name.
+### Improvements
+- Decimal Data Type Support – Added support for decimal data types in ticket filters and reporting functionality(MoCentralFrontend v1.0.434, NeobeeFrontendSettings v3.65.39, NeobeeFrontendProject v3.65.35, NeobeeFrontendCentral v3.65.53, NeobeeFrontendDeveloper v3.65.30).
+- PDF Merge Download – Renamed the generated merged PDF file from merged.pdf to pdfdownload.pdf (MoAttachment v3.65.9).
+- Keycloak User Status Validation – Enhanced user creation status verification by introducing additional status checks (MoCentralFrontend v1.0.438, NeobeeFrontendSettings v3.65.43, NeobeeFrontendProject v3.65.40, NeobeeFrontendCentral v3.65.61, NeobeeFrontendDeveloper v3.65.35).
+### New Features
+- Alternative Issue List Query – Implemented an alternative filtering mechanism for User, User Multiple, User Group, User Group Multiple, and permission-related fields based on the new data_key column, controlled through a dedicated environment setting.
+- AppDashboard User Picker – Added support for selecting inactive users in AppDashboard user picker components (MoCentralFrontend v1.0.433, NeobeeFrontendCentral v3.65.52).
+- PDF Merge Download – Added functionality for downloading multiple PDF documents as a single merged PDF file (MoProcess v3.65.48, MoAttachment v3.65.8, MoCentralFrontend v1.0.435, NeobeeFrontendSettings v3.65.40, NeobeeFrontendProject v3.65.36, NeobeeFrontendCentral v3.65.54, NeobeeFrontendDeveloper v3.65.30).
+- Keycloak Configuration Loading – Introduced server-side Keycloak configuration loading with local caching and fallback configuration support (MoCentralFrontend v1.0.436, NeobeeFrontendSettings v3.65.41, NeobeeFrontendProject v3.65.37, NeobeeFrontendCentral v3.65.58, NeobeeFrontendDeveloper v3.65.32).
 ## June, week II
 ### Fixes
 - Ticket Priority Display – Fixed priority display issues in ticket lists (NeobeeFrontendSettings v3.66.1, NeobeeFrontendProject v3.66.1, NeobeeFrontendCentral v3.66.1, NeobeeFrontendDeveloper v3.66.2).
