@@ -12,15 +12,58 @@ MoLlm, …) — workflow је исти, разликује се само име 
 
 ## Канали build-а
 
-| Канал | Када се покреће | Docker тагови |
-|-------|-----------------|---------------|
-| **dev** | push на `main` (или `master`) | `dev`, `dev-<верзија>`, `dev-3`, `dev-3.65` |
-| **feat** | ручно (`workflow_dispatch`) са било које гране | `feat-<назив>` |
-| **rc / staging** | GitHub Release означен као *pre-release* на `vX.Y.Z-rc.N` | `rc-<верзија>-<n>`, `staging` |
-| **prod** | објављен GitHub Release на `vX.Y.Z` | `prod-X.Y.Z`, `prod`, `prod-3`, `prod-3.65` |
+| Канал | Када се покреће | Регистри | Тагови image-а |
+|-------|-----------------|----------|----------------|
+| **dev** | push на `main` (или `master`) | `ghcr.io/estehdev` (+ DockerHub `neobeedev`, привремено) | `dev`, `dev-<верзија>`, `dev-3`, `dev-3.65` |
+| **feat** | ручно (`workflow_dispatch`) са било које гране | `ghcr.io/estehdev` | `feat-<назив>` |
+| **rc / staging** | GitHub Release означен као *pre-release* на `vX.Y.Z-rc.N` | `ghcr.io/estehdev` | `rc-<верзија>-<n>`, `staging` |
+| **prod** | објављен GitHub Release на `vX.Y.Z` | DockerHub `neobeedev` | `prod-X.Y.Z`, `prod`, `prod-3`, `prod-3.65` |
 
 > `dev-<верзија>` је облика `dev-3.65.4-5-gabc123` (последњи release + број commit-а + sha),
 > добијен преко `git describe`. Пре првог `v*` тага користи се `dev-<sha>`.
+
+## Где се објављују image-и (регистри)
+
+- **Продукциони** image-и иду на **DockerHub** (`neobeedev/<image>`) — без промене.
+- **Све остало** (dev / feat / rc-staging) сада иде на **GitHub Container Registry (GHCR)**:
+  `ghcr.io/estehdev/<image>`.
+- **Прелаз:** за сада се **dev** image-и *такође* копирају на DockerHub
+  (`neobeedev/<image>:dev*`) да би постојеће референце на dev окружењима наставиле да раде.
+  Када сва dev окружења буду повлачила са GHCR-а, то копирање се уклања и dev остаје само на GHCR.
+
+> Уводи се сервис по сервис (прво MoSafewatch). Док се workflow одређеног сервиса не ажурира,
+> сви његови image-и и даље иду на DockerHub.
+
+### Повлачење image-а са GHCR-а
+
+GHCR **није** DockerHub — твоји DockerHub креденцијали ту не раде. За повлачење image-а треба ти
+GitHub токен са `read:packages` овлашћењем:
+
+1. Направи Personal Access Token (classic): GitHub → **Settings → Developer settings →
+   Personal access tokens → Tokens (classic) → Generate new token**, штиклирај **`read:packages`**.
+2. Улогуј се једном на машини/окружењу које повлачи:
+   ```bash
+   echo <TOKEN> | docker login ghcr.io -u <github-korisnicko-ime> --password-stdin
+   ```
+3. Повлачи као и обично:
+   ```bash
+   docker pull ghcr.io/estehdev/<image>:dev
+   ```
+
+За Kubernetes pull secret користи исти токен:
+```bash
+kubectl create secret docker-registry ghcr \
+  --docker-server=ghcr.io \
+  --docker-username=<github-korisnicko-ime> \
+  --docker-password=<TOKEN>
+```
+
+**Видљивост пакета:** први push прави пакет као **приватан**, аутоматски повезан са својим repo-м.
+Ако пакет треба да буде доступан без аутентикације, админ организације га поставља на јаван:
+**Org → Packages → `<image>` → Package settings → Change visibility**.
+
+> **Push из CI-ја не захтева никакво подешавање** — workflow се аутентикује на GHCR преко
+> уграђеног `GITHUB_TOKEN`-а (job има `packages: write`). Горње напомене важе само за *повлачење*.
 
 ## Верзионисање — `vX.Y.Z`
 
