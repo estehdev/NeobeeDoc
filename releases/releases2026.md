@@ -1,4 +1,19 @@
 # NeoBee Releases 2026
+## June, week IV
+### Fixes
+- Fixed an issue where the group list was duplicated after saving changes.
+- Fixed a problem with incorrect redirection to the Keycloak SSO page during the initial application load (MoCentralFrontend v1.0.439, NeobeeFrontendSettings v3.65.47, NeobeeFrontendProject v3.65.44, NeobeeFrontendCentral v3.65.66, NeobeeFrontendDeveloper v3.65.37).
+- Added VUE_APP_TEMP_MAP_SELECT_KEY_TO_EXT_CODE to frontend runtime mappings, making it available for runtime injection (NeobeeFrontendSettings v3.65.48, NeobeeFrontendProject v3.65.45, NeobeeFrontendCentral v3.65.67, NeobeeFrontendDeveloper v3.65.38).
+- Removed application lock validation from the Users page within Project Administration.
+- Corrected application lock validation to be evaluated at the application instance level instead of the application level.
+### Improvements
+- AI Configuration Default Values – Introduced predefined default values for selected AI Configuration settings, including RAG, MCP, memory limits, scoring thresholds, model parameters, and timeout settings.
+### New Features
+- Digital Signature Validation Component – Added a new form component for displaying digital signature validation results, including signer details and certificate chain information.
+- AI Chat File Uploads – Added file upload support in AI Chat, including a dedicated file panel for displaying uploaded files.
+- AI Chat Upload Progress Indicator – Added visual upload progress tracking for files uploaded through AI Chat.
+- Content Index Statistics – Added statistics display within the Content Index details modal.
+- NeoChat Attachment Messages – Added support for the ATTACHMENT_LIST message type in NeoChat messages.
 ## June, week III
 ### Fixes
 - Keycloak WebSocket Token Refresh – Implemented proactive authentication token refresh to prevent token expiration while WebSocket connections remain open in on-premise Keycloak environments.
