@@ -12,15 +12,58 @@ the workflow is the same; only the image name differs.
 
 ## Build channels
 
-| Channel | Trigger | Docker tags |
-|---------|---------|-------------|
-| **dev** | push to `main` (or `master`) | `dev`, `dev-<version>`, `dev-3`, `dev-3.65` |
-| **feat** | manual (`workflow_dispatch`) from any branch | `feat-<name>` |
-| **rc / staging** | GitHub Release marked *pre-release* on `vX.Y.Z-rc.N` | `rc-<version>-<n>`, `staging` |
-| **prod** | published GitHub Release on `vX.Y.Z` | `prod-X.Y.Z`, `prod`, `prod-3`, `prod-3.65` |
+| Channel | Trigger | Registry | Image tags |
+|---------|---------|----------|------------|
+| **dev** | push to `main` (or `master`) | `ghcr.io/estehdev` (+ DockerHub `neobeedev`, temporary) | `dev`, `dev-<version>`, `dev-3`, `dev-3.65` |
+| **feat** | manual (`workflow_dispatch`) from any branch | `ghcr.io/estehdev` | `feat-<name>` |
+| **rc / staging** | GitHub Release marked *pre-release* on `vX.Y.Z-rc.N` | `ghcr.io/estehdev` | `rc-<version>-<n>`, `staging` |
+| **prod** | published GitHub Release on `vX.Y.Z` | DockerHub `neobeedev` | `prod-X.Y.Z`, `prod`, `prod-3`, `prod-3.65` |
 
 > `dev-<version>` looks like `dev-3.65.4-5-gabc123` (last release + commit count + sha), produced
 > by `git describe`. Before the first `v*` tag exists, it falls back to `dev-<sha>`.
+
+## Where images are published (registries)
+
+- **Production** images go to **DockerHub** (`neobeedev/<image>`) — unchanged.
+- **Everything else** (dev / feat / rc-staging) now goes to **GitHub Container Registry (GHCR)**:
+  `ghcr.io/estehdev/<image>`.
+- **Transition:** for now, **dev** images are *also* mirrored to DockerHub
+  (`neobeedev/<image>:dev*`) so existing dev-environment references keep working. Once every
+  dev environment pulls from GHCR, that mirror is removed and dev will live on GHCR only.
+
+> Rolled out per service (MoSafewatch first). Until a given service's workflow is updated, all of
+> its images still go to DockerHub.
+
+### Pulling images from GHCR
+
+GHCR is **not** DockerHub — your DockerHub credentials do not work for it. To pull an image you
+need a GitHub token with the `read:packages` scope:
+
+1. Create a Personal Access Token (classic): GitHub → **Settings → Developer settings →
+   Personal access tokens → Tokens (classic) → Generate new token**, tick **`read:packages`**.
+2. Log in once on the machine/environment that pulls:
+   ```bash
+   echo <TOKEN> | docker login ghcr.io -u <github-username> --password-stdin
+   ```
+3. Pull as usual:
+   ```bash
+   docker pull ghcr.io/estehdev/<image>:dev
+   ```
+
+For a Kubernetes pull secret, use the same token:
+```bash
+kubectl create secret docker-registry ghcr \
+  --docker-server=ghcr.io \
+  --docker-username=<github-username> \
+  --docker-password=<TOKEN>
+```
+
+**Package visibility:** the first push creates the package as **private**, auto-linked to its repo.
+If a package should be pullable without authentication, an org admin sets it public:
+**Org → Packages → `<image>` → Package settings → Change visibility**.
+
+> **Pushing from CI needs no setup** — the workflow authenticates to GHCR with the built-in
+> `GITHUB_TOKEN` (the job has `packages: write`). The notes above are only for *pulling*.
 
 ## Versioning — `vX.Y.Z`
 
