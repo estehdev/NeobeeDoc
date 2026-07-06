@@ -1,4 +1,21 @@
 # NeoBee Releases 2026
+## June, week V
+### Fixes
+- Applications Navigation – Fixed navigation and homepage value issues affecting the newly introduced Applications page with dynamic menus.
+- Application Build Export – Fixed an issue where only App Dashboard groups with a default dashboard were included during application export.
+- Workflow Creation – Fixed manual workflow creation to prevent generation of unnecessary forms, states, and transitions, creating only the process and initial state.
+- App Dashboard Membership Validation – Temporarily disabled dashboard-to-menu membership validation while a more robust validation mechanism is being developed.
+- FormGroup Scroll Handling – Improved textarea scrolling behavior in the FormGroup component by introducing dedicated input handling.
+- Project Management Post Function UI – Fixed scroll position retention and highlighted the selected function when editing post functions, improving navigation within the Project Management interface.
+### Improvements
+- Custom Table Dropdown Formatting – Added automatic formatting of DAY type columns displayed in Custom Table dropdown lists.
+- User Group Administration – Improved user group membership detection by validating membership directly against the database instead of relying on currently displayed records.
+- User Group Hover Preview Optimization – Improved performance and display of user group member previews by loading an initial subset of users and retrieving additional data on demand, with paging support for large groups.
+- Application Filtering – Enhanced Project Administration with application-based filtering for multiple entities (processes, form schemas, issue types, and state types), while also improving name search by disabling ASCII-only matching.
+- App Dashboard Images – Changed App Dashboard image loading to use image redirection instead of loading images directly through database queries.
+### New Features
+- Applications Page with Dynamic Menus – Completed and released the new Applications page with dynamic application menus, including enhanced dashboard loading that validates menu and group associations to prevent opening incorrect dashboards when duplicate ext_code values exist.
+- Menu Image Columns – Added support for image columns on application menus and menu items, enabling image-based navigation elements within the Applications menu.
 ## June, week IV
 ### Fixes
 - Fixed an issue where the group list was duplicated after saving changes.
