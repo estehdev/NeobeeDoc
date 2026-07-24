@@ -1,4 +1,28 @@
 # NeoBee Releases 2026
+## July, week II
+### Fixes
+- Added date range validation to the Reports page, preventing report execution when the selected period exceeds 366 days and displaying a warning message.
+### New Features
+- Implemented context-based value propagation between subforms in Entity Forms, allowing fields from one subform to be automatically accessed by another when using External Data mode, eliminating the need for direct component path references.
+- Implemented application switching from the Developer sidebar, including application configuration support with the same locking and updateability rules as the Settings application.
+- Added hover-based application selection, allowing users to view all applications and open the selected application in a new browser tab.
+- Migrated the complete Project creation functionality to the Developer application with a responsive interface.
+## July, week I
+### Fixes
+- Fixed Entity Form subform validation when the subform itself was optional but contained required fields.
+- Fixed the User Picker component displaying "undefined undefined" for user names by correcting mode resolution.
+- Fixed an issue where rag_enabled and mcp_enabled fields were not correctly saved to the JSON definition.
+- Removed the noEmitCheckboxOnRowClick prop from the Queue Item page in the NeoBee Admin Tenant Frontend.
+### Improvements
+- Updated the AI Configuration UI by replacing disabled node indicators with dashed connections and improving the RAG/MCP toggle state presentation.
+- Added row double-click support to open the Entity Manager directly.
+- Enhanced table row highlighting behavior while interacting with the Entity Manager and context menus.
+- Implemented automatic focus on the search field when opening or focusing a record list tab.
+- Introduced automatic opening of the Entity Manager when a search returns a single result.
+### New Features
+- Added pinned and recently picked record functionality across all currently implemented entities.
+- Implemented record pinning support through the Entity Manager and table context menus.
+- Introduced a dedicated Pinned section in the sidebar, displaying entities with pinned records in the same order as the main sidebar.
 ## June, week V
 ### Fixes
 - Applications Navigation – Fixed navigation and homepage value issues affecting the newly introduced Applications page with dynamic menus.
