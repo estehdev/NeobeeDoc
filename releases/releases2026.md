@@ -1,4 +1,21 @@
 # NeoBee Releases 2026
+## July, week III
+### Fixes
+- Fixed the Project site Page Not Found page so that the Back to Home button correctly redirects to the home page.
+- Fixed an issue where values were not displayed in nested subforms (two levels deep).
+- Fixed email field validation.
+- Fixed display and validation issues for Tax Identification Number and Company Registration Number fields.
+- Fixed a frontend error that occurred when approving or rejecting tickets after the Vue 2 to Vue 3 migration (NeobeeFrontendCentral v3.66.11-20, NeobeeFrontendSettings v3.66.6-23, NeobeeFrontendProject v3.66.5-15).
+- Fixed the Developer application build by correcting the Dockerfile configuration (NeobeeFrontendDeveloper v3.66.2).
+- Removed the requirement to select an application when managing menu items in the Settings administration (NeobeeFrontendSettings v3.66.5-22).
+### Improvements
+- Improved the tab bar by introducing responsive tab sizing with text truncation, replacing the trapezoid tab design, showing the close button only on hover,
+- Enhanced the mobile view of the Developer application to provide a more usable layout on smaller screens.
+- Added a condition in ProcessApprovalView to use the PROCESS_PENDING_STATE_LIST_V2_WITH_PAGING_INCLUDING_ARCHIVE query when the Show Details checkbox is selected.
+### New Features
+- Implemented the Project Filter functionality, allowing project-based filtering across relevant entity lists and project-related entity creation flows.
+- Added support for opening the table row context menu with a right-click across the entire Developer application.
+- Introduced an Opened and Recently Closed Tabs mechanism in the tab bar, including search support for both Cyrillic and Latin scripts.
 ## July, week II
 ### Fixes
 - Added date range validation to the Reports page, preventing report execution when the selected period exceeds 366 days and displaying a warning message.
