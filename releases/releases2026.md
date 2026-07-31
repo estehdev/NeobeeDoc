@@ -1,4 +1,20 @@
 # NeoBee Releases 2026
+## July, week IV
+### Fixes
+- Fixed Developer site link availability in the Dev Cloud environment.
+### Improvements
+- Improved AppDashboard image handling by adding support for reading images from the file_data column before falling back to storage.
+- Improved portal link visibility by adding permission checks for Project and Global Settings portals, hiding links when users do not have the required permissions.
+- Enhanced diagram search behavior by preserving the diagram position and zoom level and restoring the previous state after clearing the search.
+- Improved diagram interaction by adding selection and zoom support for selected diagram areas.
+- Enhanced diagram connector creation usability by adding a background helper grid for more precise connector placement.
+- Improved diagram visibility by hiding the function state list until a search term is entered.
+- Enhanced diagram transition creation by supporting multiple output connectors and automatically determining the appropriate connector based on the drag position.
+### New Features
+- Added connector configuration support for diagram nodes, including a dedicated Connectors tab with connector creation through node edge selection and signal/type configuration.
+- Added support for displaying and connecting specific connectors on true/false conditions, including configurable TRUE and FALSE connectors and connector selection for target states.
+- Added drag-and-drop support for moving existing connectors in the diagram.
+- Added connector-based transition creation support, including automatic detection of the closest output connector and target input connector during drag actions.
 ## July, week III
 ### Fixes
 - Fixed the Project site Page Not Found page so that the Back to Home button correctly redirects to the home page.
