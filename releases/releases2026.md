@@ -1,4 +1,19 @@
 # NeoBee Releases 2026
+## August, week I
+### Fixes
+- Fixed application administration for the permission schema (NeobeeFrontendSettings #28, MoProcess).
+- Fixed Excel report generation by adding support for converting custom day/date fields to the display format with timezone conversion (MoProcess).
+- Fixed SMTP AppMap creation on projects by correcting locked application detection to use the app instance instead of the application (NeobeeFrontendProject #18).
+### Improvements
+- Improved file template list filtering in post-functions by applying app_instance_id filtering, including related entities such as Issue Type and Process Project (NeobeeFrontendProject #18).
+### New Features
+- Implemented application-specific calendar support, including calendar export, app_instance_id support for CRUD operations, and application selection in calendar administration (NeobeeFrontendCentral #23, NeobeeFrontendSettings #25, MoProcess, NeobeeBase).
+- Added a public user registration page, available behind an environment variable (NeobeeFrontendCentral #31).
+- Added new HR statistics queries with parameterization support (NeobeeBase).
+- Added dashboard calendar filtering through events from a dropdown list (NeobeeFrontendCentral #33).
+- Implemented a new ENTITY field type with the INVENTORY subtype for combined input from es_inventory_item and es_item_storage (MoCentralFrontend v1.0.448).
+- Implemented the new Group state type for logically grouping states, including nested groups, resizing, and configurable appearance.
+- Added advanced diagram functionality, including screenshots, area-based zoom, connector labels, and creating new states between existing states with automatic transition updates.
 ## July, week IV
 ### Fixes
 - Fixed Developer site link availability in the Dev Cloud environment.
