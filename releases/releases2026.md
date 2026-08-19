@@ -1,4 +1,22 @@
 # NeoBee Releases 2026
+## August, week II
+### Fixes
+- Fixed AdvancedTable value refresh when the table is used inside a subform (NeobeeFrontendSettings #37, NeobeeFrontendProject #19, NeobeeFrontendCentral #30, NeobeeFrontendDeveloper #17).
+- Fixed AppDashboard issues related to adding and removing ticket columns and enabled application editing when no application is currently assigned to the dashboard (NeobeeFrontendCentral #38).
+- Fixed the Delimiter component by limiting displayed text length and showing the remaining content in a tooltip (NeobeeFrontendSettings #32, NeobeeFrontendProject #21, NeobeeFrontendCentral #40, NeobeeFrontendDeveloper #19).
+- Fixed app_instance_id assignment on the relationship between a project and an issue type (MoProcess).
+- Fixed app_instance_id assignment on the linking table (MoProcess v3.67.1).
+### Improvements
+- Added support for grouping ticket types such as Epic and Release (NeobeeFrontendProject #22, MoProcess).
+- NeobeeFrontendDeveloper: Improved the EntityPicker layout by separating records into Pinned, Recently Picked and other records.
+- NeobeeFrontendDeveloper: Improved tab labels by displaying the name of the opened entity instead of its entity type and dynamically adjusting tab width based on the displayed text.
+- NeobeeFrontendDeveloper: Improved tab organization by automatically grouping five or more tabs of the same entity type and allowing users to manually configure tab groups.
+- NeobeeFrontendDeveloper: Improved record navigation by opening record details in a new tab on double-click, while keeping the option to open the record in the floating menu available through the context menu.
+- NeobeeFrontendDeveloper: Improved support for multiple views in tab zones by preserving UI state when moving between views and automatically closing a view when it is resized below the defined threshold.
+- Improved project administration by allowing all process definitions (workflows) to be selected, instead of limiting the selection to those associated with non-grouping issue types. (NeobeeFrontendProject #24)
+### New Features
+- Added configurable AdvancedTable columns, allowing separate selection of columns available for display and columns available for interaction (NeobeeFrontendSettings #32, NeobeeFrontendProject #21, NeobeeFrontendCentral #40, NeobeeFrontendDeveloper #19).
+- Added multiform sorting configuration, allowing users to select a sorting column from a subform and define ascending or descending order (NeobeeFrontendSettings #32, NeobeeFrontendProject #21, NeobeeFrontendCentral #40, NeobeeFrontendDeveloper #19).
 ## August, week I
 ### Fixes
 - Fixed application administration for the permission schema (NeobeeFrontendSettings #28, MoProcess).
