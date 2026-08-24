@@ -1,4 +1,18 @@
 # NeoBee Releases 2026
+## August, week III
+### Fixes
+- Fixed transition export so that IDs of user groups and project roles in the condition column are correctly converted to NRN. 
+- Fixed form busy-state detection when triggering actions from a multiform subform, preventing partial subform states from being saved. Also fixed unnecessary field-detail loading during action execution (NeobeeFrontendCentral v54, NeobeeFrontendSettings v40, NeobeeFrontendProject v28).
+- Fixed application export conversion of group and role IDs contained in transition conditions (MoProcess v3.67.3).
+### Improvements
+- Improved pseudo-VTL evaluation on the frontend to support direct operations with objects and arrays (NeobeeFrontendSettings #35, NeobeeFrontendProject #26, NeobeeFrontendCentral #50, NeobeeFrontendDeveloper #23).
+- Improved custom column formatting in subforms by adding support for overriding columns in the table representation of the multiform component (NeobeeFrontendSettings #36, NeobeeFrontendProject #27, NeobeeFrontendCentral #51).
+- Added .sql to the list of allowed file upload extensions (NeobeeFrontendSettings #36, NeobeeFrontendProject #27, NeobeeFrontendCentral #51).
+- NeobeeFrontendDeveloper: Refactored custom table interfaces into shared NeobeeUI components and reused the same UI in create and edit modes.
+- NeobeeFrontendDeveloper: Extracted homepage item and file template configuration into separate components.
+### New Features
+- Added AI Chat integration to ticket details, including ticket-specific conversations and project-level controls for chat availability and AI space selection (NeobeeFrontendCentral #47, NeobeeFrontendProject #25).
+- Added handling of HTTP 429 responses in get_issue_list, including automatic retry support (NeobeeFrontendCentral #48).
 ## August, week II
 ### Fixes
 - Fixed AdvancedTable value refresh when the table is used inside a subform (NeobeeFrontendSettings #37, NeobeeFrontendProject #19, NeobeeFrontendCentral #30, NeobeeFrontendDeveloper #17).
