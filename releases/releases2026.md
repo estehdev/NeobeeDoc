@@ -1,4 +1,10 @@
 # NeoBee Releases 2026
+## August, week IV
+### Fixes
+- Fixed an issue with deleting subscriptions in AppDashboard administration, where deleting a subscription directly from the list could delete a different subscription instead of the selected one (NeobeeFrontendCentral v56).
+- Fixed an issue on the Tickets page where project filters were not reset after deselecting the selected project (NeobeeFrontendCentral v57).
+### Improvements
+- Added separate components for solution configuration, permission schemas, project roles, and AppDashboard configuration (NeobeeFrontendDeveloper).
 ## August, week III
 ### Fixes
 - Fixed transition export so that IDs of user groups and project roles in the condition column are correctly converted to NRN. 
