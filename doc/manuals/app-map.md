@@ -1,11 +1,11 @@
-# AppMap - НРН референце
+# AppMap - NRN references
 
-У наставку су објашњења за колоне у табели es_app_map, за потребе мапирања локалних и екстерних ресурса 
-и начина коришћења у апликацијама.
+Below are explanations of the columns in the *es_app_map* table, used for mapping local and external resources
+and how they are used in applications.
 
-### Колоне:
+### Columns:
 
-| назив | тип |
+| name | type |
 | --- | --- |
 | [map_type](#map_type) | VARCHAR(256) |
 | [map_subtype](#map_subtype) | VARCHAR(256) |
@@ -16,16 +16,16 @@
 
 
 ## map_type
-Садржи енумерацију доступних типова ресурса за мапирање (нпр., es_process_project, es_process_issue_type, итд.).
-Код новијих типова мапирања вредност колоне ће бити *data_def* (es_process_file_template), а старији (*legacy*) типови користе специјалну нотацију (*file_template*), која ће постепено бити избацивана из употребе.
+Contains an enumeration of the available resource types for mapping (e.g., es_process_project, es_process_issue_type, etc.).
+For newer mapping types the column value will be the *data_def* (es_process_file_template), while older (*legacy*) types use a special notation (*file_template*), which will gradually be phased out.
 
 ## map_subtype
-Садржи допунску информацију о ентитету на који се мапирање односи. На примеру ентитета *ES_ENDPOINT*, ова колона може садржати тип удаљене тачке или интерфејс удаљене тачке који имплементира. (*endpoint_type* ili *endpoint_interface*).
+Contains additional information about the entity the mapping refers to. For example, for the *ES_ENDPOINT* entity, this column may contain the endpoint type or the endpoint interface it implements. (*endpoint_type* or *endpoint_interface*).
 
 ## map_subtype_code
-Садржи конкретан идентификатор информације из колоне map_subtype. На примеру ентитета *ES_ENDPOINT*, где у *map_subtype* колони стоји *endpoint_type*, у овој колони би стајала шифра типа удаљене тачке.
+Contains the concrete identifier of the information from the map_subtype column. For example, for the *ES_ENDPOINT* entity, where the *map_subtype* column holds *endpoint_type*, this column would hold the code of the endpoint type.
 
-**Примери**
+**Examples**
 | map_type | map_subtype | map_subtype_code | resolve_model | map_reference_nrn | map_reference_to |
 | --- | --- | --- | ---: | --- | ---: |
 | es_endpoint | **endpoint_type** | **neobee.wordpress** | 4 | nrn:system:es_endpoint:123 | 123 |
@@ -34,22 +34,22 @@
 
 
 ## resolve_model
-Описује начин учитавања ресурса на који се мапирање односи.
-Дозвољене вредности ове колоне су бројеви 1, 2, 3 и 4.
+Describes how the resource the mapping refers to is loaded.
+The allowed values of this column are the numbers 1, 2, 3 and 4.
 
-| resolve_model | опис |
+| resolve_model | description |
 | ---: | --- |
-| 1 | Локални ресурс из текуће апликације |
-| 2 | Локални ресурс из друге апликације на истом систему |
-| 3 | Екстерни ресурс - налази се на удаљеном систему |
-| 4 | Системски ресурс - налази се на истом систему, али нема app_instance_id |
+| 1 | Local resource from the current application |
+| 2 | Local resource from another application on the same system |
+| 3 | External resource - located on a remote system |
+| 4 | System resource - located on the same system, but has no app_instance_id |
 
-Системским ресурсом се сматрају ентитети који не подржавају апликативни модел уопште (немају *app_instance_id* колону) и ентитети који подржавају апликативни модел, али немају у датом тренутку постављен *app_instance_id*.
+A system resource is considered to be an entity that does not support the application model at all (has no *app_instance_id* column), as well as an entity that supports the application model but does not have *app_instance_id* set at the given moment.
 
-У колону map_type се уписује назив *data_def*-а на који мапирање указује, што би у овом случају било "**es_endpoint**".
-Колона map_subtype означава варијанту подтипа, која код удаљене тачке може бити endpoint_type или endpoint_interface.
-У случају када је map_subtype попуњен, колона map_subtype_code садржи шифру конкретног подтипа, која може да се користи како би се дати подтип пронашао у бази.
-Будући да табела es_endpoint нема везу према апликацији (*app_instance_id*), resolve_model мора да има вредност "**4**", што значи да је у питању системски ресурс.
+The map_type column stores the name of the *data_def* the mapping points to, which in this case would be "**es_endpoint**".
+The map_subtype column denotes the subtype variant, which for an endpoint can be endpoint_type or endpoint_interface.
+When map_subtype is filled in, the map_subtype_code column contains the code of the concrete subtype, which can be used to find that subtype in the database.
+Since the es_endpoint table has no link to an application (*app_instance_id*), resolve_model must have the value "**4**", meaning it is a system resource.
 
 | map_type | map_subtype | map_subtype_code | resolve_model | map_reference_nrn | map_reference_to |
 | --- | --- | --- | ---: | --- | ---: |
@@ -60,34 +60,34 @@
 | es_process_issue_type | *NULL* | *NULL* | 2 | nrn:neobee:neobee:es_process_issue_type:444 | 444 |
 
 ## map_reference_nrn
-Садржи НРН референцу према ресурсу, која се снима увек, без обзира на вредност из *resolve_model* колоне.
+Contains the NRN reference to the resource, which is always saved, regardless of the value in the *resolve_model* column.
 
-Примена овог модела се односи само на параметре пост функције чији је тип *APP_MAP*, што је нови тип параметра и мора да се детектује током извршавања функције, тако што ће се учитати дефиниција удаљене тачке из пост функције.
-Вредност овог типа параметра ће бити НРН од *es_app_map* записа.
+This model applies only to post function parameters whose type is *APP_MAP*, which is a new parameter type and must be detected during function execution, by loading the endpoint definition from the post function.
+The value of this parameter type will be the NRN of the *es_app_map* record.
 
-**Пример вредности једног параметра из пост функције:**
+**Example value of a single parameter from a post function:**
 ```json
 {
-  "ext_code": "appmap_parametar_u_post_funkciji",
+  "ext_code": "appmap_param_in_post_function",
   "value": "nrn:neobee:neobee:es_app_map:123"
 }
 ```
 
-Потребно је учитати es_app_map запис по датом НРН-у.
+The es_app_map record must be loaded by the given NRN.
 
 ```sql
 select * from es_app_map where nrn = 'nrn:neobee:neobee:es_app_map:123';
 ```
 
-У том запису постоји колона *map_reference_nrn*, која садржи НРН референцу према конкретном ресурсу. 
-У колони *map_type* стоји тип податка на који се референца односи. 
-Код нових типова ће то бити баш њихов *data_def*, али је најбоље користити помоћну методу *MoProcess::AppMapManager::getDataDefForMapType*. 
+That record has a *map_reference_nrn* column, which contains the NRN reference to the concrete resource.
+The *map_type* column holds the data type the reference refers to.
+For new types this will be exactly their *data_def*, but it is best to use the helper method *MoProcess::AppMapManager::getDataDefForMapType*.
 
-Та референца може бити апликативна, екстерна или системска.
+That reference can be application-level, external or system-level.
 
-Ако је апликативна или екстерна, потребно је пронаћи запис у табели на коју се *map_type* односи, користећи *map_reference_nrn* за претрагу по колони *nrn*.
+If it is application-level or external, the record must be found in the table that *map_type* refers to, using *map_reference_nrn* to search by the *nrn* column.
 
-**Пример апликативни или екстерни:**
+**Application-level or external example:**
 | map_type | map_reference_nrn |
 | --- | --- |
 | es_process_file_template | nrn:neobee:neobee:es_process_file_template_123 |
@@ -97,20 +97,20 @@ select * from es_app_map where nrn = 'nrn:neobee:neobee:es_app_map:123';
 select * from es_process_file_template where nrn='nrn:neobee:neobee:es_process_file_template_123';
 ```
 
-Ако је системска референца, НРН ће имати специјалан префикс "***nrn:system***":, у ком случају је потребно парсирати ту вредност на начин да се дође до ид-а ресурса.
+If it is a system reference, the NRN will have the special prefix "***nrn:system***":, in which case that value must be parsed in order to obtain the resource id.
 
 
 
-**Пример системски:**
+**System example:**
 | map_type | map_reference_nrn |
 | --- | --- |
 | es_endpoint | nrn:system:es_endpoint:66 |
 
 
-1. nrn:system:es_endpoint:66 - скида се префикс
-2. es_endpoint:66 - узима се табела es_endpoint и у њој се тражи запис са ид-ем 66, или се табела узима из map_type колоне, као у претходном примеру (getDataDefForMapType)
+1. nrn:system:es_endpoint:66 - the prefix is stripped
+2. es_endpoint:66 - the es_endpoint table is taken and the record with id 66 is looked up in it, or the table is taken from the map_type column, as in the previous example (getDataDefForMapType)
 ```sql
 select * from es_endpoint where id = 66;
 ```
 
-Вредност ресурса која се добије неким од ова два пута је оно што треба проследити даљем извршавању функције.
+The resource value obtained through either of these two paths is what should be passed on to the further execution of the function.
