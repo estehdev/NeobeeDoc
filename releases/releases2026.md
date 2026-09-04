@@ -1,4 +1,14 @@
 # NeoBee Releases 2026
+## September, week I
+### Improvements
+- Improved process filter creation by allowing filters to be created without an application association (NEO-31, NeobeeFrontendCentral v59).
+- NeobeeFrontendDeveloper: Refactored and consolidated CRUD interfaces across existing applications and the Developer application, removing duplicated code.
+- Added mcp_enabled and mcp_description fields to the REST Endpoint form.
+- Added an Installation Logs page to the Applications section.
+### New Features
+- Implemented the complete AppMap NRN reference flow, including administration, remote endpoint configuration, APP_MAP parameter handling in post functions, support for new mapping types (es_process_issue_type, es_process_project, es_process_file_template, es_endpoint) and application export changes (NEO-6).
+- NeobeeFrontendDeveloper: Added a new Rest Endpoint node type to the AI configuration, with filter support.
+- Implemented file hashing during process file upload as part of the process file hashing functionality (NEO-21).
 ## August, week IV
 ### Fixes
 - Fixed an issue with deleting subscriptions in AppDashboard administration, where deleting a subscription directly from the list could delete a different subscription instead of the selected one (NeobeeFrontendCentral v56).
