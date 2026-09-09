@@ -12,7 +12,8 @@ and how they are used in applications.
 | [map_subtype_code](#map_subtype_code) | VARCHAR(256) |
 | [resolve_model](#resolve_model) | SMALLINT |
 | [map_reference_nrn](#map_reference_nrn) | VARCHAR(1024) |
-
+| [is_export_enabled](#is_export_enabled) | INT |
+| [is_edit_enabled](#is_edit_enabled) | INT |
 
 
 ## map_type
@@ -114,3 +115,23 @@ select * from es_endpoint where id = 66;
 ```
 
 The resource value obtained through either of these two paths is what should be passed on to the further execution of the function.
+
+## is_export_enabled
+Означава особину мапирања која говори да ли се дати ресурс извози са апликацијом.
+
+- Уколико је 1, ресурс се извози и мапирање ће имати референцу према ресурсу (*map_reference_nrn*, *map_reference_to*)
+- Уколико је 2 или NULL, референца ресурса из мапирања неће бити присутна у извозу, нити ће се током инсталације узимати у обзир.
+
+## is_edit_enabled
+Означава особину мапирања која говори да ли је могуће мењати мапирање на дестинационом систему. 
+Односи се на референцу према ресурсу и на природу мапирања (*map_reference_nrn*, *map_reference_to*, *resolve_model*).
+
+- Уколико је 1, мапирање је могуће мењати на дестинационом систему. Мапирање које је могуће мењати неће бити ажурирано поновном инсталацијом.
+- Уколико је 2, мапирање је није могуће мењати на дестинационом систему. Оваква мапирања се аутоматски ажурирају поновном инсталацијом.
+
+| Комбинације | is_export_enabled=1 | is_export_enabled=2 |
+| :--- | :--- | :--- |
+| **is_edit_enabled=1** | извози се, може да се мења | не извози се, може да се мења |
+| **is_edit_enabled=2** | извози се, не може да се мења | неисправна ситуација |
+
+На развојном систему се виде сва мапирања, без обзира на њихову измењивост, док се на дестинационом систему виде само она која је могуће мењати.
