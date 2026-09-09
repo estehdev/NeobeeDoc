@@ -3,7 +3,7 @@ A SHA-512 hash is created on every file upload that concerns the *es_process_fil
 
 ### Columns
 | name | type |
-| --- | --- |
+| :--- | :--- |
 | [hash](#hash) | BINARY(64) |
 
 ## Hash

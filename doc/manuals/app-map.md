@@ -6,7 +6,7 @@ and how they are used in applications.
 ### Columns:
 
 | name | type |
-| --- | --- |
+| :--- | :--- |
 | [map_type](#map_type) | VARCHAR(256) |
 | [map_subtype](#map_subtype) | VARCHAR(256) |
 | [map_subtype_code](#map_subtype_code) | VARCHAR(256) |
@@ -27,7 +27,7 @@ Contains the concrete identifier of the information from the map_subtype column.
 
 **Examples**
 | map_type | map_subtype | map_subtype_code | resolve_model | map_reference_nrn | map_reference_to |
-| --- | --- | --- | ---: | --- | ---: |
+| :--- | :--- | :--- | ---: | :--- | ---: |
 | es_endpoint | **endpoint_type** | **neobee.wordpress** | 4 | nrn:system:es_endpoint:123 | 123 |
 | es_endpoint | **endpoint_interface** | **neobee.file** | 4 | nrn:system:es_endpoint:456 | 456 |
 
@@ -38,7 +38,7 @@ Describes how the resource the mapping refers to is loaded.
 The allowed values of this column are the numbers 1, 2, 3 and 4.
 
 | resolve_model | description |
-| ---: | --- |
+| ---: | :--- |
 | 1 | Local resource from the current application |
 | 2 | Local resource from another application on the same system |
 | 3 | External resource - located on a remote system |
@@ -52,7 +52,7 @@ When map_subtype is filled in, the map_subtype_code column contains the code of 
 Since the es_endpoint table has no link to an application (*app_instance_id*), resolve_model must have the value "**4**", meaning it is a system resource.
 
 | map_type | map_subtype | map_subtype_code | resolve_model | map_reference_nrn | map_reference_to |
-| --- | --- | --- | ---: | --- | ---: |
+| :--- | :--- | :--- | ---: | :--- | ---: |
 | es_endpoint | endpoint_type | neobee.wordpress | 4 | nrn:system:es_endpoint:123 | 123 |
 | es_endpoint | endpoint_interface | neobee.file | 4 | nrn:system:es_endpoint:456 | 456 |
 | es_process_file_template | *NULL* | *NULL* | 1 | nrn:esteh:esteh:es_process_file_template:333 | 333 |
@@ -89,7 +89,7 @@ If it is application-level or external, the record must be found in the table th
 
 **Application-level or external example:**
 | map_type | map_reference_nrn |
-| --- | --- |
+| :--- | :--- |
 | es_process_file_template | nrn:neobee:neobee:es_process_file_template_123 |
 
 
@@ -103,7 +103,7 @@ If it is a system reference, the NRN will have the special prefix "***nrn:system
 
 **System example:**
 | map_type | map_reference_nrn |
-| --- | --- |
+| :--- | :--- |
 | es_endpoint | nrn:system:es_endpoint:66 |
 
 
