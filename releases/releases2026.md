@@ -1,4 +1,14 @@
 # NeoBee Releases 2026
+## September, week II
+### Fixes
+- Added triggers for entering and exiting states, including UI and administration, post-function integration, trigger export, and extended post-function export support (MoProcess, NeobeeFrontendProject v35).
+- Added mcp_enabled and mcp_description fields from the es_endpoint_rest table to the export procedure.
+### Improvements
+- Improved AppMap administration by introducing is_edit_enabled and is_export_enabled controls for managing the visibility of editable and exportable mappings (NeobeeFrontendSettings v54).
+- Optimized NeoAiChat static resource loading by removing duplicated resources across projects and loading them only on pages where the chat is present (NeobeeFrontendSettings v55, NeobeeFrontendProject v37, NeobeeFrontendCentral v66).
+### New Features
+- Added triggers for entering and exiting states, including UI and administration, post-function integration, trigger export, and extended post-function export support (MoProcess, NeobeeFrontendProject v35).
+- Added mcp_enabled and mcp_description fields from the es_endpoint_rest table to the export procedure.
 ## September, week I
 ### Improvements
 - Improved process filter creation by allowing filters to be created without an application association (NEO-31, NeobeeFrontendCentral v59).
