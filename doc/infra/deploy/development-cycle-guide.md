@@ -14,13 +14,14 @@ the workflow is the same; only the image name differs.
 
 | Channel | Trigger | Registry | Image tags |
 |---------|---------|----------|------------|
-| **dev** | push to `main` (or `master`) | `ghcr.io/estehdev` (+ DockerHub `neobeedev`, temporary) | `dev`, `dev-<version>`, `dev-3`, `dev-3.65` |
+| **dev** | push to `main` (or `master`) | `ghcr.io/estehdev` (+ DockerHub `neobeedev`, temporary) | one floating tag: `dev` (`main` in a few repos); mirror adds `dev`, `dev-3` |
 | **feat** | manual (`workflow_dispatch`) from any branch | `ghcr.io/estehdev` | `feat-<name>` |
 | **rc / staging** | GitHub Release marked *pre-release* on `vX.Y.Z-rc.N` | `ghcr.io/estehdev` | `rc-<version>-<n>`, `staging` |
-| **prod** | published GitHub Release on `vX.Y.Z` | DockerHub `neobeedev` | `prod-X.Y.Z`, `prod`, `prod-3`, `prod-3.65` |
+| **prod** | published GitHub Release on `vX.Y.Z` | DockerHub `neobeedev` | `X.Y.Z`, `X.Y`, `X` |
 
-> `dev-<version>` looks like `dev-3.65.4-5-gabc123` (last release + commit count + sha), produced
-> by `git describe`. Before the first `v*` tag exists, it falls back to `dev-<sha>`.
+> The GHCR dev tag is **floating only** — no version-specific dev tags are published there, so
+> packages don't pile up. The real version (from `git describe`, e.g. `3.65.4-5-gabc123`) is still
+> baked into the image via `-Dquarkus.application.version`.
 
 ## Where images are published (registries)
 
@@ -32,7 +33,9 @@ the workflow is the same; only the image name differs.
   dev environment pulls from GHCR, that mirror is removed and dev will live on GHCR only.
 
 > Rolled out per service (MoSafewatch first). Until a given service's workflow is updated, all of
-> its images still go to DockerHub.
+> its images still go to DockerHub. As of 2026-09-16 every migrated service shares this workflow;
+> `NeobeeKeycloak` is the remaining exception — it still builds on push to `main` and pushes
+> `<pom version>` / `latest` / `prod` / `test` unconditionally.
 
 ### Pulling images from GHCR
 
@@ -77,12 +80,13 @@ If a package should be pullable without authentication, an org admin sets it pub
 ## 1. Day-to-day work (dev)
 
 Nothing special — **just push/merge to `main`**. CI automatically:
-- builds and publishes the image with tags `dev`, `dev-<git-describe>`, `dev-3`, `dev-3.65`.
+- builds and publishes the image to GHCR under a single floating tag (`dev`, or `main` in a few
+  repos), and mirrors `dev` + `dev-3` to DockerHub.
 - derives the version from git (you don't touch `application.properties`).
 
 ```bash
 git push origin main
-# → neobeedev/<image>:dev  and  :dev-3.65.4-5-gabc123  and  :dev-3  and  :dev-3.65
+# → ghcr.io/estehdev/<image>:dev   (mirrored to neobeedev/<image>:dev and :dev-3)
 ```
 
 ## 2. Feature / preview build (to test a branch)
@@ -92,12 +96,13 @@ When you're working on a feature branch and want an image you can pull on a dev 
 **From the command line:**
 ```bash
 gh workflow run build-and-push.yml --ref my-branch -f tag=my-feature
-# → neobeedev/<image>:feat-my-feature
+# → ghcr.io/estehdev/<image>:feat-my-feature
 ```
 If you omit `-f tag`, the branch name is used (`feat-<branch>`).
 
 **From the GitHub UI:**
-1. Repo → **Actions** → workflow **"Build and Push to DockerHub"**.
+1. Repo → **Actions** → the build-and-push workflow (named either *Build and Push Container
+   Image* or *Build and Push to DockerHub*, depending on the repo).
 2. **"Run workflow"** button → pick the branch → (optional) enter `tag` → **Run workflow**.
 
 > Note: the "Run workflow" button only appears once a workflow with the `workflow_dispatch`
@@ -111,7 +116,7 @@ When you want to test a production candidate before it goes to prod:
 
 ```bash
 gh release create v3.65.6-rc.1 --prerelease --title "3.65.6-rc.1" --notes "..."
-# → neobeedev/<image>:rc-3.65.6-1  +  :staging
+# → ghcr.io/estehdev/<image>:rc-3.65.6-1  +  :staging
 ```
 - `staging` always points to the latest pre-release — handy for deploying to a staging environment.
 - It **does not touch** the production tags.
@@ -121,12 +126,14 @@ gh release create v3.65.6-rc.1 --prerelease --title "3.65.6-rc.1" --notes "..."
 
 ```bash
 gh release create v3.65.6 --title "3.65.6" --notes "..."
-# → neobeedev/<image>:prod-3.65.6  +  :prod  :prod-3  :prod-3.65
+# → neobeedev/<image>:3.65.6  +  :3.65  :3
 ```
 Or via the GitHub UI: **Releases** → **Draft a new release** → tag `v3.65.6` → **Publish release**.
 
-- `prod` / `prod-3` / `prod-3.65` move only if this is the **newest** version in that group
-  (see "Hotfix" below) — so a hotfix on an older line never drags `prod` backward.
+- `3.65` (MAJOR.MINOR) and `3` (MAJOR) move only if this is the **newest** version in that group
+  (see "Hotfix" below) — so a hotfix on an older line never drags `3` backward.
+- There is **no floating `prod` tag** — it was removed on 2026-09-16. Pin deployments to the exact
+  `X.Y.Z`, or follow `X.Y` / `X` if you want a tier pointer.
 
 ## 5. Hotfix from a released tag
 
@@ -142,7 +149,7 @@ gh release create v3.65.7 --target hotfix/3.65.7 --title "3.65.7" --notes "hotfi
 ```
 - `--target` points the new tag at the hotfix branch tip.
 - If `main` has already moved to a newer line (e.g. 3.66.x), the hotfix publishes only
-  `prod-3.65.7` + `prod-3.65` and does **not** move `prod` / `prod-3` backward.
+  `3.65.7` + `3.65` and does **not** move `3` backward.
 
 ---
 
@@ -159,5 +166,5 @@ gh release create v3.65.7 --target hotfix/3.65.7 --title "3.65.7" --notes "hotfi
   The `quarkus.application.version=dev` value in the file is only a default for local builds.
 - **The version printed at application startup** is correct because it is baked into the image
   at build time (prod → `3.65.6`, dev → `3.65.4-5-gabc123`, local → `dev`).
-- **`dev-3` / `dev-3.65`** are floating tags pointing to the latest dev on that major/minor line;
-  they are derived from the last release tag, not written by hand.
+- **`dev-3`** is a floating tag on the DockerHub mirror pointing at the latest dev on that major
+  line; it is derived from the last release tag, not written by hand. There is no `dev-3.65`.

@@ -14,13 +14,14 @@ MoLlm, …) — workflow је исти, разликује се само име 
 
 | Канал | Када се покреће | Регистри | Тагови image-а |
 |-------|-----------------|----------|----------------|
-| **dev** | push на `main` (или `master`) | `ghcr.io/estehdev` (+ DockerHub `neobeedev`, привремено) | `dev`, `dev-<верзија>`, `dev-3`, `dev-3.65` |
+| **dev** | push на `main` (или `master`) | `ghcr.io/estehdev` (+ DockerHub `neobeedev`, привремено) | један „покретни“ таг: `dev` (у неколико repo-а `main`); mirror додаје `dev`, `dev-3` |
 | **feat** | ручно (`workflow_dispatch`) са било које гране | `ghcr.io/estehdev` | `feat-<назив>` |
 | **rc / staging** | GitHub Release означен као *pre-release* на `vX.Y.Z-rc.N` | `ghcr.io/estehdev` | `rc-<верзија>-<n>`, `staging` |
-| **prod** | објављен GitHub Release на `vX.Y.Z` | DockerHub `neobeedev` | `prod-X.Y.Z`, `prod`, `prod-3`, `prod-3.65` |
+| **prod** | објављен GitHub Release на `vX.Y.Z` | DockerHub `neobeedev` | `X.Y.Z`, `X.Y`, `X` |
 
-> `dev-<верзија>` је облика `dev-3.65.4-5-gabc123` (последњи release + број commit-а + sha),
-> добијен преко `git describe`. Пре првог `v*` тага користи се `dev-<sha>`.
+> dev таг на GHCR-у је **само „покретни“** — верзионисани dev тагови се тамо не објављују, да се
+> пакети не гомилају. Права верзија (из `git describe`, нпр. `3.65.4-5-gabc123`) и даље се „пече“
+> у image преко `-Dquarkus.application.version`.
 
 ## Где се објављују image-и (регистри)
 
@@ -32,7 +33,9 @@ MoLlm, …) — workflow је исти, разликује се само име 
   Када сва dev окружења буду повлачила са GHCR-а, то копирање се уклања и dev остаје само на GHCR.
 
 > Уводи се сервис по сервис (прво MoSafewatch). Док се workflow одређеног сервиса не ажурира,
-> сви његови image-и и даље иду на DockerHub.
+> сви његови image-и и даље иду на DockerHub. Од 2026-09-16 сви мигрирани сервиси имају исти
+> workflow; `NeobeeKeycloak` је преостали изузетак — и даље се гради на push на `main` и безусловно
+> објављује `<pom верзија>` / `latest` / `prod` / `test`.
 
 ### Повлачење image-а са GHCR-а
 
@@ -77,12 +80,13 @@ kubectl create secret docker-registry ghcr \
 ## 1. Свакодневни рад (dev)
 
 Ништа посебно — **само push/merge на `main`**. CI аутоматски:
-- направи и објави image са таговима `dev`, `dev-<git-describe>`, `dev-3`, `dev-3.65`.
+- направи и објави image на GHCR под једним „покретним“ тагом (`dev`, у неколико repo-а `main`),
+  а на DockerHub копира `dev` + `dev-3`.
 - верзију извуче из git-а (не дираш `application.properties`).
 
 ```bash
 git push origin main
-# → neobeedev/<image>:dev  и  :dev-3.65.4-5-gabc123  и  :dev-3  и  :dev-3.65
+# → ghcr.io/estehdev/<image>:dev   (копира се на neobeedev/<image>:dev и :dev-3)
 ```
 
 ## 2. Feature / preview build (за тестирање гране)
@@ -92,12 +96,13 @@ git push origin main
 **Из командне линије:**
 ```bash
 gh workflow run build-and-push.yml --ref naziv-grane -f tag=moj-feature
-# → neobeedev/<image>:feat-moj-feature
+# → ghcr.io/estehdev/<image>:feat-moj-feature
 ```
 Ако изоставиш `-f tag`, користи се назив гране (`feat-<grana>`).
 
 **Из GitHub UI:**
-1. Repo → **Actions** → workflow **„Build and Push to DockerHub“**.
+1. Repo → **Actions** → build-and-push workflow (зове се или *Build and Push Container Image*
+   или *Build and Push to DockerHub*, зависно од repo-а).
 2. Дугме **„Run workflow“** → изабери грану → (опционо) упиши `tag` → **Run workflow**.
 
 > Напомена: дугме „Run workflow“ се појављује тек када је workflow са `workflow_dispatch`
@@ -111,7 +116,7 @@ gh workflow run build-and-push.yml --ref naziv-grane -f tag=moj-feature
 
 ```bash
 gh release create v3.65.6-rc.1 --prerelease --title "3.65.6-rc.1" --notes "..."
-# → neobeedev/<image>:rc-3.65.6-1  +  :staging
+# → ghcr.io/estehdev/<image>:rc-3.65.6-1  +  :staging
 ```
 - `staging` увек показује на најновији pre-release — згодно за деплој на staging окружење.
 - **Не дира** продукционе тагове.
@@ -121,12 +126,14 @@ gh release create v3.65.6-rc.1 --prerelease --title "3.65.6-rc.1" --notes "..."
 
 ```bash
 gh release create v3.65.6 --title "3.65.6" --notes "..."
-# → neobeedev/<image>:prod-3.65.6  +  :prod  :prod-3  :prod-3.65
+# → neobeedev/<image>:3.65.6  +  :3.65  :3
 ```
 Или кроз GitHub UI: **Releases** → **Draft a new release** → таг `v3.65.6` → **Publish release**.
 
-- `prod` / `prod-3` / `prod-3.65` се померају само ако је ово **најновија** верзија у тој
-  групи (види „Hotfix“ испод) — тако hotfix на старој линији не враћа `prod` уназад.
+- `3.65` (MAJOR.MINOR) и `3` (MAJOR) се померају само ако је ово **најновија** верзија у тој
+  групи (види „Hotfix“ испод) — тако hotfix на старој линији не враћа `3` уназад.
+- **Нема „покретног“ `prod` тага** — уклоњен је 2026-09-16. Деплој вежи за тачан `X.Y.Z`, или
+  прати `X.Y` / `X` ако ти треба показивач на линију.
 
 ## 5. Hotfix са објављеног тага
 
@@ -142,7 +149,7 @@ gh release create v3.65.7 --target hotfix/3.65.7 --title "3.65.7" --notes "hotfi
 ```
 - `--target` веже нови таг за врх hotfix гране.
 - Ако је `main` већ отишао на новију линију (нпр. 3.66.x), hotfix објављује само
-  `prod-3.65.7` + `prod-3.65` и **не** помера `prod` / `prod-3` уназад.
+  `3.65.7` + `3.65` и **не** помера `3` уназад.
 
 ---
 
@@ -159,5 +166,5 @@ gh release create v3.65.7 --target hotfix/3.65.7 --title "3.65.7" --notes "hotfi
   Вредност `quarkus.application.version=dev` у фајлу је само default за локални build.
 - **Верзија која се исписује при старту апликације** је тачна јер је „упечена“ у image
   током build-а (prod → `3.65.6`, dev → `3.65.4-5-gabc123`, локално → `dev`).
-- **`dev-3` / `dev-3.65`** су „покретни“ тагови који показују на најновији dev на тој
-  major/minor линији; изведени су из последњег release тага, не пишу се ручно.
+- **`dev-3`** је „покретни“ таг на DockerHub копији који показује на најновији dev на тој major
+  линији; изведен је из последњег release тага, не пише се ручно. `dev-3.65` не постоји.
