@@ -1,4 +1,16 @@
 # NeoBee Releases 2026
+## September, week III
+### Improvements
+- Enabled text fields for use in process filters for the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Improved visual highlighting of claimed groups in the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Improved export of permission scheme items for user groups to include items belonging to shared applications (MoProcess).
+### Fixes
+- Fixed app_instance_id handling for AppDashboard, menu and dashboard group translations (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Fixed missing app menus and dashboard groups in translation exports (MoCentral v3.68.1, NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Fixed application translation issues across menus, dashboards, groups, AdvancedTable forms and subforms.
+### New Features
+- Implemented dynamic visibility settings for fields on the AppDashboard (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Implemented the ability to take over approval tasks by assigning them to the current user.
 ## September, week II
 ### Fixes
 - Added triggers for entering and exiting states, including UI and administration, post-function integration, trigger export, and extended post-function export support (MoProcess, NeobeeFrontendProject v35).
