@@ -152,7 +152,7 @@ The resource value obtained through either of these two paths is what should be 
 ## Подразумеване вредности за is_export_enabled и is_edit_enabled
 База нема подразумеване вредности за ове две колоне. Бекенд (*MoProcess::AppMapManager::createAppMapReference*, као и његов порт у MoUser-у) уписује само оно што стигне у захтеву. Ако параметар не постоји, колона остаје NULL.
 
-**Подразумеване вредности одређује искључиво фронтенд.**
+**Подразумеване вредности одређује фронтенд.** Једини изузетак је подразумевана шема дозвола, коју бекенд креира са 1 / 1.
 
 Постојећи записи са NULL вредностима ажурирани су скриптом *929.sql*: *is_export_enabled* на 2, *is_edit_enabled* на 1.
 
@@ -162,7 +162,7 @@ The resource value obtained through either of these two paths is what should be 
 | *AppMapPicker*, креирање новог мапирања | по типу, из табеле испод |
 | Мапирање апликације (*ApplicationInstanceMapping*, NeobeeAdminTenantFrontend), креирање | по типу, из табеле испод. Примењује се при отварању прозора и при промени типа, док корисник не промени прекидаче. |
 | *should_create_app_map* при креирању улоге, приоритета, шаблона фајла, филтера, корисничке групе и прилагођене табеле | 1 / 2. Вредности шаље фронтенд, а бекенд их само преноси (*AppMapManager::createAppMapReferenceForEntity*). |
-| Подразумевана шема дозвола при креирању инстанце апликације или пројекта | 1 / NULL. Постојећи изузетак: вредност поставља бекенд. |
+| Подразумевана шема дозвола при креирању инстанце апликације или пројекта | 1 / 1. Једини изузетак: вредности поставља бекенд (*ProcessAppManager::createDefaultProcessPermissionSchemeWithMapReference*). |
 | Директан позив *create_app_map_reference* без ових параметара | NULL / NULL |
 | Инсталација (увоз) | вредности из извоза |
 
