@@ -1,4 +1,33 @@
 # NeoBee Releases 2026
+## September, week V
+### Improvements
+- File access permissions - Expanded file permission management with policy administration, additional grant types, frontend and server-side permission handling, and support for multiple policies per state with MATCH_ANY, MATCH_ALL and MATCH_NONE modes (MoProcess v3.68.9, NeobeeFrontendSettings v3.68.8, NeobeeFrontendProject v3.68.8, NeobeeFrontendCentral v3.68.10).
+- File access permissions - Implemented FILE_UPLOAD and FILE_EDIT_CONTENT permissions on both the frontend and server side (MoProcess, NeobeeFrontendSettings v75, NeobeeFrontendProject v50, NeobeeFrontendCentral v87).
+- File policy management - Added FILE_AUTHOR support and improved policy editing (NeobeeFrontendSettings #78, NeobeeFrontendProject #52, NeobeeFrontendCentral #91).
+- NeobeeFrontendDeveloper: Entity navigation and tabs - Improved entity opening behavior, tab hierarchy with diagrams prioritized, and added the ability to move interfaces from the floating section into a tab.
+- NeobeeFrontendDeveloper: Development improvements - Enabled the use of local frontend libraries across applications and improved font handling by adding missing Cyrillic Roboto font files and migrating from .woff to .woff2format to reduce file size.
+- Delimiter component - Improved the Delimiter component styling and text display.
+### Fixes
+- File upload components - Fixed an issue where files were not removed from tickets when the "enable deletion on ticket" option was enabled (NeobeeFrontendCentral v86).
+- NeobeeFrontendDeveloper: Custom tables - Fixed an issue where outdated column and index definitions could overwrite newly created custom table columns or indexes.
+- Process project creation - Fixed default permission scheme creation to exclude file permissions that do not belong to the relevant permission group.
+- AppMap permission scheme reference - Fixed an issue during project creation where the AppMap reference for the default permission scheme was created without the map_reference_to column due to a missing resolve_model flag.
+- AppMap references - Fixed inconsistent handling of is_export_enabled and is_edit_enabled values in AppMap records (NeobeeBase v3.68.4, MoProcess v3.68.10, MoCat v3.68.2, MoUser v3.68.1, NeobeeFrontendSettings v3.68.10, NeobeeFrontendProject v3.68.10, NeobeeFrontendCentral v3.68.12).
+- File Dropzone - Fixed permission initialization when the File Dropzone component is used directly on a form (NeobeeFrontendSettings #76, NeobeeFrontendProject #51, NeobeeFrontendCentral #89).
+- Process state query - Fixed inconsistent column definitions in the PROCESS_PENDING_STATE_LIST_V2_WITH_PAGING_INCLUDING_ARCHIVE query. (MoProcess)
+- File templates and App Instance IDs - Fixed App Instance display and persistence issues on the File Template page.
+- FormGroup validation - Fixed minlength validation so inputs cannot contain fewer characters than the configured minimum.
+### New Features
+- File access permissions - Introduced file access permission management, including policy administration, frontend and server-side permission handling, state-to-policy mapping, and export support for file policies (MoProcess, NeobeeFrontendSettings v73, NeobeeFrontendProject v49, NeobeeFrontendCentral v86).
+- NeobeeFrontendDeveloper: Diagram improvements - Added automatic transition reconnection when moving or creating states, diagram screenshots, focused-state centering, and partial diagram selection, and fixed repeated opening of new configuration windows.
+- NeobeeFrontendDeveloper: App Instance selection - Added App Instance pickers for Modules, Policies, Project Templates and REST Endpoints, and added server-side validation for App Instance updates.
+## September, week IV
+### Improvements
+- Application translations - Extended application translation support to Excel exports and additional AppDashboard components, with server-side translation handling for consistent results (NeobeeBase v3.68.3, MoCentral v3.68.3, MoProcess v3.68.5, MoCat v3.68.1, NeobeeFrontendSettings v3.68.7, NeobeeFrontendProject v3.68.7, NeobeeFrontendCentral v3.68.8).
+- System label export - Improved query conditions used for exporting system labels (MoCentral v3.68.4).
+### New Features
+- Homepage ticket filtering - Added filtering of tickets in My Approvals, My Requests, My Team and My History sections by module and project (MoProcess v3.68.7, NeobeeFrontendCentral v3.68.9).
+- File access permissions - Implemented the initial file permission model and frontend support for applying file access permissions to the central file view and form file dropzone.
 ## September, week III
 ### Improvements
 - Enabled text fields for use in process filters for the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
