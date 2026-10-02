@@ -14,7 +14,7 @@
 - AppMap permission scheme reference - Fixed an issue during project creation where the AppMap reference for the default permission scheme was created without the map_reference_to column due to a missing resolve_model flag.
 - AppMap references - Fixed inconsistent handling of is_export_enabled and is_edit_enabled values in AppMap records (NeobeeBase v3.68.4, MoProcess v3.68.10, MoCat v3.68.2, MoUser v3.68.1, NeobeeFrontendSettings v3.68.10, NeobeeFrontendProject v3.68.10, NeobeeFrontendCentral v3.68.12).
 - File Dropzone - Fixed permission initialization when the File Dropzone component is used directly on a form (NeobeeFrontendSettings #76, NeobeeFrontendProject #51, NeobeeFrontendCentral #89).
-- Process state query - Fixed inconsistent column definitions in the PROCESS_PENDING_STATE_LIST_V2_WITH_PAGING_INCLUDING_ARCHIVE query. (MoProcess)
+- Process state query - Fixed inconsistent column definitions in the PROCESS_PENDING_STATE_LIST_V2_WITH_PAGING_INCLUDING_ARCHIVE query (MoProcess).
 - File templates and App Instance IDs - Fixed App Instance display and persistence issues on the File Template page.
 - FormGroup validation - Fixed minlength validation so inputs cannot contain fewer characters than the configured minimum.
 ### New Features
