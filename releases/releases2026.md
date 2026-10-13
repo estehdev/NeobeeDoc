@@ -1,4 +1,18 @@
 # NeoBee Releases 2026
+## October, week I
+### Improvements
+- File access permissions - Added per-file permission retrieval to support showing or hiding edit and delete controls for individual files (MoProcess v3.68.16, NeobeeFrontendCentral v3.68.16).
+- Ticket list filters - Enabled text input in shortcut filters displayed above the ticket list (MoProcess v3.68.15, NeobeeFrontendSettings v3.68.12, NeobeeFrontendProject v3.68.12, NeobeeFrontendCentral v3.68.14).
+- NeobeeFrontendDeveloper: Diagram performance - Optimized diagram performance, particularly for diagrams containing more than 100 states and transitions.
+- NeobeeFrontendDeveloper: Diagram connectors - Improved custom connector configuration and transition routing, including connector editing and deletion handling.
+### Fixes
+- Filter administration - Fixed an issue that incorrectly made an application mandatory when configuring filters (NeobeeFrontendSettings v90).
+- Form locking - Restricted automatic form locking to FUNCTION, CONDITION and LOOP states instead of all non-STATE types (NeobeeFrontendSettings v94, NeobeeFrontendProject v63, NeobeeFrontendCentral v105).
+- NeobeeFrontendDeveloper: Custom table primary key - Fixed an issue when changing the name of a custom table's primary column.
+### New Features
+- File access permissions - Added FILE_ONLYOFFICE_COMMENT permission to control OnlyOffice comments independently of FILE_EDIT_CONTENT (NeobeeFrontendSettings v90, NeobeeFrontendProject v61, NeobeeFrontendCentral v102).
+- AppDashboard ticket lists - Added support for My Team and My History ticket list types (NeobeeFrontendCentral v101).
+- NeobeeFrontendDeveloper: Recently viewed entities - Added a list of the five most recently opened forms, components, custom tables, states and transitions, with options to open their configuration in the floating menu or a separate tab.
 ## September, week V
 ### Improvements
 - File access permissions - Expanded file permission management with policy administration, additional grant types, frontend and server-side permission handling, and support for multiple policies per state with MATCH_ANY, MATCH_ALL and MATCH_NONE modes (MoProcess v3.68.9, NeobeeFrontendSettings v3.68.8, NeobeeFrontendProject v3.68.8, NeobeeFrontendCentral v3.68.10).
