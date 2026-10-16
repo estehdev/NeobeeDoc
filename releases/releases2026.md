@@ -1,4 +1,17 @@
 # NeoBee Releases 2026
+## October, week II
+### Improvements
+- Multiple file preview - Improved the AdvancedTable component to correctly preview multiple files in a single field (NeobeeFrontendSettings v3.68.14, NeobeeFrontendProject v3.68.14, NeobeeFrontendCentral v3.68.17).
+- NeobeeFrontendDeveloper: Vertical tabs - Added an optional vertical tab layout with a collapsible panel, grouped tabs by panel position and entity, drag-and-drop support, and separate highlighting of the focused tab in each panel.
+- NeobeeFrontendDeveloper: SQL View Designer - Improved column formatting by filtering available functions based on column type and separating existing columns from custom derived columns in the designer interface.
+### Fixes
+- Custom table content listing - Fixed an issue where the eid column added to SELECT queries in view_custom_tablewas missing the database schema and table name prefix (MoProcess v3.68.17).
+- Ticket form performance - Prevented unnecessary saving of fields that do not have a default value configured and improved Work Log refresh by debouncing updates until save operations are complete (NeobeeFrontendSettings v3.68.16, NeobeeFrontendProject v3.68.16, NeobeeFrontendCentral v3.68.19).
+- DatepickerReport - Fixed an issue that allowed the date to be cleared, although the component requires a date value (NeobeeFrontendCentral v121).
+- NeobeeFrontendDeveloper: Application bug fixes - Fixed identified bugs across the Developer application and extracted additional CRUD interfaces into NeobeeUI.
+
+### New Features
+- User assignment restrictions - Applied the existing Assignee field rules to the user picker in the ticket list (MoUser v3.68.2, NeobeeFrontendSettings v3.68.17, NeobeeFrontendProject v3.68.17, NeobeeFrontendCentral v3.68.20).
 ## October, week I
 ### Improvements
 - File access permissions - Added per-file permission retrieval to support showing or hiding edit and delete controls for individual files (MoProcess v3.68.16, NeobeeFrontendCentral v3.68.16).
