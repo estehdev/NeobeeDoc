@@ -1,4 +1,18 @@
 # NeoBee Releases 2026
+## October, week III
+### Improvements
+- GraphQL connection - Added automatic reconnection before the JWT expires to prevent connection issues caused by token expiration (NeobeeFrontendSettings v115, NeobeeFrontendProject v76, NeobeeFrontendCentral v123).
+- NeobeeFrontendDeveloper: SQL View Designer - Simplified column configuration by reducing available fields to alias, type, format and raw SQL, with aliases generated automatically by default. Added separate handling for existing and custom columns.
+- NeobeeFrontendDeveloper: Custom table configuration - Separated table type changes into a dedicated action with a popup displaying the fields required for the selected table type.
+### Fixes
+- OnlyOffice file preview - Fixed an issue with full-screen display in the OnlyOffice file viewer when opened from the ticket details popup (NeobeeFrontendSettings v3.69.1, NeobeeFrontendProject v3.69.1, NeobeeFrontendCentral v3.69.1).
+- Ticket filter translations - Fixed translations in the ticket filter popup (MoDatabaseUpgrade v3.69.2).
+- NeobeeFrontendDeveloper: Custom table primary key - Fixed an issue when changing the name of a custom table's primary column.
+- NeobeeFrontendDeveloper: Character conversion - Fixed ASCII conversion so that the Latin character đ is converted to dj instead of d.
+### New Features
+- NeobeeFrontendDeveloper: SQL View Designer - Implemented enhancements to the SQL View Designer, including source table and join configuration, automatic saving, data preview, and switching between Designer and SQL Query modes.
+- NeobeeFrontendDeveloper: Group state display - Added a collapsed display mode for group states, with transitions visually connected to the group state and custom connectors inherited where applicable.
+- NeobeeFrontendDeveloper: Command palette - Started implementing a command palette accessible with CMD/CTRL + K, including entity search, keyboard navigation and access to entity records.
 ## October, week II
 ### Improvements
 - Multiple file preview - Improved the AdvancedTable component to correctly preview multiple files in a single field (NeobeeFrontendSettings v3.68.14, NeobeeFrontendProject v3.68.14, NeobeeFrontendCentral v3.68.17).
@@ -9,7 +23,6 @@
 - Ticket form performance - Prevented unnecessary saving of fields that do not have a default value configured and improved Work Log refresh by debouncing updates until save operations are complete (NeobeeFrontendSettings v3.68.16, NeobeeFrontendProject v3.68.16, NeobeeFrontendCentral v3.68.19).
 - DatepickerReport - Fixed an issue that allowed the date to be cleared, although the component requires a date value (NeobeeFrontendCentral v121).
 - NeobeeFrontendDeveloper: Application bug fixes - Fixed identified bugs across the Developer application and extracted additional CRUD interfaces into NeobeeUI.
-
 ### New Features
 - User assignment restrictions - Applied the existing Assignee field rules to the user picker in the ticket list (MoUser v3.68.2, NeobeeFrontendSettings v3.68.17, NeobeeFrontendProject v3.68.17, NeobeeFrontendCentral v3.68.20).
 ## October, week I
