@@ -1,52 +1,61 @@
 # NeoBee Releases 2026
-## October, week III
+## October, week IV
+### Fixes
+- AdvancedTable - Fixed an issue with saving the column display order in AdvancedTable administration. When a column was selected again, it was incorrectly moved to the end of the list instead of retaining the configured display order (NeobeeFrontendSettings v124, NeobeeFrontendProject v85, NeobeeFrontendCentral v132).
+- Inactive User Handling - Fixed an issue preventing inactive users from being loaded and added visual indication of inactive users in the user picker (NeobeeFrontendSettings v3.69.4, NeobeeFrontendProject v3.69.4, NeobeeFrontendCentral v3.69.4, NeobeeFrontendDeveloper v3.69.4).
+- File Upload Limit - Fixed an issue on the new frontend affecting the maximum number of files that can be uploaded (NeobeeFrontendSettings v3.69.5, NeobeeFrontendProject v3.69.5, NeobeeFrontendCentral v3.69.5).
+- Manual Signing File Upload - Fixed an issue preventing file uploads for manual signing on the new frontend (NeobeeFrontendSettings v3.69.5, NeobeeFrontendProject v3.69.5, NeobeeFrontendCentral v3.69.5).
 ### Improvements
-- GraphQL connection - Added automatic reconnection before the JWT expires to prevent connection issues caused by token expiration (NeobeeFrontendSettings v115, NeobeeFrontendProject v76, NeobeeFrontendCentral v123).
-- NeobeeFrontendDeveloper: SQL View Designer - Simplified column configuration by reducing available fields to alias, type, format and raw SQL, with aliases generated automatically by default. Added separate handling for existing and custom columns.
-- NeobeeFrontendDeveloper: Custom table configuration - Separated table type changes into a dedicated action with a popup displaying the fields required for the selected table type.
+- AdvancedTable Error Handling - Improved error handling on both old and new frontends to prevent the table from crashing and remaining stuck in the loading state when encountering invalid saved field values (NeobeeFrontendSettings v3.70.1, NeobeeFrontendProject v3.70.1, NeobeeFrontendCentral v3.70.1, MoCentralFrontend v1.0.462).
+- Frontend Dependencies Update - Updated all dependencies across frontend libraries and applications (MoUser v3.69.2, NeobeeFrontendSettings v3.69.4 (127), NeobeeFrontendProject v3.69.4 (88), NeobeeFrontendCentral v3.69.4 (138), NeobeeFrontendDeveloper v3.69.4 (87)).
+- NeobeeFrontendDeveloper: Aside Menu Navigation and Organization - Improved the aside menu by grouping entities into Process, Data, UI, UX, and Security categories. Hovering over a group displays its entities and records of the first entity, while clicking an entity or group opens the most recently used tab for the selected entity, with the table view as a fallback when no tabs are open.
+- NeobeeFrontendDeveloper: Diagram Configuration - Added configuration options for transition styles and diagram orientation, supporting horizontal and vertical layouts.
+- NeobeeFrontendDeveloper: Tab Management - Improved tab organization by grouping tabs by entity, preserving the entity order from the side menu, and displaying full entity names. Added navigation arrows to make horizontal scrolling easier.
+- NeobeeFrontendDeveloper: Form Item Administration - Improved the administration interface with cleaner styling, consistent spacing, and better usability on smaller screens. The available components are now displayed on demand, making it easier to add and arrange form items.
+- NeobeeFrontendDeveloper: Recently Used Entities - Updated the Recently Used section to display entity types first, with the corresponding records shown on hover.
+### New Features
+- AI Chat Visibility Configuration - Added a flag in Look & Feel settings to control the visibility of the AI Chat page (MoDatabaseUpgrade v3.70.1, MoCompany v3.70.1, NeobeeFrontendSettings v3.70.0, NeobeeFrontendProject v3.70.0, NeobeeFrontendCentral v3.70.0).
+## October, week III
 ### Fixes
 - OnlyOffice file preview - Fixed an issue with full-screen display in the OnlyOffice file viewer when opened from the ticket details popup (NeobeeFrontendSettings v3.69.1, NeobeeFrontendProject v3.69.1, NeobeeFrontendCentral v3.69.1).
 - Ticket filter translations - Fixed translations in the ticket filter popup (MoDatabaseUpgrade v3.69.2).
 - NeobeeFrontendDeveloper: Custom table primary key - Fixed an issue when changing the name of a custom table's primary column.
 - NeobeeFrontendDeveloper: Character conversion - Fixed ASCII conversion so that the Latin character đ is converted to dj instead of d.
+### Improvements
+- GraphQL connection - Added automatic reconnection before the JWT expires to prevent connection issues caused by token expiration (NeobeeFrontendSettings v115, NeobeeFrontendProject v76, NeobeeFrontendCentral v123).
+- NeobeeFrontendDeveloper: SQL View Designer - Simplified column configuration by reducing available fields to alias, type, format and raw SQL, with aliases generated automatically by default. Added separate handling for existing and custom columns.
+- NeobeeFrontendDeveloper: Custom table configuration - Separated table type changes into a dedicated action with a popup displaying the fields required for the selected table type.
 ### New Features
 - NeobeeFrontendDeveloper: SQL View Designer - Implemented enhancements to the SQL View Designer, including source table and join configuration, automatic saving, data preview, and switching between Designer and SQL Query modes.
 - NeobeeFrontendDeveloper: Group state display - Added a collapsed display mode for group states, with transitions visually connected to the group state and custom connectors inherited where applicable.
 - NeobeeFrontendDeveloper: Command palette - Started implementing a command palette accessible with CMD/CTRL + K, including entity search, keyboard navigation and access to entity records.
 ## October, week II
-### Improvements
-- Multiple file preview - Improved the AdvancedTable component to correctly preview multiple files in a single field (NeobeeFrontendSettings v3.68.14, NeobeeFrontendProject v3.68.14, NeobeeFrontendCentral v3.68.17).
-- NeobeeFrontendDeveloper: Vertical tabs - Added an optional vertical tab layout with a collapsible panel, grouped tabs by panel position and entity, drag-and-drop support, and separate highlighting of the focused tab in each panel.
-- NeobeeFrontendDeveloper: SQL View Designer - Improved column formatting by filtering available functions based on column type and separating existing columns from custom derived columns in the designer interface.
 ### Fixes
 - Custom table content listing - Fixed an issue where the eid column added to SELECT queries in view_custom_tablewas missing the database schema and table name prefix (MoProcess v3.68.17).
 - Ticket form performance - Prevented unnecessary saving of fields that do not have a default value configured and improved Work Log refresh by debouncing updates until save operations are complete (NeobeeFrontendSettings v3.68.16, NeobeeFrontendProject v3.68.16, NeobeeFrontendCentral v3.68.19).
 - DatepickerReport - Fixed an issue that allowed the date to be cleared, although the component requires a date value (NeobeeFrontendCentral v121).
 - NeobeeFrontendDeveloper: Application bug fixes - Fixed identified bugs across the Developer application and extracted additional CRUD interfaces into NeobeeUI.
+### Improvements
+- Multiple file preview - Improved the AdvancedTable component to correctly preview multiple files in a single field (NeobeeFrontendSettings v3.68.14, NeobeeFrontendProject v3.68.14, NeobeeFrontendCentral v3.68.17).
+- NeobeeFrontendDeveloper: Vertical tabs - Added an optional vertical tab layout with a collapsible panel, grouped tabs by panel position and entity, drag-and-drop support, and separate highlighting of the focused tab in each panel.
+- NeobeeFrontendDeveloper: SQL View Designer - Improved column formatting by filtering available functions based on column type and separating existing columns from custom derived columns in the designer interface.
 ### New Features
 - User assignment restrictions - Applied the existing Assignee field rules to the user picker in the ticket list (MoUser v3.68.2, NeobeeFrontendSettings v3.68.17, NeobeeFrontendProject v3.68.17, NeobeeFrontendCentral v3.68.20).
 ## October, week I
+### Fixes
+- Filter administration - Fixed an issue that incorrectly made an application mandatory when configuring filters (NeobeeFrontendSettings v90).
+- Form locking - Restricted automatic form locking to FUNCTION, CONDITION and LOOP states instead of all non-STATE types (NeobeeFrontendSettings v94, NeobeeFrontendProject v63, NeobeeFrontendCentral v105).
+- NeobeeFrontendDeveloper: Custom table primary key - Fixed an issue when changing the name of a custom table's primary column.
 ### Improvements
 - File access permissions - Added per-file permission retrieval to support showing or hiding edit and delete controls for individual files (MoProcess v3.68.16, NeobeeFrontendCentral v3.68.16).
 - Ticket list filters - Enabled text input in shortcut filters displayed above the ticket list (MoProcess v3.68.15, NeobeeFrontendSettings v3.68.12, NeobeeFrontendProject v3.68.12, NeobeeFrontendCentral v3.68.14).
 - NeobeeFrontendDeveloper: Diagram performance - Optimized diagram performance, particularly for diagrams containing more than 100 states and transitions.
 - NeobeeFrontendDeveloper: Diagram connectors - Improved custom connector configuration and transition routing, including connector editing and deletion handling.
-### Fixes
-- Filter administration - Fixed an issue that incorrectly made an application mandatory when configuring filters (NeobeeFrontendSettings v90).
-- Form locking - Restricted automatic form locking to FUNCTION, CONDITION and LOOP states instead of all non-STATE types (NeobeeFrontendSettings v94, NeobeeFrontendProject v63, NeobeeFrontendCentral v105).
-- NeobeeFrontendDeveloper: Custom table primary key - Fixed an issue when changing the name of a custom table's primary column.
 ### New Features
 - File access permissions - Added FILE_ONLYOFFICE_COMMENT permission to control OnlyOffice comments independently of FILE_EDIT_CONTENT (NeobeeFrontendSettings v90, NeobeeFrontendProject v61, NeobeeFrontendCentral v102).
 - AppDashboard ticket lists - Added support for My Team and My History ticket list types (NeobeeFrontendCentral v101).
 - NeobeeFrontendDeveloper: Recently viewed entities - Added a list of the five most recently opened forms, components, custom tables, states and transitions, with options to open their configuration in the floating menu or a separate tab.
 ## September, week V
-### Improvements
-- File access permissions - Expanded file permission management with policy administration, additional grant types, frontend and server-side permission handling, and support for multiple policies per state with MATCH_ANY, MATCH_ALL and MATCH_NONE modes (MoProcess v3.68.9, NeobeeFrontendSettings v3.68.8, NeobeeFrontendProject v3.68.8, NeobeeFrontendCentral v3.68.10).
-- File access permissions - Implemented FILE_UPLOAD and FILE_EDIT_CONTENT permissions on both the frontend and server side (MoProcess, NeobeeFrontendSettings v75, NeobeeFrontendProject v50, NeobeeFrontendCentral v87).
-- File policy management - Added FILE_AUTHOR support and improved policy editing (NeobeeFrontendSettings #78, NeobeeFrontendProject #52, NeobeeFrontendCentral #91).
-- NeobeeFrontendDeveloper: Entity navigation and tabs - Improved entity opening behavior, tab hierarchy with diagrams prioritized, and added the ability to move interfaces from the floating section into a tab.
-- NeobeeFrontendDeveloper: Development improvements - Enabled the use of local frontend libraries across applications and improved font handling by adding missing Cyrillic Roboto font files and migrating from .woff to .woff2format to reduce file size.
-- Delimiter component - Improved the Delimiter component styling and text display.
 ### Fixes
 - File upload components - Fixed an issue where files were not removed from tickets when the "enable deletion on ticket" option was enabled (NeobeeFrontendCentral v86).
 - NeobeeFrontendDeveloper: Custom tables - Fixed an issue where outdated column and index definitions could overwrite newly created custom table columns or indexes.
@@ -57,6 +66,13 @@
 - Process state query - Fixed inconsistent column definitions in the PROCESS_PENDING_STATE_LIST_V2_WITH_PAGING_INCLUDING_ARCHIVE query (MoProcess).
 - File templates and App Instance IDs - Fixed App Instance display and persistence issues on the File Template page.
 - FormGroup validation - Fixed minlength validation so inputs cannot contain fewer characters than the configured minimum.
+### Improvements
+- File access permissions - Expanded file permission management with policy administration, additional grant types, frontend and server-side permission handling, and support for multiple policies per state with MATCH_ANY, MATCH_ALL and MATCH_NONE modes (MoProcess v3.68.9, NeobeeFrontendSettings v3.68.8, NeobeeFrontendProject v3.68.8, NeobeeFrontendCentral v3.68.10).
+- File access permissions - Implemented FILE_UPLOAD and FILE_EDIT_CONTENT permissions on both the frontend and server side (MoProcess, NeobeeFrontendSettings v75, NeobeeFrontendProject v50, NeobeeFrontendCentral v87).
+- File policy management - Added FILE_AUTHOR support and improved policy editing (NeobeeFrontendSettings #78, NeobeeFrontendProject #52, NeobeeFrontendCentral #91).
+- NeobeeFrontendDeveloper: Entity navigation and tabs - Improved entity opening behavior, tab hierarchy with diagrams prioritized, and added the ability to move interfaces from the floating section into a tab.
+- NeobeeFrontendDeveloper: Development improvements - Enabled the use of local frontend libraries across applications and improved font handling by adding missing Cyrillic Roboto font files and migrating from .woff to .woff2format to reduce file size.
+- Delimiter component - Improved the Delimiter component styling and text display.
 ### New Features
 - File access permissions - Introduced file access permission management, including policy administration, frontend and server-side permission handling, state-to-policy mapping, and export support for file policies (MoProcess, NeobeeFrontendSettings v73, NeobeeFrontendProject v49, NeobeeFrontendCentral v86).
 - NeobeeFrontendDeveloper: Diagram improvements - Added automatic transition reconnection when moving or creating states, diagram screenshots, focused-state centering, and partial diagram selection, and fixed repeated opening of new configuration windows.
@@ -69,14 +85,14 @@
 - Homepage ticket filtering - Added filtering of tickets in My Approvals, My Requests, My Team and My History sections by module and project (MoProcess v3.68.7, NeobeeFrontendCentral v3.68.9).
 - File access permissions - Implemented the initial file permission model and frontend support for applying file access permissions to the central file view and form file dropzone.
 ## September, week III
-### Improvements
-- Enabled text fields for use in process filters for the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
-- Improved visual highlighting of claimed groups in the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
-- Improved export of permission scheme items for user groups to include items belonging to shared applications (MoProcess).
 ### Fixes
 - Fixed app_instance_id handling for AppDashboard, menu and dashboard group translations (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
 - Fixed missing app menus and dashboard groups in translation exports (MoCentral v3.68.1, NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
 - Fixed application translation issues across menus, dashboards, groups, AdvancedTable forms and subforms.
+### Improvements
+- Enabled text fields for use in process filters for the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Improved visual highlighting of claimed groups in the ticket list (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
+- Improved export of permission scheme items for user groups to include items belonging to shared applications (MoProcess).
 ### New Features
 - Implemented dynamic visibility settings for fields on the AppDashboard (NeobeeFrontendSettings v58, NeobeeFrontendProject v58, NeobeeFrontendCentral v69).
 - Implemented the ability to take over approval tasks by assigning them to the current user.
